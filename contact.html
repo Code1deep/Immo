@@ -3,70 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Société d’Investissement Hybride</title>
+    <title>Contact – SIH Group</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        function envoyerFormulaire(event) {
-            event.preventDefault();
-            alert("✅ Merci ! Votre message a été envoyé avec succès.");
-            event.target.reset();
-        }
-    </script>
 </head>
 <body>
-
-    <header class="navbar">
-        <div class="logo">🌿 Société d’Investissement Hybride</div>
+<header>
+    <div class="container">
+        <h1>🌿 SIH Group</h1>
+        <p>Investir dans la Stabilité Durable</p>
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="investisseurs.html">Investisseurs</a>
-            <a href="locataires.html">Locataires</a>
-            <a href="projets.html">Projets</a>
-            <a href="contact.html" class="active">Contact</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="investisseurs.html">Investisseurs</a></li>
+                <li><a href="locataires.html">Locataires</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="distributeurs.html">Distributeurs</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <section class="page-header">
-        <h1>Contactez-nous</h1>
-        <p>Un conseiller vous répondra dans les plus brefs délais.</p>
-    </section>
+<section class="modele">
+    <h2>Contactez-nous</h2>
+    <p>Notre équipe est à votre écoute pour toute question sur l’investissement, la location ou la distribution.</p>
 
-    <section class="contact-form">
-        <form onsubmit="envoyerFormulaire(event)">
-            <div class="form-group">
-                <label>Nom complet</label>
-                <input type="text" name="nom" required>
-            </div>
+    <form action="#" method="post" style="max-width:500px; margin:30px auto; text-align:left;">
+        <label>Nom complet</label><br>
+        <input type="text" name="nom" required style="width:100%; padding:10px; margin:5px 0 15px;"><br>
 
-            <div class="form-group">
-                <label>Adresse e-mail</label>
-                <input type="email" name="email" required>
-            </div>
+        <label>Email</label><br>
+        <input type="email" name="email" required style="width:100%; padding:10px; margin:5px 0 15px;"><br>
 
-            <div class="form-group">
-                <label>Sujet</label>
-                <input type="text" name="sujet" required>
-            </div>
+        <label>Message</label><br>
+        <textarea name="message" rows="5" required style="width:100%; padding:10px;"></textarea><br>
 
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="message" rows="5" required></textarea>
-            </div>
+        <button type="submit" class="btn" style="margin-top:10px;">Envoyer</button>
+    </form>
+</section>
 
-            <button type="submit" class="btn-primary">Envoyer</button>
-        </form>
-    </section>
-
-    <section class="infos">
-        <h2>Nos Coordonnées</h2>
-        <p>📍 Siège : Montréal, Canada</p>
-        <p>📧 Email : contact@investissementhybride.ca</p>
-        <p>📞 Téléphone : +1 (514) 555-0182</p>
-    </section>
-
-    <footer>
-        <p>© 2025 Société d’Investissement Hybride | Contact</p>
-    </footer>
-
+<footer>
+    <p>© 2025 SIH Group – Tous droits réservés</p>
+</footer>
 </body>
 </html>

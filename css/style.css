@@ -1,0 +1,113 @@
+:root {
+    --green: #2E7D32;
+    --light-green: #81C784;
+    --beige: #F5F5DC;
+    --dark-gray: #333;
+    --light-gray: #eee;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background: #fff;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--green);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
+        url('../assets/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 8rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--light-green);
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: var(--green);
+    color: white;
+}
+
+/* SECTIONS */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.vision-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.vision-item {
+    background: var(--beige);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+}
+
+/* Parrainage */
+.parrainage-box {
+    background: var(--light-gray);
+    border-left: 5px solid var(--green);
+    padding: 1rem 1.5rem;
+    margin: 1rem auto;
+    width: 80%;
+    text-align: left;
+}
+
+.kpis {
+    list-style: none;
+    padding: 0;
+}
+
+footer {
+    background: var(--dark-gray);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}

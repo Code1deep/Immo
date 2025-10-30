@@ -1,11 +1,9 @@
-// Simple animation au scroll
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const options = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-        });
-    }, options);
-    sections.forEach(section => observer.observe(section));
+// Animation simple sur les noeuds de la structure
+document.querySelectorAll('.node.child').forEach(node => {
+    node.addEventListener('mouseenter', () => {
+        node.style.borderColor = '#66bb6a';
+    });
+    node.addEventListener('mouseleave', () => {
+        node.style.borderColor = '#a5d6a7';
+    });
 });

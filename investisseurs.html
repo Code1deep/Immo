@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme Investisseurs – SIH Group</title>
+    <title>Programme Investisseurs – MasterWeb</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: "Poppins", sans-serif;
@@ -13,55 +14,78 @@
             line-height: 1.7;
             margin: 0;
         }
+
         header {
             background: linear-gradient(to right, #2e7d32, #81c784);
             color: white;
-            padding: 60px 20px;
+            padding: 50px 20px;
             text-align: center;
+            position: relative;
         }
+
         header h1 {
             font-size: 2.2rem;
             margin: 0;
         }
-        header nav ul {
+
+        .lang-links {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+        }
+        .lang-links a {
+            color: white;
+            margin-left: 10px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .lang-links a:hover {
+            text-decoration: underline;
+        }
+
+        nav ul {
             list-style: none;
             padding: 0;
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            margin-top: 25px;
         }
-        header nav a {
+        nav ul li {
+            display: inline-block;
+            margin: 0 12px;
+        }
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: 600;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
+            transition: opacity .3s;
         }
-        header nav a:hover,
-        header nav a.active {
-            background: rgba(255,255,255,0.2);
+        nav ul li a:hover,
+        nav ul li a.active {
+            opacity: 0.85;
+            border-bottom: 2px solid white;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 40px 20px;
         }
+
         section {
             margin-bottom: 60px;
         }
+
         h2 {
             color: #2e7d32;
             border-left: 5px solid #2e7d32;
             padding-left: 10px;
         }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
+
         .card {
             background: white;
             border-radius: 15px;
@@ -69,15 +93,18 @@
             padding: 25px;
             transition: transform .3s;
         }
+
         .card:hover {
             transform: translateY(-5px);
         }
+
         .highlight {
             background-color: #e8f5e9;
             border-left: 4px solid #388e3c;
             padding: 15px 20px;
             margin-top: 10px;
         }
+
         .cta {
             display: inline-block;
             margin-top: 30px;
@@ -88,9 +115,11 @@
             text-decoration: none;
             transition: background .3s;
         }
+
         .cta:hover {
             background-color: #1b5e20;
         }
+
         footer {
             background: #1b3a24;
             color: #c8e6c9;
@@ -99,9 +128,6 @@
         }
 
         /* FAQ Section */
-        .faq {
-            margin-top: 40px;
-        }
         .faq-item {
             background: white;
             border-radius: 10px;
@@ -109,6 +135,7 @@
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             overflow: hidden;
         }
+
         .faq-question {
             background-color: #e8f5e9;
             color: #1b3a24;
@@ -117,6 +144,7 @@
             font-weight: 600;
             position: relative;
         }
+
         .faq-question::after {
             content: '+';
             position: absolute;
@@ -124,27 +152,61 @@
             font-size: 20px;
             transition: transform .3s;
         }
+
         .faq-question.active::after {
             transform: rotate(45deg);
         }
+
         .faq-answer {
             display: none;
             padding: 15px 25px;
             background: #ffffff;
             border-top: 1px solid #c8e6c9;
         }
+
         .faq-answer p {
             margin: 10px 0;
         }
+
+        /* Logos Auditeurs */
+        .audit-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .audit-logos img {
+            height: 50px;
+            opacity: 0.9;
+            transition: transform .3s, opacity .3s;
+        }
+
+        .audit-logos img:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
     </style>
 </head>
 <body>
     <header>
+        <div class="lang-links">
+            🌐 Langues :
+            <a href="investors-en.html">English</a> |
+            <a href="investisseurs-ar.html">العربية</a>
+        </div>
         <div class="container">
             <h1>🌿 SIH Group</h1>
-            <h2>Programme Investisseurs</h2>
-            <p>Sécurisez votre capital : investissez dans le double rempart de l’immobilier commercial et agricole.</p>
-            <p><em>Investir dans la Stabilité Durable</em></p>
+            <h1>Programme Investisseurs</h1>
+            <p>Investissez dans la stabilité durable — un modèle hybride alliant immobilier et agriculture.</p>
             <nav>
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
@@ -159,106 +221,98 @@
     </header>
 
     <div class="container">
-        <!-- SECTION 1 : Transparence et Sécurité -->
+        <!-- SECTION 1 : Transparence -->
         <section>
             <h2>Transparence, Légalité et Sécurité</h2>
             <p>
-                Chaque investissement est <strong>adossé à un titre foncier légalement enregistré</strong> et certifié par les autorités locales compétentes.
-                Un notaire assermenté et un cabinet juridique indépendant valident chaque acquisition foncière.
-                Vous recevez la <strong>preuve légale et assermentée</strong> que votre capital est converti en actif réel et sécurisé.
+                Chaque investissement est <strong>adossé à un titre foncier légalement enregistré et certifié</strong>.  
+                Un notaire assermenté et un cabinet juridique indépendant garantissent l’authenticité de chaque acquisition.  
+                Vous recevez une <strong>preuve légale</strong> attestant que votre capital est transformé en actif réel.
             </p>
             <div class="highlight">
                 <ul>
-                    <li>📜 <strong>Garantie Foncière :</strong> titre foncier assermenté, vérifié et authentifié par acte notarié.</li>
-                    <li>📊 <strong>Rapports trimestriels</strong> de performance disponibles dans votre espace investisseur.</li>
-                    <li>🔒 <strong>Audit annuel</strong> des fonds et actifs par un cabinet indépendant.</li>
-                    <li>🌱 <strong>Engagement ESG :</strong> tous nos projets favorisent la durabilité alimentaire et énergétique.</li>
+                    <li>📜 Titre foncier authentifié par acte notarié</li>
+                    <li>📊 Rapports trimestriels d’audit et de performance</li>
+                    <li>🔒 Audit annuel indépendant</li>
+                    <li>🌱 Engagement ESG durable</li>
                 </ul>
             </div>
         </section>
 
-        <!-- SECTION 2 : Modèle Financier -->
+        <!-- SECTION 2 : Nos Garanties Légales -->
+        <section>
+            <h2>Nos Garanties Légales et Auditeurs</h2>
+            <p>
+                Notre gestion est auditée par des cabinets de renommée mondiale et conforme aux standards internationaux IFRS & ESG.
+            </p>
+            <div class="audit-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/PwC_logo.svg" alt="PwC Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Deloitte.svg" alt="Deloitte Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/KPMG_logo.svg" alt="KPMG Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/EY_logo_2019.svg" alt="EY Logo">
+            </div>
+        </section>
+
+        <!-- SECTION 3 : Modèle Financier + Graphique -->
         <section>
             <h2>Notre Modèle Financier</h2>
             <p>
-                Conformément à notre statut de <strong>Société d’Investissement Hybride (SIH)</strong>,
-                <strong>90 % des FFO (Funds From Operations)</strong> sont redistribués chaque trimestre à nos investisseurs.
-                Ce modèle garantit la <strong>stabilité des flux financiers</strong> et la <strong>transparence des rendements</strong>.
+                Nous redistribuons 90 % de nos revenus nets aux investisseurs.  
+                La stabilité provient d’une répartition équilibrée entre <strong>immobilier commercial</strong> (65 %) et <strong>terres agricoles</strong> (35 %).
             </p>
-            <div class="highlight">
-                <p>💰 Répartition de nos actifs :</p>
-                <ul>
-                    <li>🏢 65 % Immobilier commercial (bureaux, commerces de catégorie A)</li>
-                    <li>🌾 35 % Terres agricoles louées à long terme</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- SECTION 3 : Rendements -->
-        <section>
-            <h2>Rendements Cibles et Opportunités</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Projet A — Immobilier</h3>
-                    <p><strong>Rendement cible : 13 % net annualisé</strong></p>
-                    <p>Bail commercial de 10 ans indexé sur l’inflation. Revenus locatifs stables et contractuels.</p>
-                </div>
-                <div class="card">
-                    <h3>Projet B — Agricole</h3>
-                    <p><strong>Rendement cible : 15 % net annualisé</strong></p>
-                    <p>Exploitation sur terres de catégorie I, contrat de 20 ans. Revenus sécurisés par distribution locale.</p>
-                </div>
-            </div>
-            <div class="highlight">
-                <p>
-                    📈 Les rendements indiqués sont des objectifs réalistes basés sur des performances historiques.
-                    <em>Accédez à notre Mémorandum d’Investissement pour connaître les opportunités disponibles.</em>
-                </p>
-            </div>
-            <a href="contact.html" class="cta">Demander les opportunités disponibles</a>
+            <canvas id="repartitionChart"></canvas>
         </section>
 
         <!-- SECTION 4 : Programme Parrainage -->
         <section>
-            <h2>💚 Programme Ambassadeur : Croissance Responsable</h2>
-            <p>
-                Jusqu’au <strong>31 décembre</strong>, profitez de notre <strong>programme de parrainage exclusif</strong>.
-                Pour chaque nouvel investisseur qualifié que vous parrainez, vous recevez <strong>2 %</strong> du montant investi,
-                ajouté à votre portefeuille après la première année.
-            </p>
+            <h2>💚 Programme Ambassadeur</h2>
+            <p>Recevez <strong>2 %</strong> pour chaque nouvel investisseur que vous parrainez.</p>
             <div class="highlight">
-                <p>🎁 Exemple : Vous parrainez un investisseur de 50 000 $ → vous recevez 1 000 $ en bonus fidélité.</p>
+                <p>🎁 Exemple : 50 000 $ investis par votre filleul → 1 000 $ de bonus pour vous.</p>
             </div>
         </section>
 
         <!-- SECTION 5 : FAQ -->
         <section class="faq">
             <h2>❓ Foire Aux Questions (FAQ)</h2>
-            <p>Réponses aux questions les plus fréquentes sur la sécurité, la rentabilité et la fiscalité.</p>
             <div id="faq-container"></div>
         </section>
     </div>
 
     <footer>
-        <p>© 2025 SIH Group – Fonds Immobilier & Agricole Durable</p>
+        <p>© 2025 MasterWeb Invest – Stabilité Durable et Performance Hybride</p>
     </footer>
 
     <script>
+        // Graphique Chart.js
+        const ctx = document.getElementById('repartitionChart');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Immobilier commercial (65 %)', 'Terres agricoles (35 %)'],
+                datasets: [{
+                    data: [65, 35],
+                    backgroundColor: ['#2e7d32', '#81c784']
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Répartition des actifs' }
+                }
+            }
+        });
+
+        // FAQ Dynamique
         const faqData = [
-            { category: "💰 Rendement et Distribution", q: "Comment le rendement (dividende) est-il calculé ?", a: "Notre statut de FII nous oblige à distribuer 90 % des FFO (trésorerie issue des loyers), assurant un revenu stable." },
-            { q: "Le rendement ciblé est-il garanti ?", a: "Non, il dépend de la performance locative et de la solidité des baux long terme." },
-            { q: "Comment le portefeuille hybride minimise-t-il le risque ?", a: "La diversification entre immobilier commercial et terres agricoles équilibre les cycles économiques." },
-            { category: "🛡️ Sécurité et Actifs", q: "Qui sont vos locataires ?", a: "Des entreprises solides et exploitants agricoles expérimentés sous baux à long terme." },
-            { q: "Comment la valeur de mon investissement est-elle protégée ?", a: "Les actifs physiques (bureaux, terres) et les baux indexés protègent votre capital contre l’inflation." },
-            { q: "Comment suivez-vous l’impact durable ?", a: "Nos rapports ESG mesurent les indicateurs clés de durabilité et de performance énergétique." },
-            { category: "💳 Aspects Pratiques et Légaux", q: "Comment puis-je acheter des parts ?", a: "Via l’acquisition d’actions selon la réglementation locale. Contactez notre service investisseurs." },
-            { q: "Mes actions sont-elles liquides ?", a: "Si le fonds est coté, elles sont revendables librement. Sinon, rachat trimestriel possible." },
-            { q: "Comment les dividendes sont-ils imposés ?", a: "Selon la juridiction. Consultez un conseiller fiscal pour connaître les détails." }
+            { category: "💰 Rendement", q: "Comment est calculé le rendement ?", a: "Nous redistribuons 90 % des FFO sous forme de dividendes trimestriels." },
+            { q: "Le rendement est-il garanti ?", a: "Non, il dépend de la performance locative mais est soutenu par des baux longs et stables." },
+            { category: "🛡️ Sécurité", q: "Comment mon capital est-il protégé ?", a: "Chaque part est adossée à un titre foncier enregistré et audité par un cabinet externe." },
+            { category: "💳 Pratique", q: "Comment investir ?", a: "En contactant notre équipe d’investissement pour recevoir le Mémorandum officiel." }
         ];
 
         const container = document.getElementById("faq-container");
         let currentCategory = "";
-
         faqData.forEach(item => {
             if (item.category && item.category !== currentCategory) {
                 currentCategory = item.category;
@@ -268,20 +322,16 @@
             }
             const faqItem = document.createElement("div");
             faqItem.classList.add("faq-item");
-
             const q = document.createElement("div");
             q.classList.add("faq-question");
             q.textContent = item.q;
-
             const a = document.createElement("div");
             a.classList.add("faq-answer");
             a.innerHTML = `<p>${item.a}</p>`;
-
             q.addEventListener("click", () => {
                 q.classList.toggle("active");
                 a.style.display = a.style.display === "block" ? "none" : "block";
             });
-
             faqItem.appendChild(q);
             faqItem.appendChild(a);
             container.appendChild(faqItem);

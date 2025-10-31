@@ -3,51 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investisseurs – SIH Group</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Programme Investisseurs – MasterWeb</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f6f9f6;
+            color: #1b3a24;
+            line-height: 1.7;
+            margin: 0;
+        }
+        header {
+            background: linear-gradient(to right, #2e7d32, #81c784);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            color: #2e7d32;
+            border-left: 5px solid #2e7d32;
+            padding-left: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            transition: transform .3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .highlight {
+            background-color: #e8f5e9;
+            border-left: 4px solid #388e3c;
+            padding: 15px 20px;
+            margin-top: 10px;
+        }
+        .cta {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background .3s;
+        }
+        .cta:hover {
+            background-color: #1b5e20;
+        }
+        footer {
+            background: #1b3a24;
+            color: #c8e6c9;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-<header>
+    <header>
+        <h1>Programme Investisseurs</h1>
+        <p>Sécurisez votre capital : investissez dans le double rempart de l’immobilier commercial et agricole.</p>
+    </header>
+
     <div class="container">
-        <h1>🌿 SIH Group</h1>
-        <p>Investir dans la Stabilité Durable</p>
-        <nav>
+        <!-- SECTION I : Modèle Financier -->
+        <section>
+            <h2>Notre Modèle Financier</h2>
+            <p>
+                Conformément à notre statut de <strong>Société d’Investissement Hybride (SIH)</strong>, 
+                <strong>90 % des FFO (Funds From Operations)</strong> sont redistribués chaque trimestre à nos investisseurs.  
+                Ce modèle garantit la <strong>stabilité des flux financiers</strong> et la <strong>transparence des rendements</strong>.
+            </p>
+            <div class="highlight">
+                <p>💰 Répartition de nos actifs :</p>
+                <ul>
+                    <li>65 % Immobilier commercial (bureaux, commerces de catégorie A)</li>
+                    <li>35 % Terres agricoles premières louées à long terme</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION II : Rendements et Opportunités -->
+        <section>
+            <h2>Rendements Cibles et Opportunités</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Projet A — Immobilier</h3>
+                    <p><strong>Rendement cible : 13 % net annualisé</strong></p>
+                    <p>Bail commercial de 10 ans avec société partenaire indexé sur l’inflation. Revenus locatifs stables garantis.</p>
+                </div>
+                <div class="card">
+                    <h3>Projet B — Agricole</h3>
+                    <p><strong>Rendement cible : 15 % net annualisé</strong></p>
+                    <p>Exploitation sur terres de catégorie I, contrat de location de 20 ans. Revenu sécurisé par vente directe et distribution locale.</p>
+                </div>
+            </div>
+            <div class="highlight">
+                <p>
+                    📈 Les rendements indiqués sont des objectifs basés sur la performance historique et la stabilité locative des actifs.  
+                    <em>Accédez à notre registre d’offres et au Mémorandum d’Investissement sur demande pour vérifier votre éligibilité (investisseurs qualifiés).</em>
+                </p>
+            </div>
+            <a href="contact.html" class="cta">Demander les opportunités disponibles</a>
+        </section>
+
+        <!-- SECTION III : Programme Parrainage -->
+        <section>
+            <h2>💚 Programme Ambassadeur : Croissance Responsable</h2>
+            <p>
+                Jusqu’au <strong>31 décembre</strong>, profitez de notre <strong>programme de parrainage exclusif</strong>.  
+                Pour chaque nouvel investisseur qualifié que vous parrainez, vous recevez <strong>2 %</strong> du montant investi, 
+                ajouté à votre portefeuille après la première année.
+            </p>
+            <div class="highlight">
+                <p>🎁 Exemple : Vous parrainez un nouvel investisseur de 50 000 $ → vous recevez 1 000 $ en bonus fidélité.</p>
+                <p>Un moyen simple et équitable de développer le réseau d’investisseurs responsables.</p>
+            </div>
+        </section>
+
+        <!-- SECTION IV : Transparence et Confiance -->
+        <section>
+            <h2>Transparence et Sécurité</h2>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="investisseurs.html" class="active">Investisseurs</a></li>
-                <li><a href="locataires.html">Locataires</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="distributeurs.html">Distributeurs</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>📊 Rapports trimestriels de performance disponibles sur votre espace investisseur.</li>
+                <li>🔒 Fonds et actifs audités chaque année par un cabinet indépendant.</li>
+                <li>🌱 Engagement ESG : chaque projet soutient la durabilité alimentaire et énergétique.</li>
             </ul>
-        </nav>
+        </section>
     </div>
-</header>
 
-<section class="modele">
-    <h2>Programme Investisseurs</h2>
-    <p>
-        Rejoignez un modèle unique alliant performance, durabilité et solidarité.
-    </p>
-    <p>
-        90% des bénéfices nets sont reversés sous forme de <strong>dividendes trimestriels</strong> à nos investisseurs.
-    </p>
-
-    <h3>💚 Programme de Parrainage</h3>
-    <p>
-        Pour chaque nouvel investisseur que vous parrainez, vous recevez <strong>2 %</strong> du montant investi,
-        automatiquement ajouté à votre portefeuille.  
-        <br>Un moyen simple et équitable de développer le réseau d’investisseurs responsables.
-    </p>
-
-    <div class="cta">
-        <h2>Devenez Investisseur dès Aujourd’hui</h2>
-        <a href="contact.html" class="btn">Nous Contacter</a>
-    </div>
-</section>
-
-<footer>
-    <p>© 2025 SIH Group – Tous droits réservés | Investissement Vert & Durable</p>
-</footer>
+    <footer>
+        <p>© 2025 MasterWeb Invest – Performance & Stabilité Durable</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investors – Green & Stable Investment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background:#fdfdfd; color:#333; line-height:1.6; margin:0; }
+        header { background:#0c513f; color:#fff; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; }
+        nav a { color:#fff; margin:0 8px; text-decoration:none; font-weight:600; }
+        section { padding:50px 10%; }
+        h1,h2 { color:#0c513f; }
+        .guarantees img { height:50px; margin:0 10px; }
+        .chart-container { width:300px; margin:auto; }
+        .faq-item { margin-bottom:20px; }
+        footer { background:#0c513f; color:#fff; text-align:center; padding:15px; font-size:14px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Investors Area</h1>
+    <nav>
+        <a href="investisseurs.html">FR</a> | 
+        <a href="investors_en.html"><strong>EN</strong></a> | 
+        <a href="investors_ar.html">AR</a>
+    </nav>
+</header>
+
+<section id="transparency">
+    <h2>Transparency & Security</h2>
+    <ul>
+        <li>📊 Quarterly performance reports accessible in your investor portal.</li>
+        <li>🔒 Funds and assets audited annually by an independent firm.</li>
+        <li>🌱 ESG commitment: each project supports food and energy sustainability.</li>
+        <li>📜 Every investment is legally registered as a certified land title verified by local authorities.</li>
+    </ul>
+</section>
+
+<section id="guarantees" class="guarantees" style="text-align:center;">
+    <h2>Our Legal Guarantees</h2>
+    <p>Audited and certified by internationally recognized partners.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/PwC_flame_logo.svg" alt="PwC">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Deloitte.svg" alt="Deloitte">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/EY_logo_2019.svg" alt="EY">
+</section>
+
+<section id="model">
+    <h2>Our Financial Model</h2>
+    <p>Our revenues come from stable rents and the sale of farm products (wheat, corn, milk, eggs, poultry...).</p>
+    <p><strong>90% of net income is distributed</strong> as quarterly dividends to investors.</p>
+
+    <div class="chart-container">
+        <canvas id="assetChart"></canvas>
+    </div>
+    <script>
+        new Chart(document.getElementById('assetChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Commercial Real Estate (65%)', 'Agricultural Land (35%)'],
+                datasets: [{ data: [65, 35], backgroundColor: ['#0c513f', '#91c788'] }]
+            },
+            options: { plugins: { legend: { position: 'bottom' } } }
+        });
+    </script>
+</section>
+
+<section id="opportunities">
+    <h2>Investment Opportunities</h2>
+    <p>Project A – Target annual yield: <strong>13% net</strong> based on a 10-year commercial lease (inflation indexed).</p>
+    <p>Project B – Target annual yield: <strong>15% net</strong> based on 20-year agricultural contracts.</p>
+    <p><em>Contact us to learn about open investment opportunities this month.</em></p>
+</section>
+
+<section id="referral">
+    <h2>💚 Referral Program</h2>
+    <p>Until December 31: For each new investor you refer, receive <strong>2% of the invested amount</strong> directly credited to your portfolio.</p>
+    <p>A fair way to grow our network of responsible investors.</p>
+</section>
+
+<section id="faq">
+    <h2>FAQ – Investors</h2>
+
+    <div class="faq-item">
+        <h3>💰 How is the yield (dividend) calculated?</h3>
+        <p>We distribute at least 90% of our FFO (Funds From Operations), representing net rental cash flows before depreciation.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Is the target yield guaranteed?</h3>
+        <p>No, yields depend on real asset performance. Our dual strategy minimizes volatility through economic diversification.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Who are your tenants?</h3>
+        <p>Corporate tenants (commercial) and professional farmers (agricultural leases).</p>
+    </div>
+    <div class="faq-item">
+        <h3>Are my shares liquid?</h3>
+        <p>If listed: daily liquidity via stock market. If private: limited liquidity via quarterly redemptions.</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Green & Stable Investment – All rights reserved.
+</footer>
+</body>
+</html>

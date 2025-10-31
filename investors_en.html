@@ -1,107 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investors – Green & Stable Investment</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background:#fdfdfd; color:#333; line-height:1.6; margin:0; }
-        header { background:#0c513f; color:#fff; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; }
-        nav a { color:#fff; margin:0 8px; text-decoration:none; font-weight:600; }
-        section { padding:50px 10%; }
-        h1,h2 { color:#0c513f; }
-        .guarantees img { height:50px; margin:0 10px; }
-        .chart-container { width:300px; margin:auto; }
-        .faq-item { margin-bottom:20px; }
-        footer { background:#0c513f; color:#fff; text-align:center; padding:15px; font-size:14px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investors | Green Stability Fund</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; margin:0; background:#f8f9f9; color:#222; }
+    header { background:#0a6838; color:white; text-align:center; padding:1.5rem; }
+    header h1 { margin:0; }
+    nav a { color:white; margin:0 10px; text-decoration:none; font-weight:600; }
+    section { max-width:1000px; margin:2rem auto; padding:1.5rem; background:white; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.08); }
+    h2 { color:#0a6838; border-left:5px solid #0a6838; padding-left:10px; }
+    ul { line-height:1.8; }
+    .faq-item { margin-bottom:1rem; }
+    .chart-container { width:300px; margin:1rem auto; }
+    .audit-logos img { height:40px; margin:10px; filter:grayscale(1); opacity:0.8; }
+    footer { text-align:center; padding:1.5rem; background:#0a6838; color:white; margin-top:3rem; }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Investors Area</h1>
+  <header>
+    <h1>Investor Relations</h1>
     <nav>
-        <a href="investisseurs.html">FR</a> | 
-        <a href="investors_en.html"><strong>EN</strong></a> | 
-        <a href="investors_ar.html">AR</a>
+      <a href="investisseurs.html">FR</a> | 
+      <a href="investors_en.html"><strong>EN</strong></a> | 
+      <a href="investors_ar.html">AR</a>
     </nav>
-</header>
+  </header>
 
-<section id="transparency">
+  <section>
     <h2>Transparency & Security</h2>
     <ul>
-        <li>📊 Quarterly performance reports accessible in your investor portal.</li>
-        <li>🔒 Funds and assets audited annually by an independent firm.</li>
-        <li>🌱 ESG commitment: each project supports food and energy sustainability.</li>
-        <li>📜 Every investment is legally registered as a certified land title verified by local authorities.</li>
+      <li>📊 Quarterly performance reports available in your investor dashboard.</li>
+      <li>🔒 Funds and assets audited annually by an independent firm.</li>
+      <li>🌱 ESG commitment: each project promotes food and energy sustainability.</li>
+      <li>🏦 Every investment is legally registered and backed by certified land title documents verified by local authorities.</li>
     </ul>
-</section>
+  </section>
 
-<section id="guarantees" class="guarantees" style="text-align:center;">
-    <h2>Our Legal Guarantees</h2>
-    <p>Audited and certified by internationally recognized partners.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/PwC_flame_logo.svg" alt="PwC">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Deloitte.svg" alt="Deloitte">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/EY_logo_2019.svg" alt="EY">
-</section>
-
-<section id="model">
+  <section>
     <h2>Our Financial Model</h2>
-    <p>Our revenues come from stable rents and the sale of farm products (wheat, corn, milk, eggs, poultry...).</p>
-    <p><strong>90% of net income is distributed</strong> as quarterly dividends to investors.</p>
-
+    <p>
+      Our hybrid model combines commercial real estate and agricultural production.  
+      <strong>90% of net operating income (FFO)</strong> is redistributed to investors as quarterly dividends.  
+    </p>
+    <p>Example Projects:</p>
+    <ul>
+      <li><strong>Project A (Commercial):</strong> Target annual return 13% (secured by a 10-year indexed lease).</li>
+      <li><strong>Project B (Agricultural):</strong> Target annual return 15% (secured by 20-year farm lease).</li>
+    </ul>
     <div class="chart-container">
-        <canvas id="assetChart"></canvas>
+      <canvas id="assetsChart"></canvas>
     </div>
-    <script>
-        new Chart(document.getElementById('assetChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['Commercial Real Estate (65%)', 'Agricultural Land (35%)'],
-                datasets: [{ data: [65, 35], backgroundColor: ['#0c513f', '#91c788'] }]
-            },
-            options: { plugins: { legend: { position: 'bottom' } } }
-        });
-    </script>
-</section>
+  </section>
 
-<section id="opportunities">
-    <h2>Investment Opportunities</h2>
-    <p>Project A – Target annual yield: <strong>13% net</strong> based on a 10-year commercial lease (inflation indexed).</p>
-    <p>Project B – Target annual yield: <strong>15% net</strong> based on 20-year agricultural contracts.</p>
-    <p><em>Contact us to learn about open investment opportunities this month.</em></p>
-</section>
+  <section>
+    <h2>💚 Referral Program (until Dec 31)</h2>
+    <p>For every new investor you refer, you earn <strong>2% of the invested amount</strong>, added to your portfolio.</p>
+    <p><em>Reward is paid after the first year to encourage long-term partnerships.</em></p>
+  </section>
 
-<section id="referral">
-    <h2>💚 Referral Program</h2>
-    <p>Until December 31: For each new investor you refer, receive <strong>2% of the invested amount</strong> directly credited to your portfolio.</p>
-    <p>A fair way to grow our network of responsible investors.</p>
-</section>
+  <section>
+    <h2>🛡️ Legal Guarantees</h2>
+    <p>All assets are verified and legally backed by certified notarial deeds.</p>
+    <div class="audit-logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/PwC_logo.svg" alt="PwC">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Deloitte_logo.svg" alt="Deloitte">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/KPMG_logo.svg" alt="KPMG">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/EY_logo_2019.svg" alt="EY">
+    </div>
+  </section>
 
-<section id="faq">
-    <h2>FAQ – Investors</h2>
+  <section>
+    <h2>💰 FAQ – Common Investor Questions</h2>
 
     <div class="faq-item">
-        <h3>💰 How is the yield (dividend) calculated?</h3>
-        <p>We distribute at least 90% of our FFO (Funds From Operations), representing net rental cash flows before depreciation.</p>
+      <strong>Q1. How is the dividend yield calculated?</strong>
+      <p>As a FII, we distribute at least 90% of Funds From Operations (FFO), i.e., rental income before amortization. This ensures high transparency and consistent cash flow.</p>
     </div>
     <div class="faq-item">
-        <h3>Is the target yield guaranteed?</h3>
-        <p>No, yields depend on real asset performance. Our dual strategy minimizes volatility through economic diversification.</p>
+      <strong>Q2. Is the return guaranteed?</strong>
+      <p>No. Returns depend on rental performance. The 13–15% targets are based on current lease projections.</p>
     </div>
     <div class="faq-item">
-        <h3>Who are your tenants?</h3>
-        <p>Corporate tenants (commercial) and professional farmers (agricultural leases).</p>
+      <strong>Q3. How do we minimize risk?</strong>
+      <p>By diversifying between commercial real estate (urban growth) and farmland (defensive, inflation-resistant assets).</p>
     </div>
-    <div class="faq-item">
-        <h3>Are my shares liquid?</h3>
-        <p>If listed: daily liquidity via stock market. If private: limited liquidity via quarterly redemptions.</p>
-    </div>
-</section>
+  </section>
 
-<footer>
-    © 2025 Green & Stable Investment – All rights reserved.
-</footer>
+  <footer>
+    © 2025 Green Stability Fund — Sustainable Real Estate & Agriculture
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('assetsChart');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Commercial Real Estate (65%)', 'Agricultural Land (35%)'],
+        datasets: [{
+          data: [65, 35],
+          backgroundColor: ['#0a6838', '#9cd67a']
+        }]
+      }
+    });
+  </script>
 </body>
 </html>

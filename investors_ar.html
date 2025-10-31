@@ -1,105 +1,312 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المستثمرون – استثمار أخضر ومستقر</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body { font-family: 'Tahoma', sans-serif; background:#fdfdfd; color:#333; line-height:1.8; margin:0; direction:rtl; }
-        header { background:#0c513f; color:#fff; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; }
-        nav a { color:#fff; margin:0 8px; text-decoration:none; font-weight:600; }
-        section { padding:50px 10%; text-align:right; }
-        h1,h2 { color:#0c513f; }
-        .guarantees img { height:50px; margin:0 10px; }
-        .chart-container { width:300px; margin:auto; }
-        footer { background:#0c513f; color:#fff; text-align:center; padding:15px; font-size:14px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج المستثمرين – مجموعة SIH</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: "Tajawal", "Noto Kufi Arabic", sans-serif;
+      background-color: #f6f9f6;
+      color: #1b3a24;
+      line-height: 1.8;
+      margin: 0;
+      direction: rtl;
+      text-align: right;
+    }
+    header {
+      background: linear-gradient(to left, #2e7d32, #81c784);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      left: 25px;
+      display: flex;
+      gap: 10px;
+      flex-direction: row-reverse;
+    }
+    .lang-switch a {
+      color: white;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .lang-switch a:hover {
+      opacity: 0.8;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      flex-direction: row-reverse;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a.active {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      color: #2e7d32;
+      border-right: 5px solid #2e7d32;
+      padding-right: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      padding: 25px;
+      transition: transform .3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .highlight {
+      background-color: #e8f5e9;
+      border-right: 4px solid #388e3c;
+      padding: 15px 20px;
+      margin-top: 10px;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #2e7d32;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background .3s;
+    }
+    .cta:hover {
+      background-color: #1b5e20;
+    }
+    footer {
+      background: #1b3a24;
+      color: #c8e6c9;
+      text-align: center;
+      padding: 25px;
+    }
+    /* FAQ */
+    .faq {
+      margin-top: 40px;
+    }
+    .faq-item {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .faq-question {
+      background-color: #e8f5e9;
+      color: #1b3a24;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      position: relative;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      left: 20px;
+      font-size: 20px;
+      transition: transform .3s;
+    }
+    .faq-question.active::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 15px 25px;
+      background: #ffffff;
+      border-top: 1px solid #c8e6c9;
+    }
+    .faq-answer p {
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
+
 <header>
-    <h1>منطقة المستثمرين</h1>
+  <div class="lang-switch">
+    <a href="investisseurs.html">🇫🇷 Français</a>
+    <a href="investors_en.html">🇬🇧 English</a>
+    <a href="investors_ar.html">🇸🇦 العربية</a>
+  </div>
+
+  <div class="container">
+    <h1>🌿 مجموعة SIH</h1>
+    <h1>برنامج المستثمرين</h1>
+    <p>أمّن رأس مالك: استثمر في العقار التجاري والزراعي بثقة مزدوجة.</p>
+    <p>استثمار في الاستقرار المستدام</p>
     <nav>
-        <a href="investisseurs.html">FR</a> | 
-        <a href="investors_en.html">EN</a> | 
-        <a href="investors_ar.html"><strong>AR</strong></a>
+      <ul>
+        <li><a href="index_ar.html">الرئيسية</a></li>
+        <li><a href="investors_ar.html" class="active">المستثمرون</a></li>
+        <li><a href="tenants_ar.html">المستأجرون</a></li>
+        <li><a href="projects_ar.html">المشاريع</a></li>
+        <li><a href="distributors_ar.html">الموزعون</a></li>
+        <li><a href="contact_ar.html">اتصل بنا</a></li>
+      </ul>
     </nav>
+  </div>
 </header>
 
-<section id="transparency">
-    <h2>الشفافية والأمان</h2>
-    <ul>
-        <li>📊 تقارير أداء ربع سنوية متاحة في حساب المستثمر الخاص بك.</li>
-        <li>🔒 يتم تدقيق الأموال والأصول سنويًا من قبل شركة مستقلة.</li>
-        <li>🌱 التزام بالمعايير البيئية والاجتماعية: كل مشروع يدعم الاستدامة الغذائية والطاقة.</li>
-        <li>📜 كل استثمار يتم توثيقه قانونيًا كملكية رسمية مصدقة من السلطات المحلية.</li>
-    </ul>
-</section>
+<div class="container">
 
-<section id="guarantees" class="guarantees" style="text-align:center;">
-    <h2>ضماناتنا القانونية</h2>
-    <p>تدقيق من قبل شركاء دوليين موثوقين.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/PwC_flame_logo.svg" alt="PwC">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Deloitte.svg" alt="Deloitte">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/EY_logo_2019.svg" alt="EY">
-</section>
+  <!-- الشفافية والأمان -->
+  <section>
+    <h2>الشفافية والشرعية والأمان</h2>
+    <p>
+      كل استثمار مدعوم <strong>بعقد ملكية رسمي مسجل وموثق من قبل السلطات المحلية المختصة</strong>.
+      يتم التحقق من كل عملية شراء عقارية أو زراعية <strong>من قبل موثق ومحامٍ مستقلين</strong>.
+      تحصل بالتالي على <strong>دليل قانوني رسمي</strong> بأن رأس مالك قد تحول إلى أصل حقيقي وآمن.
+    </p>
+    <div class="highlight">
+      <ul>
+        <li>📜 <strong>الضمان العقاري:</strong> كل مشروع مرتبط بعقد ملكية موثق ومعتمد قانونيًا.</li>
+        <li>📊 <strong>تقارير أداء ربع سنوية</strong> متاحة في لوحة المستثمر الخاصة بك.</li>
+        <li>🔒 <strong>تدقيق سنوي</strong> للصناديق والأصول من قبل شركة تدقيق مستقلة.</li>
+        <li>🌱 <strong>الالتزام بالاستدامة (ESG):</strong> جميع مشاريعنا تساهم في الأمن الغذائي والطاقة المتجددة.</li>
+      </ul>
+    </div>
+  </section>
 
-<section id="model">
+  <!-- النموذج المالي -->
+  <section>
     <h2>نموذجنا المالي</h2>
-    <p>تأتي إيراداتنا من الإيجارات المستقرة ومن بيع المنتجات الزراعية (قمح، ذرة، حليب، بيض...).</p>
-    <p><strong>يتم توزيع 90٪ من صافي الدخل</strong> كأرباح ربع سنوية على المستثمرين.</p>
+    <p>
+      وفقًا لوضعنا كـ <strong>شركة استثمار هجينة (SIH)</strong>، 
+      يتم توزيع <strong>90٪ من العوائد التشغيلية (FFO)</strong> بشكل ربع سنوي على المستثمرين.
+      هذا النموذج يضمن <strong>استقرار التدفقات المالية</strong> و<strong>شفافية كاملة في العوائد</strong>.
+    </p>
+    <div class="highlight">
+      <p>💰 توزيع الأصول:</p>
+      <ul>
+        <li>65٪ عقارات تجارية (مكاتب، متاجر من الفئة A)</li>
+        <li>35٪ أراضٍ زراعية متميزة بعقود إيجار طويلة الأجل</li>
+      </ul>
+    </div>
+  </section>
 
-    <div class="chart-container">
-        <canvas id="assetChart"></canvas>
+  <!-- العوائد والفرص -->
+  <section>
+    <h2>العوائد المستهدفة والفرص الاستثمارية</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>المشروع أ – عقارات تجارية</h3>
+        <p><strong>عائد مستهدف: 13٪ صافٍ سنويًا</strong></p>
+        <p>عقد إيجار تجاري لمدة 10 سنوات بإيجار متدرج. دخل إيجاري ثابت ومضمون.</p>
+      </div>
+      <div class="card">
+        <h3>المشروع ب – زراعة مستدامة</h3>
+        <p><strong>عائد مستهدف: 15٪ صافٍ سنويًا</strong></p>
+        <p>أراضٍ من الفئة الأولى بعقود إيجار لمدة 20 عامًا. دخل مضمون من البيع المباشر والتوزيع المحلي.</p>
+      </div>
     </div>
-    <script>
-        new Chart(document.getElementById('assetChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['العقارات التجارية (65%)', 'الأراضي الزراعية (35%)'],
-                datasets: [{ data: [65, 35], backgroundColor: ['#0c513f', '#91c788'] }]
-            },
-            options: { plugins: { legend: { position: 'bottom' } } }
-        });
-    </script>
-</section>
+    <div class="highlight">
+      <p>
+        📈 العوائد المذكورة هي أهداف تستند إلى الأداء التاريخي واستقرار الإيجارات.
+        <em>يمكنك طلب مذكرة الاستثمار الرسمية للتحقق من أهليتك كمستثمر مؤهل.</em>
+      </p>
+    </div>
+    <a href="contact_ar.html" class="cta">اطلب الفرص المتاحة</a>
+  </section>
 
-<section id="opportunities">
-    <h2>فرص الاستثمار</h2>
-    <p>المشروع (A): عائد سنوي مستهدف <strong>13٪ صافي</strong> – عقد إيجار تجاري لمدة 10 سنوات (مؤشر على التضخم).</p>
-    <p>المشروع (B): عائد سنوي مستهدف <strong>15٪ صافي</strong> – عقد زراعي لمدة 20 سنة.</p>
-    <p><em>تواصل معنا لمعرفة فرص الاستثمار المتاحة هذا الشهر.</em></p>
-</section>
+  <!-- برنامج السفراء -->
+  <section>
+    <h2>💚 برنامج السفراء: النمو المسؤول</h2>
+    <p>
+      حتى <strong>31 ديسمبر</strong>، استفد من <strong>برنامج الإحالة الحصري</strong>.
+      مقابل كل مستثمر جديد مؤهل تقوم بإحالته، تحصل على <strong>2٪</strong> من المبلغ المستثمر،
+      تُضاف إلى محفظتك بعد السنة الأولى.
+    </p>
+    <div class="highlight">
+      <p>🎁 مثال: إذا أحلت مستثمرًا بمبلغ 50,000 دولار → تحصل على مكافأة ولاء بقيمة 1,000 دولار.</p>
+      <p>طريقة بسيطة وعادلة لبناء مجتمع من المستثمرين المسؤولين.</p>
+    </div>
+  </section>
 
-<section id="referral">
-    <h2>💚 برنامج الإحالة</h2>
-    <p>حتى 31 ديسمبر: لكل مستثمر جديد تحيله، تحصل على <strong>2٪ من المبلغ المستثمر</strong> يُضاف تلقائيًا إلى محفظتك.</p>
-    <p>طريقة عادلة لتوسيع شبكة المستثمرين المسؤولين.</p>
-</section>
-
-<section id="faq">
-    <h2>الأسئلة الشائعة – المستثمرون</h2>
-    <div class="faq-item">
-        <h3>💰 كيف يتم حساب العائد؟</h3>
-        <p>نوزع ما لا يقل عن 90٪ من الأرباح التشغيلية (FFO) الناتجة عن الإيجارات بعد خصم المصاريف.</p>
-    </div>
-    <div class="faq-item">
-        <h3>هل العائد مضمون؟</h3>
-        <p>لا، يعتمد على أداء الأصول العقارية والزراعية. التنويع يقلل من المخاطر ويضمن الاستقرار.</p>
-    </div>
-    <div class="faq-item">
-        <h3>من هم المستأجرون؟</h3>
-        <p>شركات كبرى ومستثمرون زراعيون محترفون بعقود طويلة الأجل.</p>
-    </div>
-    <div class="faq-item">
-        <h3>هل الأسهم قابلة للتداول؟</h3>
-        <p>إذا كانت مدرجة: تداول يومي في السوق. إذا كانت خاصة: سيولة محدودة في فترات محددة.</p>
-    </div>
-</section>
+  <!-- الأسئلة الشائعة -->
+  <section class="faq">
+    <h2>❓ الأسئلة الشائعة</h2>
+    <p>اكتشف الإجابات على أكثر الأسئلة شيوعًا حول الأمان والسيولة والضرائب.</p>
+    <div id="faq-container"></div>
+  </section>
+</div>
 
 <footer>
-    © 2025 الاستثمار الأخضر والمستقر – جميع الحقوق محفوظة.
+  <p>© 2025 مجموعة SIH – أداء، عقارات، زراعة واستدامة مالية</p>
 </footer>
+
+<script>
+const faqData = [
+  { category: "💰 العائدات والتوزيع", q: "كيف يتم حساب العائد ولماذا هو مرتفع؟", a: "بصفتنا شركة استثمار عقاري هجينة، نوزع 90٪ من الأرباح التشغيلية على المستثمرين بشكل قانوني." },
+  { q: "هل العائد مضمون؟", a: "العائد المستهدف ليس مضمونًا ولكنه يستند إلى أداء أصول مؤجرة ومستقرة." },
+  { q: "كيف يقلل النموذج الهجين من المخاطر؟", a: "من خلال الجمع بين العقارات التجارية والأراضي الزراعية لضمان توازن اقتصادي مستدام." },
+  { category: "🛡️ الأمان والأصول", q: "من هم المستأجرون؟", a: "شركات كبرى ومشغلون زراعيون محترفون بعقود طويلة الأجل." },
+  { q: "كيف يتم حماية استثماري؟", a: "الاستثمار مدعوم بأصول حقيقية: عقارات مؤجرة وأراضٍ زراعية ذات قيمة متزايدة." },
+  { q: "كيف تتابعون الأثر البيئي والاجتماعي؟", a: "يتم تضمين مؤشرات الأداء البيئي والاجتماعي في تقاريرنا السنوية." },
+  { category: "💳 الجوانب القانونية والعملية", q: "كيف يمكنني شراء الأسهم؟", a: "عن طريق الاكتتاب الرسمي وفق القوانين المحلية. اتصل بفريق علاقات المستثمرين للمذكرة الرسمية." },
+  { q: "هل يمكنني بيع حصتي بسهولة؟", a: "في حالة الإدراج: السيولة يومية. في الصناديق الخاصة: إعادة شراء فصلية أو تحويل ثانوي." },
+  { q: "كيف تُفرض الضرائب على الأرباح؟", a: "حسب بلد الإقامة والوضع الضريبي. يُنصح باستشارة مستشار ضرائب متخصص." }
+];
+
+const container = document.getElementById("faq-container");
+let currentCategory = "";
+faqData.forEach(item => {
+  if (item.category && item.category !== currentCategory) {
+    currentCategory = item.category;
+    const h3 = document.createElement("h3");
+    h3.textContent = currentCategory;
+    container.appendChild(h3);
+  }
+  const faqItem = document.createElement("div");
+  faqItem.classList.add("faq-item");
+  const q = document.createElement("div");
+  q.classList.add("faq-question");
+  q.textContent = item.q;
+  const a = document.createElement("div");
+  a.classList.add("faq-answer");
+  a.innerHTML = `<p>${item.a}</p>`;
+  q.addEventListener("click", () => {
+    q.classList.toggle("active");
+    a.style.display = a.style.display === "block" ? "none" : "block";
+  });
+  faqItem.appendChild(q);
+  faqItem.appendChild(a);
+  container.appendChild(faqItem);
+});
+</script>
+
 </body>
 </html>

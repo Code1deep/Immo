@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستثمرون – استثمار أخضر ومستقر</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Tahoma', sans-serif; background:#fdfdfd; color:#333; line-height:1.8; margin:0; direction:rtl; }
+        header { background:#0c513f; color:#fff; padding:20px 10%; display:flex; justify-content:space-between; align-items:center; }
+        nav a { color:#fff; margin:0 8px; text-decoration:none; font-weight:600; }
+        section { padding:50px 10%; text-align:right; }
+        h1,h2 { color:#0c513f; }
+        .guarantees img { height:50px; margin:0 10px; }
+        .chart-container { width:300px; margin:auto; }
+        footer { background:#0c513f; color:#fff; text-align:center; padding:15px; font-size:14px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>منطقة المستثمرين</h1>
+    <nav>
+        <a href="investisseurs.html">FR</a> | 
+        <a href="investors_en.html">EN</a> | 
+        <a href="investors_ar.html"><strong>AR</strong></a>
+    </nav>
+</header>
+
+<section id="transparency">
+    <h2>الشفافية والأمان</h2>
+    <ul>
+        <li>📊 تقارير أداء ربع سنوية متاحة في حساب المستثمر الخاص بك.</li>
+        <li>🔒 يتم تدقيق الأموال والأصول سنويًا من قبل شركة مستقلة.</li>
+        <li>🌱 التزام بالمعايير البيئية والاجتماعية: كل مشروع يدعم الاستدامة الغذائية والطاقة.</li>
+        <li>📜 كل استثمار يتم توثيقه قانونيًا كملكية رسمية مصدقة من السلطات المحلية.</li>
+    </ul>
+</section>
+
+<section id="guarantees" class="guarantees" style="text-align:center;">
+    <h2>ضماناتنا القانونية</h2>
+    <p>تدقيق من قبل شركاء دوليين موثوقين.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/PwC_flame_logo.svg" alt="PwC">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Deloitte.svg" alt="Deloitte">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/EY_logo_2019.svg" alt="EY">
+</section>
+
+<section id="model">
+    <h2>نموذجنا المالي</h2>
+    <p>تأتي إيراداتنا من الإيجارات المستقرة ومن بيع المنتجات الزراعية (قمح، ذرة، حليب، بيض...).</p>
+    <p><strong>يتم توزيع 90٪ من صافي الدخل</strong> كأرباح ربع سنوية على المستثمرين.</p>
+
+    <div class="chart-container">
+        <canvas id="assetChart"></canvas>
+    </div>
+    <script>
+        new Chart(document.getElementById('assetChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['العقارات التجارية (65%)', 'الأراضي الزراعية (35%)'],
+                datasets: [{ data: [65, 35], backgroundColor: ['#0c513f', '#91c788'] }]
+            },
+            options: { plugins: { legend: { position: 'bottom' } } }
+        });
+    </script>
+</section>
+
+<section id="opportunities">
+    <h2>فرص الاستثمار</h2>
+    <p>المشروع (A): عائد سنوي مستهدف <strong>13٪ صافي</strong> – عقد إيجار تجاري لمدة 10 سنوات (مؤشر على التضخم).</p>
+    <p>المشروع (B): عائد سنوي مستهدف <strong>15٪ صافي</strong> – عقد زراعي لمدة 20 سنة.</p>
+    <p><em>تواصل معنا لمعرفة فرص الاستثمار المتاحة هذا الشهر.</em></p>
+</section>
+
+<section id="referral">
+    <h2>💚 برنامج الإحالة</h2>
+    <p>حتى 31 ديسمبر: لكل مستثمر جديد تحيله، تحصل على <strong>2٪ من المبلغ المستثمر</strong> يُضاف تلقائيًا إلى محفظتك.</p>
+    <p>طريقة عادلة لتوسيع شبكة المستثمرين المسؤولين.</p>
+</section>
+
+<section id="faq">
+    <h2>الأسئلة الشائعة – المستثمرون</h2>
+    <div class="faq-item">
+        <h3>💰 كيف يتم حساب العائد؟</h3>
+        <p>نوزع ما لا يقل عن 90٪ من الأرباح التشغيلية (FFO) الناتجة عن الإيجارات بعد خصم المصاريف.</p>
+    </div>
+    <div class="faq-item">
+        <h3>هل العائد مضمون؟</h3>
+        <p>لا، يعتمد على أداء الأصول العقارية والزراعية. التنويع يقلل من المخاطر ويضمن الاستقرار.</p>
+    </div>
+    <div class="faq-item">
+        <h3>من هم المستأجرون؟</h3>
+        <p>شركات كبرى ومستثمرون زراعيون محترفون بعقود طويلة الأجل.</p>
+    </div>
+    <div class="faq-item">
+        <h3>هل الأسهم قابلة للتداول؟</h3>
+        <p>إذا كانت مدرجة: تداول يومي في السوق. إذا كانت خاصة: سيولة محدودة في فترات محددة.</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 الاستثمار الأخضر والمستقر – جميع الحقوق محفوظة.
+</footer>
+</body>
+</html>

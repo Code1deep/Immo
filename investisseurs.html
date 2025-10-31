@@ -76,104 +76,249 @@
             text-align: center;
             padding: 25px;
         }
+
+        /* FAQ Section */
+        .faq {
+            margin-top: 40px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .faq-question {
+            background-color: #e8f5e9;
+            color: #1b3a24;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            position: relative;
+        }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+            transition: transform .3s;
+        }
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            display: none;
+            padding: 15px 25px;
+            background: #ffffff;
+            border-top: 1px solid #c8e6c9;
+        }
+        .faq-answer p {
+            margin: 10px 0;
+        }
     </style>
 </head>
-
 <body>
+    <header>
+        <h1>Programme Investisseurs</h1>
+        <p>Sécurisez votre capital : investissez dans le double rempart de l’immobilier commercial et agricole.</p>
+    </header>
 
-<header class="hero-section">
-    <h1>Investir dans la Stabilité Durable</h1>
-    <p>Sécurisez votre capital grâce au double rempart de l’immobilier commercial et agricole.</p>
-</header>
+    <div class="container">
+        <!-- SECTION 1 : Transparence et Sécurité -->
+        <section>
+            <h2>Transparence, Légalité et Sécurité</h2>
+            <p>
+                Chaque investissement est <strong>adossé à un titre foncier légalement enregistré et certifié par les autorités locales compétentes</strong>.  
+                Un notaire assermenté et un cabinet juridique indépendant valident chaque acquisition foncière ou immobilière.  
+                Vous recevez ainsi la <strong>preuve légale et assermentée</strong> que votre capital est converti en actif réel et sécurisé.
+            </p>
+            <div class="highlight">
+                <ul>
+                    <li>📜 <strong>Garantie Foncière :</strong> chaque projet correspond à un titre foncier assermenté, vérifié et authentifié par acte notarié.</li>
+                    <li>📊 <strong>Rapports trimestriels</strong> de performance disponibles dans votre espace investisseur.</li>
+                    <li>🔒 <strong>Audit annuel</strong> des fonds et actifs par un cabinet indépendant.</li>
+                    <li>🌱 <strong>Engagement ESG :</strong> tous nos projets favorisent la durabilité alimentaire et énergétique.</li>
+                </ul>
+            </div>
+        </section>
 
-<!-- SECTION 1 : TRANSPARENCE ET SÉCURITÉ -->
-<section class="transparence">
-    <h2>Transparence et Sécurité</h2>
-    <p>Chaque investissement est adossé à un <strong>titre foncier assermenté</strong>, validé par les autorités locales et consigné dans un registre légal.</p>
-    <ul>
-        <li>📊 <strong>Rapports trimestriels</strong> de performance disponibles dans votre espace investisseur.</li>
-        <li>🔒 <strong>Fonds et actifs audités</strong chaque année par un cabinet indépendant reconnu.</li>
-        <li>🌱 <strong>Engagement ESG</strong> : chaque projet soutient la durabilité alimentaire et énergétique.</li>
-    </ul>
-</section>
+        <!-- SECTION 2 : Modèle Financier -->
+        <section>
+            <h2>Notre Modèle Financier</h2>
+            <p>
+                Conformément à notre statut de <strong>Société d’Investissement Hybride (SIH)</strong>, 
+                <strong>90 % des FFO (Funds From Operations)</strong> sont redistribués chaque trimestre à nos investisseurs.  
+                Ce modèle garantit la <strong>stabilité des flux financiers</strong> et la <strong>transparence des rendements</strong>.
+            </p>
+            <div class="highlight">
+                <p>💰 Répartition de nos actifs :</p>
+                <ul>
+                    <li>65 % Immobilier commercial (bureaux, commerces de catégorie A)</li>
+                    <li>35 % Terres agricoles premières louées à long terme</li>
+                </ul>
+            </div>
+        </section>
 
-<!-- SECTION 2 : PROGRAMME INVESTISSEURS -->
-<section class="programme-investisseurs">
-    <h2>Programme Investisseurs</h2>
-    <p>Conformément à notre statut de <strong>Fonds Immobilier d’Investissement (FII)</strong>, 
-    <strong>90 % des Fonds Provenant des Opérations (FFO)</strong> sont redistribués sous forme de dividendes trimestriels.</p>
+        <!-- SECTION 3 : Rendements et Opportunités -->
+        <section>
+            <h2>Rendements Cibles et Opportunités</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Projet A — Immobilier</h3>
+                    <p><strong>Rendement cible : 13 % net annualisé</strong></p>
+                    <p>Bail commercial de 10 ans avec société partenaire indexé sur l’inflation. Revenus locatifs stables garantis.</p>
+                </div>
+                <div class="card">
+                    <h3>Projet B — Agricole</h3>
+                    <p><strong>Rendement cible : 15 % net annualisé</strong></p>
+                    <p>Exploitation sur terres de catégorie I, contrat de location de 20 ans. Revenu sécurisé par vente directe et distribution locale.</p>
+                </div>
+            </div>
+            <div class="highlight">
+                <p>
+                    📈 Les rendements indiqués sont des objectifs basés sur la performance historique et la stabilité locative des actifs.  
+                    <em>Accédez à notre registre d’offres et au Mémorandum d’Investissement sur demande pour vérifier votre éligibilité (investisseurs qualifiés).</em>
+                </p>
+            </div>
+            <a href="contact.html" class="cta">Demander les opportunités disponibles</a>
+        </section>
 
-    <div class="rendements">
-        <h3>Exemples de Projets Performants</h3>
-        <div class="projet">
-            <h4>Projet A – Immobilier Commercial</h4>
-            <p><strong>Rendement cible :</strong> 13 % net annualisé</p>
-            <p><em>Bail de 10 ans avec indexation sur l’inflation.</em></p>
-        </div>
-        <div class="projet">
-            <h4>Projet B – Immobilier Agricole</h4>
-            <p><strong>Rendement cible :</strong> 15 % net annualisé</p>
-            <p><em>Contrat de location de 20 ans sur terres de catégorie I, revenus sécurisés.</em></p>
-        </div>
-        <p><a href="contact.html" class="cta">Contactez-nous</a> pour connaître les opportunités d’investissement ouvertes ce mois-ci.</p>
+        <!-- SECTION 4 : Programme Parrainage -->
+        <section>
+            <h2>💚 Programme Ambassadeur : Croissance Responsable</h2>
+            <p>
+                Jusqu’au <strong>31 décembre</strong>, profitez de notre <strong>programme de parrainage exclusif</strong>.  
+                Pour chaque nouvel investisseur qualifié que vous parrainez, vous recevez <strong>2 %</strong> du montant investi, 
+                ajouté à votre portefeuille après la première année.
+            </p>
+            <div class="highlight">
+                <p>🎁 Exemple : Vous parrainez un nouvel investisseur de 50 000 $ → vous recevez 1 000 $ en bonus fidélité.</p>
+                <p>Un moyen simple et équitable de développer le réseau d’investisseurs responsables.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5 : FAQ -->
+        <section class="faq">
+            <h2>❓ Foire Aux Questions (FAQ)</h2>
+            <p>Adressez vos principales préoccupations sur la sécurité, la liquidité et la fiscalité de votre investissement.</p>
+
+            <!-- FAQ ITEMS -->
+            <div id="faq-container"></div>
+        </section>
     </div>
+        <!-- SECTION 4 : FOIRE AUX QUESTIONS (FAQ) -->
+        <section class="faq">
+            <h2>Foire Aux Questions (FAQ)</h2>
 
-    <div class="allocation">
-        <h3>Répartition du Portefeuille</h3>
-        <p>Nos actifs sont répartis de manière équilibrée :</p>
-        <ul>
-            <li>🏢 65 % Immobilier Commercial (Bureaux, Commerces)</li>
-            <li>🌾 35 % Terres Agricoles louées à long terme</li>
-        </ul>
-    </div>
-</section>
+            <h3>💰 Questions sur le Rendement et la Distribution</h3>
+            <p><strong>Q1.</strong> Comment le rendement (dividende) est-il calculé et pourquoi est-il si élevé ?<br>
+            <em>Notre statut de FII nous oblige à distribuer au moins 90 % de nos FFO. Le FFO correspond à la trésorerie issue des loyers, avant amortissement. Cela garantit un revenu régulier redistribué aux investisseurs.</em></p>
 
-<!-- SECTION 3 : PROGRAMME DE PARRAINAGE -->
-<section class="parrainage">
-    <h2>💚 Programme de Parrainage – Promotion jusqu’au 31 décembre</h2>
-    <p>Pour chaque nouvel investisseur que vous parrainez, vous recevez <strong>2 % du montant investi</strong>,
-    automatiquement ajouté à votre portefeuille après 12 mois d’investissement actif.</p>
-    <p>Un moyen simple et équitable de développer le réseau d’investisseurs responsables.</p>
-</section>
+            <p><strong>Q2.</strong> Le rendement ciblé est-il garanti ?<br>
+            <em>Non, il dépend de la performance locative. Nos taux (13 % et 15 %) sont des rendements cibles basés sur des projections réelles et sécurisées par des baux longs.</em></p>
 
-<!-- SECTION 4 : FOIRE AUX QUESTIONS (FAQ) -->
-<section class="faq">
-    <h2>Foire Aux Questions (FAQ)</h2>
+            <p><strong>Q3.</strong> Comment le portefeuille hybride minimise-t-il le risque ?<br>
+            <em>Notre modèle équilibre deux cycles économiques : immobilier commercial (urbain) et terres agricoles (alimentaire). Ce couplage stabilise les flux et réduit la volatilité.</em></p>
 
-    <h3>💰 Questions sur le Rendement et la Distribution</h3>
-    <p><strong>Q1.</strong> Comment le rendement (dividende) est-il calculé et pourquoi est-il si élevé ?<br>
-    <em>Notre statut de FII nous oblige à distribuer au moins 90 % de nos FFO. Le FFO correspond à la trésorerie issue des loyers, avant amortissement. Cela garantit un revenu régulier redistribué aux investisseurs.</em></p>
+            <h3>🛡️ Questions sur la Sécurité et les Actifs</h3>
+            <p><strong>Q4.</strong> Qui sont vos locataires ?<br>
+            <em>Grands groupes, commerces solides, et exploitants agricoles professionnels sous baux longs (WAULT élevé).</em></p>
 
-    <p><strong>Q2.</strong> Le rendement ciblé est-il garanti ?<br>
-    <em>Non, il dépend de la performance locative. Nos taux (13 % et 15 %) sont des rendements cibles basés sur des projections réelles et sécurisées par des baux longs.</em></p>
+            <p><strong>Q5.</strong> Comment la valeur de mon investissement est-elle protégée ?<br>
+            <em>Chaque part est adossée à un actif tangible : titres fonciers enregistrés, terres non délocalisables, et baux indexés sur l’inflation.</em></p>
 
-    <p><strong>Q3.</strong> Comment le portefeuille hybride minimise-t-il le risque ?<br>
-    <em>Notre modèle équilibre deux cycles économiques : immobilier commercial (urbain) et terres agricoles (alimentaire). Ce couplage stabilise les flux et réduit la volatilité.</em></p>
+            <p><strong>Q6.</strong> Comment suivez-vous l’impact durable ?<br>
+            <em>Nos rapports ESG mesurent l’efficacité énergétique, la rétention des locataires et les pratiques agricoles responsables.</em></p>
 
-    <h3>🛡️ Questions sur la Sécurité et les Actifs</h3>
-    <p><strong>Q4.</strong> Qui sont vos locataires ?<br>
-    <em>Grands groupes, commerces solides, et exploitants agricoles professionnels sous baux longs (WAULT élevé).</em></p>
+            <h3>💳 Questions Pratiques et Légales</h3>
+            <p><strong>Q7.</strong> Comment puis-je investir ?<br>
+            <em>En achetant des parts de notre FII. Certaines opportunités sont réservées aux investisseurs qualifiés, selon la réglementation locale.</em></p>
 
-    <p><strong>Q5.</strong> Comment la valeur de mon investissement est-elle protégée ?<br>
-    <em>Chaque part est adossée à un actif tangible : titres fonciers enregistrés, terres non délocalisables, et baux indexés sur l’inflation.</em></p>
+            <p><strong>Q8.</strong> Mes actions sont-elles liquides ?<br>
+            <em>Si le fonds est coté, elles peuvent être vendues librement. Sinon, les rachats sont possibles à intervalles trimestriels.</em></p>
 
-    <p><strong>Q6.</strong> Comment suivez-vous l’impact durable ?<br>
-    <em>Nos rapports ESG mesurent l’efficacité énergétique, la rétention des locataires et les pratiques agricoles responsables.</em></p>
+            <p><strong>Q9.</strong> Comment les dividendes sont-ils imposés ?<br>
+            <em>Les dividendes peuvent bénéficier d’un régime fiscal préférentiel selon la juridiction. Consultez un conseiller fiscal pour plus de détails.</em></p>
+        </section>
 
-    <h3>💳 Questions Pratiques et Légales</h3>
-    <p><strong>Q7.</strong> Comment puis-je investir ?<br>
-    <em>En achetant des parts de notre FII. Certaines opportunités sont réservées aux investisseurs qualifiés, selon la réglementation locale.</em></p>
+    <footer>
+        <p>© 2025 MasterWeb Invest – Performance, Fonds Immobilier, Agricole & Stabilité Durable</p>
+    </footer>
 
-    <p><strong>Q8.</strong> Mes actions sont-elles liquides ?<br>
-    <em>Si le fonds est coté, elles peuvent être vendues librement. Sinon, les rachats sont possibles à intervalles trimestriels.</em></p>
+    <script>
+        const faqData = [
+            {
+                category: "💰 Rendement et Distribution",
+                q: "Comment le rendement (dividende) est-il calculé et pourquoi est-il si élevé ?",
+                a: "Notre statut de FII nous oblige légalement à distribuer au moins 90 % de nos Fonds Provenant des Opérations (FFO)..."
+            },
+            {
+                q: "Le rendement ciblé est-il garanti ?",
+                a: "Non. Le rendement dépend de la performance locative du portefeuille d’actifs..."
+            },
+            {
+                q: "Comment le portefeuille hybride minimise-t-il le risque ?",
+                a: "Notre modèle combine immobilier commercial et terres agricoles pour équilibrer les cycles économiques."
+            },
+            {
+                category: "🛡️ Sécurité et Actifs",
+                q: "Qui sont les locataires de vos actifs ?",
+                a: "Des grandes entreprises (bureaux/commerces) et exploitants agricoles professionnels sous baux long terme."
+            },
+            {
+                q: "Comment la valeur de mon investissement est-elle protégée ?",
+                a: "La valeur est adossée à des actifs physiques : immobilier indexé et terres agricoles valorisées."
+            },
+            {
+                q: "Comment suivez-vous l’impact ESG ?",
+                a: "Nos rapports annuels incluent des indicateurs de performance ESG (énergie, durabilité, emploi rural)."
+            },
+            {
+                category: "💳 Aspects Pratiques et Légaux",
+                q: "Comment puis-je acheter des parts ?",
+                a: "En acquérant nos actions selon les réglementations locales. Contactez notre service investisseurs pour le Mémorandum officiel."
+            },
+            {
+                q: "Mes actions sont-elles liquides ?",
+                a: "Si cotées : liquidité quotidienne. Si fonds privé : rachats trimestriels ou via marché secondaire."
+            },
+            {
+                q: "Comment les dividendes sont-ils imposés ?",
+                a: "Selon votre juridiction et statut fiscal. Consultez un conseiller fiscal pour vos spécificités."
+            }
+        ];
 
-    <p><strong>Q9.</strong> Comment les dividendes sont-ils imposés ?<br>
-    <em>Les dividendes peuvent bénéficier d’un régime fiscal préférentiel selon la juridiction. Consultez un conseiller fiscal pour plus de détails.</em></p>
-</section>
+        const container = document.getElementById("faq-container");
+        let currentCategory = "";
 
-<footer>
-    <p>© 2025 MasterWeb Invest – Fonds Immobilier & Agricole Durable</p>
-</footer>
+        faqData.forEach(item => {
+            if (item.category && item.category !== currentCategory) {
+                currentCategory = item.category;
+                const h3 = document.createElement("h3");
+                h3.textContent = currentCategory;
+                container.appendChild(h3);
+            }
 
+            const faqItem = document.createElement("div");
+            faqItem.classList.add("faq-item");
+
+            const q = document.createElement("div");
+            q.classList.add("faq-question");
+            q.textContent = item.q;
+
+            const a = document.createElement("div");
+            a.classList.add("faq-answer");
+            a.innerHTML = `<p>${item.a}</p>`;
+
+            q.addEventListener("click", () => {
+                q.classList.toggle("active");
+                a.style.display = a.style.display === "block" ? "none" : "block";
+            });
+
+            faqItem.appendChild(q);
+            faqItem.appendChild(a);
+            container.appendChild(faqItem);
+        });
+    </script>
 </body>
 </html>

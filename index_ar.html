@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مجموعة SIH – الاستثمار في الاستقرار المستدام</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Tajawal', 'Amiri', sans-serif;
+      font-family: 'Tajawal', sans-serif;
       background: #f9f9f9;
       margin: 0;
       color: #333;
@@ -23,12 +26,13 @@
       text-align: center;
     }
 
+    /* === Sélecteur de langues (en haut à gauche en RTL) === */
     .lang-switch {
       position: absolute;
       top: 10px;
-      left: 20px; /* flipped for RTL */
+      left: 20px;
       background: rgba(255,255,255,0.15);
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 20px;
       font-size: 0.95em;
     }
@@ -68,18 +72,21 @@
     }
 
     nav ul li a:hover,
-    nav ul li a.active { background: #2e7d4b; }
+    nav ul li a.active {
+      background: #2e7d4b;
+    }
 
     section {
       padding: 50px 20px;
       max-width: 900px;
       margin: auto;
       text-align: right;
+      line-height: 1.8;
     }
 
     .hero {
       background: url('img/hero.jpg') center/cover no-repeat;
-      color: dark blue;
+      color: white;
       padding: 100px 20px;
       text-shadow: 0 2px 5px rgba(0,0,0,0.5);
       text-align: center;
@@ -91,6 +98,9 @@
       padding: 12px 24px;
       border-radius: 6px;
       text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+      font-weight: 500;
     }
 
     .btn:hover { background: #2e7d4b; }
@@ -112,8 +122,15 @@
       margin-top: 40px;
     }
 
-    footer a { color: #cde3d1; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    footer a {
+      color: #cde3d1;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width:600px){
       .lang-switch {
@@ -128,6 +145,7 @@
 </head>
 <body>
 
+  <!-- ======= HEADER ======= -->
   <header>
     <div class="lang-switch">
       🌐 
@@ -151,12 +169,14 @@
     </nav>
   </header>
 
+  <!-- ======= HERO ======= -->
   <section class="hero">
     <h2>استثمر في الاستقرار المستدام</h2>
     <p>نموذج هجين يجمع بين الأداء العقاري والأمن الغذائي والتوزيع العادل.</p>
     <a href="investors_ar.html" class="btn">انضم كمستثمر</a>
   </section>
 
+  <!-- ======= MODELE FINANCIER ======= -->
   <section class="modele">
     <h2>نموذجنا المالي</h2>
     <p>
@@ -169,6 +189,7 @@
     <p>نحن نعتمد نموذجاً مستداماً ذا أثر إيجابي: ربحية مستمرة، زراعة خضراء، وشمول اجتماعي.</p>
   </section>
 
+  <!-- ======= STRUCTURE ======= -->
   <section class="structure">
     <h2>هيكل مجموعة SIH</h2>
     <p>تنظيم واضح ومتكامل يضمن الاستقرار الدائم.</p>
@@ -187,12 +208,14 @@
     </div>
   </section>
 
+  <!-- ======= CALL TO ACTION ======= -->
   <section class="cta">
     <h2>انضم إلى الثورة الخضراء</h2>
     <p>كن جزءاً من نموذج استثماري مسؤول ومستقر وعادل.</p>
     <a href="investors_ar.html" class="btn">استثمر الآن</a>
   </section>
 
+  <!-- ======= FOOTER ======= -->
   <footer>
     <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة | الاستثمار الأخضر والمستدام</p>
     <p>

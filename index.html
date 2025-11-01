@@ -1,123 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIH Group – Investir dans la Stabilité Durable</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
-      <style>
-        body { font-family:'Segoe UI',sans-serif;background:#f9f9f9;margin:0;color:#333 }
-        header { background:#1a5632;color:white;text-align:center;padding:20px 0 }
-        nav ul { list-style:none;display:flex;justify-content:center;flex-wrap:wrap;margin:10px 0 0;padding:0 }
-        nav ul li { margin:5px 10px }
-        nav ul li a { color:white;text-decoration:none;padding:6px 12px;border-radius:4px }
-        nav ul li a:hover,nav ul li a.active{background:#2e7d4b}
-        .lang-switch{text-align:center;margin:10px 0;font-size:1.1em}
-        section { text-align:center;padding:50px 20px;max-width:900px;margin:auto }
-        .hero{background:url('img/hero.jpg') center/cover no-repeat;color:white;padding:100px 20px;text-shadow:0 2px 5px rgba(0,0,0,0.5)}
-        .btn{background:#1a5632;color:white;padding:12px 24px;border-radius:6px;text-decoration:none}
-        .btn:hover{background:#2e7d4b}
-        .orgchart{margin-top:40px}
-        .node{border:1px solid #cfe3cf;padding:15px;border-radius:10px;background:#fff;margin:10px auto;max-width:500px}
-        footer{text-align:center;background:#1a5632;color:white;padding:20px 0;margin-top:40px}
-        footer a{color:#cde3d1;text-decoration:none}
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIH Group – Investir dans la Stabilité Durable</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #1a5632;
+      color: white;
+      text-align: center;
+      padding: 20px 0 10px;
+      position: relative;
+    }
+
+    /* ===== LANG SWITCH (TOP RIGHT) ===== */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.95em;
+    }
+
+    .lang-switch a {
+      color: #e2f1e8;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 0 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 5px 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #2e7d4b;
+    }
+
+    /* ===== CONTENT SECTIONS ===== */
+    section {
+      text-align: center;
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero {
+      background: url('img/hero.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn {
+      background: #1a5632;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #2e7d4b;
+    }
+
+    .orgchart {
+      margin-top: 40px;
+    }
+
+    .node {
+      border: 1px solid #cfe3cf;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fff;
+      margin: 10px auto;
+      max-width: 500px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #cde3d1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .lang-switch {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- ======= HEADER ======= -->
-    <header>
-        <div class="lang-switch">
-          🌐 <a href="index.html">🇫🇷 Français</a> |
-          <a href="index_en.html">🇬🇧 English</a> |
-          <a href="index_ar.html">🇸🇦 العربية</a>
+  <!-- ======= HEADER ======= -->
+  <header>
+    <div class="lang-switch">
+      🌐 
+      <a href="index.html">🇫🇷 Français</a> |
+      <a href="index_en.html">🇬🇧 English</a> |
+      <a href="index_ar.html">🇸🇦 العربية</a>
+    </div>
+
+    <div class="container">
+      <h1>🌿 SIH Group</h1>
+      <p>Investir dans la Stabilité Durable</p>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="investisseurs.html">Investisseurs</a></li>
+          <li><a href="locataires.html">Locataires</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="distributeurs.html">Distributeurs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= SECTION HERO ======= -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Investir dans la Stabilité Durable</h2>
+      <p>Un modèle hybride combinant performance immobilière, sécurité alimentaire et distribution équitable.</p>
+      <a href="investisseurs.html" class="btn">Devenir Investisseur</a>
+    </div>
+  </section>
+
+  <!-- ======= SECTION MODELE FINANCIER ======= -->
+  <section class="modele">
+    <h2>Notre Modèle Financier</h2>
+    <p>
+      Nos revenus proviennent de loyers stables issus de baux commerciaux et agricoles à long terme,
+      ainsi que de la <strong>vente et distribution</strong> de nos produits (blé, orge, maïs, farine, lait,
+      œufs, beurre, poulet, dinde...).
+      <br><br>
+      <strong>90 % des revenus nets</strong> sont redistribués sous forme de dividendes à nos investisseurs.
+    </p>
+    <p>
+      Nous privilégions un modèle à impact positif : rentabilité durable, agriculture verte et inclusion sociale.
+    </p>
+  </section>
+
+  <!-- ======= SECTION STRUCTURE ======= -->
+  <section class="structure">
+    <h2>Structure du Groupe SIH</h2>
+    <p>Une organisation claire et intégrée pour garantir la stabilité durable.</p>
+
+    <div class="orgchart">
+      <div class="node parent">
+        <h3>🌿 SIH Group</h3>
+        <p>Holding principale — Investissement Vert & Durable</p>
+
+        <div class="children">
+          <div class="node child" id="immo">
+            <h4>🏢 SIH Immo</h4>
+            <p>Bureaux, commerces et résidences</p>
+          </div>
+          <div class="node child" id="agro">
+            <h4>🌾 SIH Agro</h4>
+            <p>Production agricole, élevage et transformation</p>
+          </div>
+          <div class="node child" id="distribution">
+            <h4>🚚 SIH Distribution</h4>
+            <p>Vente directe et réseau de distributeurs partenaires</p>
+          </div>
         </div>
-        <div class="container">
-            <h1>🌿 SIH Group</h1>
-            <p>Investir dans la Stabilité Durable</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Accueil</a></li>
-                    <li><a href="investisseurs.html">Investisseurs</a></li>
-                    <li><a href="locataires.html">Locataires</a></li>
-                    <li><a href="projets.html">Projets</a></li>
-                    <li><a href="distributeurs.html">Distributeurs</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- ======= SECTION HERO ======= -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Investir dans la Stabilité Durable</h2>
-            <p>Un modèle hybride combinant performance immobilière, sécurité alimentaire et distribution équitable.</p>
-            <a href="investisseurs.html" class="btn">Devenir Investisseur</a>
-        </div>
-    </section>
+  <!-- ======= SECTION APPEL À ACTION ======= -->
+  <section class="cta">
+    <h2>Rejoignez la Révolution Verte</h2>
+    <p>Participez à un modèle d’investissement responsable, stable et solidaire.</p>
+    <a href="investisseurs.html" class="btn">Investir Maintenant</a>
+  </section>
 
-    <!-- ======= SECTION MODELE FINANCIER ======= -->
-    <section class="modele">
-        <h2>Notre Modèle Financier</h2>
-        <p>
-            Nos revenus proviennent de loyers stables issus de baux commerciaux et agricoles à long terme,
-            ainsi que de la <strong>vente et distribution</strong> de nos produits (blé, orge, maïs, farine, lait,
-            œufs, beurre, poulet, dinde...).  
-            <br><br>
-            <strong>90 % des revenus nets</strong> sont redistribués sous forme de dividendes à nos investisseurs.
-        </p>
-        <p>
-            Nous privilégions un modèle à impact positif : rentabilité durable, agriculture verte et inclusion sociale.
-        </p>
-    </section>
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <p>© 2025 SIH Group – Tous droits réservés | Investissement Vert & Durable</p>
+    <p>
+      <a href="contact.html">Contact</a> |
+      <a href="projets.html">Projets</a> |
+      <a href="distributeurs.html">Distributeurs</a>
+    </p>
+  </footer>
 
-    <!-- ======= SECTION STRUCTURE ======= -->
-    <section class="structure">
-        <h2>Structure du Groupe SIH</h2>
-        <p>Une organisation claire et intégrée pour garantir la stabilité durable.</p>
-
-        <div class="orgchart">
-            <div class="node parent">
-                <h3>🌿 SIH Group</h3>
-                <p>Holding principale — Investissement Vert & Durable</p>
-
-                <div class="children">
-                    <div class="node child" id="immo">
-                        <h4>🏢 SIH Immo</h4>
-                        <p>Bureaux, commerces et résidences</p>
-                    </div>
-                    <div class="node child" id="agro">
-                        <h4>🌾 SIH Agro</h4>
-                        <p>Production agricole, élevage et transformation</p>
-                    </div>
-                    <div class="node child" id="distribution">
-                        <h4>🚚 SIH Distribution</h4>
-                        <p>Vente directe et réseau de distributeurs partenaires</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======= SECTION APPEL À ACTION ======= -->
-    <section class="cta">
-        <h2>Rejoignez la Révolution Verte</h2>
-        <p>Participez à un modèle d’investissement responsable, stable et solidaire.</p>
-        <a href="investisseurs.html" class="btn">Investir Maintenant</a>
-    </section>
-
-    <!-- ======= FOOTER ======= -->
-    <footer>
-        <p>© 2025 SIH Group – Tous droits réservés | Investissement Vert & Durable</p>
-        <p>
-            <a href="contact.html">Contact</a> |
-            <a href="projets.html">Projets</a> |
-            <a href="distributeurs.html">Distributeurs</a>
-        </p>
-    </footer>
-
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

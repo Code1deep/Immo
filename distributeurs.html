@@ -1,51 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distributeurs – SIH Group</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distributeurs – SIH Group</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+    }
+    header {
+      background-color: #1a5632;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    header p { margin: 5px 0 15px; color: #cde3d1; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0 0;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 5px 10px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
+
+    .lang-switch {
+      text-align: right;
+      margin: 15px 30px 0 0;
+      font-size: 1.1em;
+    }
+    .modele {
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 50px 20px;
+    }
+    .modele h2 { color: #1a5632; font-size: 2em; margin-bottom: 20px; }
+    .orgchart {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .node {
+      background: #eaf4ec;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .node h4 { color: #1a5632; margin-bottom: 10px; }
+    .cta {
+      margin-top: 40px;
+    }
+    .cta a.btn {
+      background: linear-gradient(90deg, #1a5632, #2e7d4b);
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: opacity 0.3s;
+    }
+    .cta a.btn:hover { opacity: 0.85; }
+    footer {
+      text-align: center;
+      background-color: #1a5632;
+      color: white;
+      padding: 15px 0;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
 <header>
-    <div class="container">
-        <h1>🌿 SIH Group</h1>
-        <p>Investir dans la Stabilité Durable</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="investisseurs.html">Investisseurs</a></li>
-                <li><a href="locataires.html">Locataires</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="distributeurs.html" class="active">Distributeurs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+  <h1>🌿 SIH Group</h1>
+  <p>Investir dans la Stabilité Durable</p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="investisseurs.html">Investisseurs</a></li>
+      <li><a href="locataires.html">Locataires</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="distributeurs.html" class="active">Distributeurs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
+<div class="lang-switch">
+  🌐 <a href="distributeurs.html">🇫🇷 Français</a> |
+  <a href="distributors_en.html">🇬🇧 English</a> |
+  <a href="distributors_ar.html">🇸🇦 العربية</a>
+</div>
+
 <section class="modele">
-    <h2>Nos Distributeurs Partenaires</h2>
-    <p>
-        SIH Distribution s’appuie sur un réseau de points de vente régionaux et de partenaires indépendants.  
-        Nos produits (farine, lait, œufs, céréales, volailles) sont vendus à prix amis et garantissent
-        un revenu équitable aux producteurs.
-    </p>
+  <h2>Nos Distributeurs Partenaires</h2>
+  <p>SIH Distribution s’appuie sur un réseau de points de vente régionaux et de partenaires indépendants.  
+     Nos produits (farine, lait, œufs, céréales, volailles) sont vendus à prix justes, garantissant un revenu équitable aux producteurs.</p>
 
-    <div class="orgchart">
-        <div class="node"><h4>🥖 Points de vente locaux</h4><p>Épiceries vertes et marchés fermiers</p></div>
-        <div class="node"><h4>🏪 Distributeurs régionaux</h4><p>Réseau certifié SIH Durable</p></div>
-        <div class="node"><h4>🌍 Export durable</h4><p>Marchés éthiques à l’international</p></div>
-    </div>
+  <div class="orgchart">
+    <div class="node"><h4>🥖 Points de vente locaux</h4><p>Épiceries vertes et marchés fermiers</p></div>
+    <div class="node"><h4>🏪 Distributeurs régionaux</h4><p>Réseau certifié SIH Durable</p></div>
+    <div class="node"><h4>🌍 Export durable</h4><p>Marchés éthiques à l’international</p></div>
+  </div>
 
-    <div class="cta">
-        <h2>Devenir Distributeur Agréé</h2>
-        <a href="contact.html" class="btn">S’inscrire</a>
-    </div>
+  <div class="cta">
+    <h2>Devenir Distributeur Agréé</h2>
+    <a href="contact.html" class="btn">S’inscrire</a>
+  </div>
 </section>
 
 <footer>
-    <p>© 2025 SIH Group – Tous droits réservés</p>
+  <p>© 2025 SIH Group – Tous droits réservés</p>
 </footer>
 </body>
 </html>

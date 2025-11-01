@@ -7,249 +7,184 @@
   <link rel="stylesheet" href="css/style.css">
   <style>
     body {
-      font-family: "Poppins", sans-serif;
-      background: #f8faf8;
-      color: #1b3a24;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fdf9;
+      color: #2b3a2b;
       margin: 0;
-      line-height: 1.7;
     }
     header {
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      background: linear-gradient(90deg, #007a3d, #00994c);
       color: white;
-      text-align: center;
-      padding: 60px 20px 80px;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       position: relative;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      letter-spacing: 0.5px;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-    .lang-switch {
+    .language-switch {
       position: absolute;
       top: 15px;
-      right: 25px;
-      display: flex;
-      gap: 10px;
-      font-weight: 600;
+      right: 20px;
     }
-    .lang-switch a {
+    .language-switch a {
       color: white;
-      text-decoration: underline;
+      margin-left: 10px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .lang-switch a:hover {
-      opacity: 0.8;
+    h1 {
+      margin: 0;
+      font-size: 1.8em;
     }
     nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       list-style: none;
       padding: 0;
-      margin-top: 30px;
+      display: flex;
       gap: 15px;
+      justify-content: center;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
     nav a.active {
-      text-decoration: underline;
+      border-bottom: 2px solid #f7d16e;
     }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 60px 25px;
-    }
+
     section {
-      margin-bottom: 70px;
+      padding: 40px 10%;
+      background-color: #fff;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
     h2 {
-      color: #2e7d32;
-      border-left: 5px solid #2e7d32;
+      color: #007a3d;
+      border-left: 5px solid #f7d16e;
       padding-left: 10px;
-      font-size: 1.7rem;
     }
     h3 {
-      color: #1b3a24;
+      color: #d88b00;
     }
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 30px;
-    }
-    .highlight {
-      background: #e8f5e9;
-      border-left: 4px solid #2e7d32;
-      padding: 20px 25px;
+    .portfolio {
+      background: #f5fff5;
+      border-left: 4px solid #00994c;
+      padding: 15px 20px;
+      margin: 15px 0;
       border-radius: 8px;
-      margin-top: 15px;
     }
     .cta {
-      display: inline-block;
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
-      color: white;
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 25px;
-      transition: background 0.3s;
+      background: linear-gradient(90deg, #ffb703, #ffcc33);
+      color: #2b3a2b;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 40px;
     }
-    .cta:hover {
-      background: #1b5e20;
+    .cta a {
+      background-color: #007a3d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta a:hover {
+      background-color: #005c2b;
     }
     footer {
-      background: #1b3a24;
-      color: #c8e6c9;
+      background-color: #004d2a;
+      color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-    }
-    /* Simple responsive chart */
-    .chart-container {
-      text-align: center;
-      margin: 40px 0;
-    }
-    canvas {
-      max-width: 480px;
+      padding: 15px 0;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="lang-switch">
-    <a href="investisseurs.html">🇫🇷 Français</a>
-    <a href="investors_en.html">🇬🇧 English</a>
-    <a href="investors_ar.html">🇸🇦 العربية</a>
+  <div class="language-switch">
+    <a href="investisseurs_en.html">EN</a> | 
+    <a href="investisseurs_ar.html">AR</a>
   </div>
-
-  <h1>🌿 SIH Group</h1>
-  <p>Investir dans la Stabilité Durable</p>
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="investisseurs.html" class="active">Investisseurs</a></li>
-      <li><a href="locataires.html">Locataires</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="distributeurs.html">Distributeurs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container" style="text-align:center;">
+    <h1>🌿 SIH Group</h1>
+    <p>Investir dans la Stabilité Durable</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="investisseurs.html" class="active">Investisseurs</a></li>
+        <li><a href="locataires.html">Locataires</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="distributeurs.html">Distributeurs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-  <!-- I. Classification des Risques -->
-  <section>
-    <h2>I. Restructuration de la Classification des Risques</h2>
-    <p>Nos investisseurs peuvent choisir entre trois portefeuilles stratégiques, adaptés à leur profil de risque et à leurs objectifs de rendement.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>1️⃣ Portefeuille Résilience</h3>
-        <p><strong>Risque faible, rendement modeste</strong></p>
-        <p>Focalisé sur des revenus locatifs stables et garantis via des baux à long terme (fermes de catégorie I, immeubles résidentiels de qualité, locaux commerciaux premium).</p>
-      </div>
-      <div class="card">
-        <h3>2️⃣ Portefeuille Équilibré</h3>
-        <p><strong>Risque modéré, rendement moyen</strong></p>
-        <p>60 % d’actifs locatifs stables et 40 % de projets de développement maîtrisés (construction, rénovation, valorisation d’actifs existants).</p>
-      </div>
-      <div class="card">
-        <h3>3️⃣ Portefeuille Croissance</h3>
-        <p><strong>Risque modéré à élevé, rendement élevé</strong></p>
-        <p>Investissements ciblés dans des projets à fort potentiel : agriculture intensive durable, immeubles de bureaux neufs, exportation de produits agricoles.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- II. Rendements et Sécurité -->
-  <section>
-    <h2>II. Rendements Cibles et Opportunités</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🏢 Projet A — Immobilier Commercial</h3>
-        <p><strong>Rendement cible : 13 % net annualisé</strong></p>
-        <p>Bail commercial de 10 ans indexé sur l’inflation, offrant des revenus locatifs stables et sécurisés.</p>
-      </div>
-      <div class="card">
-        <h3>🌾 Projet B — Terres Agricoles Premières</h3>
-        <p><strong>Rendement cible : 15 % net annualisé</strong></p>
-        <p>Exploitation sur terres de catégorie I, sous contrat de location de 20 ans avec un exploitant corporatif majeur. Revenu fixe et protégé des aléas agricoles.</p>
-      </div>
-    </div>
-
-    <div class="chart-container">
-      <canvas id="assetChart"></canvas>
-    </div>
-
-    <div class="highlight">
-      <p>💡 Chaque projet est adossé à des actifs réels et enregistrés. Nos rendements cibles reposent sur la performance historique et la stabilité locative du portefeuille.</p>
-    </div>
-    <a href="contact.html" class="cta">Découvrir les offres d’investissement</a>
-  </section>
-
-  <!-- III. Légalité, Sécurité et ESG -->
-  <section>
-    <h2>III. Légalité, Sécurité et Durabilité ESG</h2>
-    <p>
-      Chaque investissement fait l’objet d’une <strong>double certification</strong> :  
-      1️⃣ validation notariale et juridique,  
-      2️⃣ conformité ESG (Environnement, Social, Gouvernance).
-    </p>
-    <div class="highlight">
-      <ul>
-        <li>📜 <strong>Garantie foncière :</strong> chaque projet est adossé à un titre foncier vérifié par acte notarié.</li>
-        <li>🔍 <strong>Audit indépendant :</strong> contrôle annuel des fonds et actifs par un cabinet agréé.</li>
-        <li>📈 <strong>Rapports trimestriels :</strong> performance détaillée disponible dans votre espace investisseur.</li>
-        <li>🌱 <strong>Engagement ESG :</strong> priorisation des projets favorisant la durabilité alimentaire et énergétique.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div style="text-align:center;">
-    <a href="projets.html" class="cta">Voir nos projets en cours</a>
+<section>
+  <h2>I. Restructuration de la Classification des Risques</h2>
+  <p>Nos futurs investisseurs peuvent allouer leur capital selon trois profils de risque, chacun conçu pour répondre à un objectif de rendement spécifique :</p>
+  
+  <div class="portfolio">
+    <h3>1️⃣ Portefeuille Résilience (Risque Faible, Rendement Modeste)</h3>
+    <p>Concentration maximale sur les revenus locatifs stables et sécurisés : baux à long terme sur terres agricoles de catégorie I, location de locaux commerciaux et appartements résidentiels de qualité.</p>
   </div>
-</div>
+
+  <div class="portfolio">
+    <h3>2️⃣ Portefeuille Équilibré (Risque Modéré, Rendement Moyen)</h3>
+    <p>Combinaison stratégique d'actifs locatifs stables (60%) et de projets de développement maîtrisés (40%) tels que l’acquisition de biens résidentiels moyen standing et l’optimisation des actifs existants.</p>
+  </div>
+
+  <div class="portfolio">
+    <h3>3️⃣ Portefeuille Croissance (Risque Modéré/Élevé, Rendement Élevé)</h3>
+    <p>Investissement ciblé dans des projets à fort potentiel de plus-value : production agricole, construction d'immeubles de bureaux neufs, exportation de produits agricoles via notre réseau de distribution intégré.</p>
+  </div>
+</section>
+
+<section>
+  <h2>II. Clarification du Projet Agricole et du Rendement</h2>
+  
+  <div class="portfolio">
+    <h3>🌾 Projet A — Immobilier Commercial</h3>
+    <ul>
+      <li><strong>Rendement Cible :</strong> 13 % net annualisé</li>
+      <li><strong>Sécurité :</strong> Bail commercial de 10 ans indexé sur l’inflation</li>
+      <li>Revenus locatifs stables garantis par société partenaire.</li>
+    </ul>
+  </div>
+
+  <div class="portfolio">
+    <h3>🌻 Projet B — Terres Agricoles Premières</h3>
+    <ul>
+      <li><strong>Rendement Cible :</strong> 15 % net annualisé</li>
+      <li><strong>Sécurité :</strong> Contrat de location de 20 ans avec exploitant agricole majeur</li>
+      <li>Revenu fixe annuel protégeant contre les risques de récolte et de marché.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>III. Sécurité, Légalité et Engagement ESG</h2>
+  <p><strong>Transparence, Légalité et Sécurité :</strong> Chaque investissement est adossé à un titre foncier légalement enregistré et certifié par les autorités locales compétentes.</p>
+  <ul>
+    <li><strong>Garantie Foncière :</strong> Titre foncier assermenté, vérifié et authentifié par acte notarié.</li>
+    <li><strong>Rapports et Audit :</strong> Rapports trimestriels et audit annuel par cabinet indépendant.</li>
+    <li><strong>Engagement ESG :</strong> Tous nos projets favorisent la durabilité alimentaire et énergétique.</li>
+  </ul>
+</section>
+
+<section class="cta">
+  <h2>🤝 Programme de Parrainage</h2>
+  <p>Invitez un ami ou un collègue à rejoindre SIH Group et bénéficiez d’une bonification sur votre rendement annuel !</p>
+  <a href="contact.html">Parrainer un Investisseur</a>
+</section>
 
 <footer>
-  <p>© 2025 SIH Group – Investissement Immobilier & Agricole Durable</p>
+  <p>© 2025 SIH Group – Tous droits réservés</p>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  const ctx = document.getElementById('assetChart');
-  new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Immobilier Commercial', 'Terres Agricoles'],
-      datasets: [{
-        data: [65, 35],
-        backgroundColor: ['#43a047', '#81c784'],
-        hoverOffset: 10
-      }]
-    },
-    options: {
-      plugins: { legend: { position: 'bottom' } }
-    }
-  });
-</script>
 
 </body>
 </html>

@@ -23,7 +23,6 @@
     }
     header h1 { margin: 0; font-size: 2em; }
     header p { margin: 5px 0 15px; color: #FF8C00; }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -42,6 +41,7 @@
     }
     nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
 
+    /* LANG SWITCH */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -60,21 +60,17 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    .lang-switch a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
 
-    section.modele {
+    .modele {
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       max-width: 900px;
       margin: 40px auto;
       padding: 50px 20px;
-      text-align: center;
     }
-    section.modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; }
-
+    .modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; text-align: center; }
+    .modele p { text-align: center; }
     .orgchart {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -86,10 +82,10 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
     }
     .node h4 { color: #FF8C00; margin-bottom: 10px; }
-
-    .cta { margin-top: 40px; }
+    .cta { text-align: center; margin-top: 40px; }
     .cta a.btn {
       background: linear-gradient(90deg, #1a5632, #2e7d4b);
       color: #FFC72C;
@@ -99,7 +95,6 @@
       transition: opacity 0.3s;
     }
     .cta a.btn:hover { opacity: 0.85; }
-
     footer {
       text-align: center;
       background-color: #1a5632;
@@ -125,7 +120,7 @@
 
     <nav>
       <ul>
-        <li><a href="index_ar.html">الصفحة الرئيسية</a></li>
+        <li><a href="index.html">الصفحة الرئيسية</a></li>
         <li><a href="investors_ar.html">المستثمرون</a></li>
         <li><a href="tenants_ar.html">المستأجرون</a></li>
         <li><a href="projects_ar.html">المشاريع</a></li>
@@ -136,19 +131,21 @@
   </header>
 
   <section class="modele">
-    <h2>شركاؤنا في التوزيع</h2>
-    <p>تعتمد SIH للتوزيع على شبكة من نقاط البيع الإقليمية وشركاء مستقلين.  
-       تُباع منتجاتنا (الطحين، الحليب، البيض، الحبوب، الدواجن) بأسعار عادلة تضمن دخلاً منصفًا للمنتجين.</p>
+    <h2>شركاؤنا من الموزعين</h2>
+    <p>
+      تعتمد SIH للتوزيع على شبكة من نقاط البيع الإقليمية والشركاء المستقلين.  
+      تُباع منتجاتنا (الطحين، الحليب، البيض، الحبوب، الدواجن) بأسعار عادلة تضمن دخلاً منصفًا للمنتجين.
+    </p>
 
     <div class="orgchart">
-      <div class="node"><h4>🥖 نقاط البيع المحلية</h4><p>محلات البقالة الخضراء والأسواق الزراعية</p></div>
-      <div class="node"><h4>🏪 الموزعون الإقليميون</h4><p>شبكة SIH المستدامة المعتمدة</p></div>
+      <div class="node"><h4>🥖 نقاط البيع المحلية</h4><p>محلات خضراء وأسواق المزارعين</p></div>
+      <div class="node"><h4>🏪 الموزعون الإقليميون</h4><p>شبكة SIH المعتمدة للاستدامة</p></div>
       <div class="node"><h4>🌍 التصدير المستدام</h4><p>الأسواق الأخلاقية الدولية</p></div>
     </div>
 
     <div class="cta">
       <h2>كن موزعًا معتمدًا</h2>
-      <a href="contact_ar.html" class="btn">سجل الآن</a>
+      <a href="contact_ar.html" class="btn">سجّل الآن</a>
     </div>
   </section>
 

@@ -3,170 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investor Program – MasterWeb</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Investors – SIH Group</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     body {
-      font-family: "Poppins", sans-serif;
-      background-color: #f6f9f6;
-      color: #1b3a24;
-      line-height: 1.7;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fdf9;
+      color: #2b3a2b;
       margin: 0;
     }
     header {
-      background: linear-gradient(to right, #2e7d32, #81c784);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       position: relative;
-    }
-    header h1 {
-      font-size: 2.2rem;
-      margin: 0;
     }
     .lang-switch {
       position: absolute;
-      top: 15px;
-      right: 25px;
-      display: flex;
-      gap: 10px;
+      top: 10px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.95em;
     }
     .lang-switch a {
-      color: white;
-      text-decoration: underline;
-      font-weight: 600;
-      transition: opacity 0.2s;
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
     .lang-switch a:hover {
-      opacity: 0.8;
+      background: #cde3d1;
+      color: #1a5632;
     }
+    h1 { margin: 0; font-size: 1.8em; }
     nav ul {
       list-style: none;
       padding: 0;
-      margin-top: 25px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 15px;
+      justify-content: center;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
     nav a.active {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
+      border-bottom: 2px solid #f7d16e;
     }
     section {
-      margin-bottom: 60px;
+      padding: 40px 10%;
+      background-color: #fff;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    h2 {
-      color: #2e7d32;
-      border-left: 5px solid #2e7d32;
-      padding-left: 10px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      padding: 25px;
-      transition: transform .3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .highlight {
-      background-color: #e8f5e9;
-      border-left: 4px solid #388e3c;
+    h2 { color: #8A2BE2; border-left: 5px solid #f7d16e; padding-left: 10px; }
+    h3 { color: #d88b00; }
+    .portfolio {
+      background: #f5fff5;
+      border-left: 4px solid #00994c;
       padding: 15px 20px;
-      margin-top: 10px;
+      margin: 15px 0;
+      border-radius: 8px;
     }
     .cta {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: #2e7d32;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: background .3s;
-    }
-    .cta:hover {
-      background-color: #1b5e20;
-    }
-    footer {
-      background: #1b3a24;
-      color: #c8e6c9;
-      text-align: center;
+      background: linear-gradient(90deg, #ffb703, #ffcc33);
+      color: #2b3a2b;
       padding: 25px;
-    }
-    /* FAQ Section */
-    .faq {
+      border-radius: 12px;
+      text-align: center;
       margin-top: 40px;
     }
-    .faq-item {
-      background: white;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      overflow: hidden;
+    .cta a {
+      background-color: #007a3d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
-    .faq-question {
-      background-color: #e8f5e9;
-      color: #1b3a24;
-      padding: 15px 20px;
-      cursor: pointer;
-      font-weight: 600;
-      position: relative;
+    .cta a:hover { background-color: #005c2b; }
+    footer {
+      background-color: #004d2a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
     }
-    .faq-question::after {
-      content: '+';
-      position: absolute;
-      right: 20px;
-      font-size: 20px;
-      transition: transform .3s;
-    }
-    .faq-question.active::after {
-      transform: rotate(45deg);
-    }
-    .faq-answer {
-      display: none;
-      padding: 15px 25px;
-      background: #ffffff;
-      border-top: 1px solid #c8e6c9;
-    }
-    .faq-answer p {
-      margin: 10px 0;
-    }
+    .faq-item { margin-bottom: 10px; border: 1px solid #dcdcdc; border-radius: 8px; overflow: hidden; }
+    .faq-question { background-color: #e9f6ea; padding: 12px 16px; cursor: pointer; font-weight: bold; color: #007a3d; }
+    .faq-answer { display: none; padding: 12px 16px; background-color: #fff; color: #2b3a2b; }
+    .faq-question.active { background-color: #c8ebcb; }
+    .highlight { background-color: #fff5e1; border-left: 4px solid #ffa500; padding: 15px; margin-top: 15px; border-radius: 6px; }
   </style>
 </head>
 <body>
 
 <header>
   <div class="lang-switch">
-    <a href="investisseurs.html">🇫🇷 Français</a>
-    <a href="investors_en.html">🇬🇧 English</a>
+    🌐 
+    <a href="investisseurs.html">🇫🇷 Français</a> |
+    <a href="investors_en.html">🇬🇧 English</a> |
     <a href="investors_ar.html">🇸🇦 العربية</a>
   </div>
 
-  <div class="container">
+  <div class="container" style="text-align:center;">
     <h1>🌿 SIH Group</h1>
-    <h1>Investor Program</h1>
-    <p>Secure your capital: invest in the dual protection of commercial and agricultural real estate.</p>
     <p>Investing in Sustainable Stability</p>
     <nav>
       <ul>
-        <li><a href="index_en.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="investors_en.html" class="active">Investors</a></li>
         <li><a href="tenants_en.html">Tenants</a></li>
         <li><a href="projects_en.html">Projects</a></li>
@@ -177,105 +131,94 @@
   </div>
 </header>
 
-<div class="container">
-  <!-- SECTION 1 : Transparency and Security -->
-  <section>
-    <h2>Transparency, Legality and Security</h2>
-    <p>
-      Each investment is <strong>backed by a land title legally registered and certified by the competent local authorities</strong>. 
-      A sworn notary and an independent law firm validate every land or real estate acquisition. 
-      You thus receive the <strong>official, legally certified proof</strong> that your capital is converted into a real and secured asset.
-    </p>
-    <div class="highlight">
-      <ul>
-        <li>📜 <strong>Land Guarantee:</strong> each project corresponds to a sworn, verified, and notarized land title.</li>
-        <li>📊 <strong>Quarterly performance reports</strong> available in your investor dashboard.</li>
-        <li>🔒 <strong>Annual audit</strong> of funds and assets by an independent audit firm.</li>
-        <li>🌱 <strong>ESG Commitment:</strong> all our projects promote food and energy sustainability.</li>
-      </ul>
-    </div>
-  </section>
+<section>
+  <h2>I. Risk Classification Restructuring</h2>
+  <p>Our investors can allocate their capital among three portfolios, each balancing return and security:</p>
 
-  <!-- SECTION 2 : Financial Model -->
-  <section>
-    <h2>Our Financial Model</h2>
-    <p>
-      In accordance with our status as a <strong>Hybrid Investment Company (SIH)</strong>, 
-      <strong>90% of the Funds From Operations (FFO)</strong> are distributed quarterly to our investors. 
-      This model ensures <strong>financial flow stability</strong> and <strong>full transparency of returns</strong>.
-    </p>
-    <div class="highlight">
-      <p>💰 Allocation of our assets:</p>
-      <ul>
-        <li>65% Commercial real estate (offices, category A retail)</li>
-        <li>35% Prime agricultural land under long-term leases</li>
-      </ul>
-    </div>
-  </section>
+  <div class="portfolio">
+    <h3>1️⃣ Resilience Portfolio (Low Risk)</h3>
+    <p>Focus on stable rental income (long-term leases, premium farmland, high-quality residential real estate).</p>
+  </div>
 
-  <!-- SECTION 3 : Returns and Opportunities -->
-  <section>
-    <h2>Target Returns and Opportunities</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Project A — Real Estate</h3>
-        <p><strong>Target return: 13% net annualized</strong></p>
-        <p>10-year commercial lease with an indexed rent. Guaranteed stable rental income.</p>
-      </div>
-      <div class="card">
-        <h3>Project B — Agriculture</h3>
-        <p><strong>Target return: 15% net annualized</strong></p>
-        <p>Operation on category I lands, 20-year lease contract. Income secured by direct sales and local distribution.</p>
-      </div>
-    </div>
-    <div class="highlight">
-      <p>
-        📈 The indicated returns are objectives based on historical performance and the rental stability of our assets. 
-        <em>Access our Offer Register and Investment Memorandum on request to verify your eligibility (qualified investors).</em>
-      </p>
-    </div>
-    <a href="contact_en.html" class="cta">Request available opportunities</a>
-  </section>
+  <div class="portfolio">
+    <h3>2️⃣ Balanced Portfolio (Moderate Risk)</h3>
+    <p>60% stable rental assets + 40% controlled development projects (residential construction and asset optimization).</p>
+  </div>
 
-  <!-- SECTION 4 : Ambassador Program -->
-  <section>
-    <h2>💚 Ambassador Program: Responsible Growth</h2>
-    <p>
-      Until <strong>December 31st</strong>, take advantage of our <strong>exclusive referral program</strong>. 
-      For every qualified new investor you refer, you receive <strong>2%</strong> of the invested amount, 
-      added to your portfolio after the first year.
-    </p>
-    <div class="highlight">
-      <p>🎁 Example: You refer a new investor of $50,000 → you receive $1,000 in loyalty bonus.</p>
-      <p>A simple and fair way to grow a community of responsible investors.</p>
-    </div>
-  </section>
+  <div class="portfolio">
+    <h3>3️⃣ Growth Portfolio (High Risk)</h3>
+    <p>Investment in high-potential projects: agricultural production, new real estate, export through integrated network.</p>
+  </div>
+</section>
 
-  <!-- SECTION 5 : FAQ -->
-  <section class="faq">
-    <h2>❓ Frequently Asked Questions (FAQ)</h2>
-    <p>Find answers to your main concerns about investment security, liquidity, and taxation.</p>
-    <div id="faq-container"></div>
-  </section>
-</div>
+<section>
+  <h2>II. Agricultural Projects and Target Returns</h2>
+  <div class="portfolio">
+    <h3>🌾 Project A — Commercial Real Estate</h3>
+    <ul>
+      <li><strong>Return:</strong> 13% net annually</li>
+      <li><strong>Security:</strong> 10-year lease indexed to inflation</li>
+      <li>Guaranteed income through partner company.</li>
+    </ul>
+  </div>
+
+  <div class="portfolio">
+    <h3>🌻 Project B — Premium Farmland</h3>
+    <ul>
+      <li><strong>Return:</strong> 15% net annually</li>
+      <li><strong>Guarantee:</strong> 20-year contract with corporate farmer</li>
+      <li>Fixed annual income protected from market fluctuations.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>III. Security, Legality, and ESG Commitment</h2>
+  <p><strong>Transparency, Legality, and Security:</strong> Every investment is backed by legally registered land titles certified by local authorities.</p>
+  <ul>
+    <li><strong>Land Guarantee:</strong> Notarized, certified title deeds.</li>
+    <li><strong>Reports & Audits:</strong> Quarterly reports and annual audit by an independent firm.</li>
+    <li><strong>ESG Commitment:</strong> All our projects promote food and energy sustainability.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>💚 Ambassador Program: Responsible Growth</h2>
+  <p>
+    Until <strong>December 31</strong>, enjoy our exclusive <strong>Referral Program</strong>.  
+    For every qualified new investor you refer, you receive <strong>2%</strong> of their invested amount, added to your portfolio after the first year.
+  </p>
+  <div class="highlight">
+    <p>🎁 <strong>Example:</strong> Refer a $50,000 investor → earn a $1,000 loyalty bonus.</p>
+    <p>A fair and simple way to grow a network of responsible investors.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>🤝 Referral Program</h2>
+  <p>Invite a friend or colleague to join SIH Group and enjoy a bonus on your annual return!</p>
+  <a href="contact_en.html">Refer an Investor</a>
+</section>
+
+<section class="faq">
+  <h2>❓ Frequently Asked Questions (FAQ)</h2>
+  <p>Find answers about security, returns, and taxation of your investment.</p>
+  <div id="faq-container"></div>
+</section>
 
 <footer>
-  <p>© 2025 MasterWeb Invest – Performance, Real Estate, Agriculture & Sustainable Stability</p>
+  <p>© 2025 SIH Group – Real Estate, Agriculture & Sustainable Stability</p>
 </footer>
 
 <script>
 const faqData = [
-  { category: "💰 Yield and Distribution", q: "How is the return (dividend) calculated and why is it so high?", a: "Our REIT status legally requires us to distribute at least 90% of our Funds From Operations (FFO)..." },
-  { q: "Is the target yield guaranteed?", a: "No. The yield depends on the rental performance of the asset portfolio..." },
-  { q: "How does the hybrid portfolio minimize risk?", a: "Our model combines commercial real estate and agricultural land to balance economic cycles." },
-  { category: "🛡️ Security and Assets", q: "Who are your tenants?", a: "Large corporations (offices/retail) and professional agricultural operators under long-term leases." },
-  { q: "How is my investment value protected?", a: "The value is backed by physical assets: indexed real estate and revalued agricultural land." },
-  { q: "How do you track ESG impact?", a: "Our annual reports include ESG performance indicators (energy, sustainability, rural employment)." },
-  { category: "💳 Practical and Legal Aspects", q: "How can I purchase shares?", a: "By acquiring our securities under local regulations. Contact our investor relations team for the official Memorandum." },
-  { q: "Are my shares liquid?", a: "If listed: daily liquidity. If private fund: quarterly redemptions or secondary market transfers." },
-  { q: "How are dividends taxed?", a: "Depending on your jurisdiction and tax status. Please consult a tax advisor for details." }
+  { category: "💰 Returns & Distribution", q: "How is the return calculated?", a: "Returns come from rental income and property gains. 90% of net income is distributed to investors." },
+  { q: "Is the return guaranteed?", a: "No, it depends on performance, but portfolio diversification reduces risks." },
+  { category: "🛡️ Security & Assets", q: "Who are the tenants?", a: "Agri-businesses, certified farmers, and commercial firms under long-term leases." },
+  { q: "How is my investment protected?", a: "Each share is backed by a real notarized land title and annual audits." },
+  { category: "💳 Practical & Legal Aspects", q: "How can I invest?", a: "By subscribing through our investor service. Each case is notarized and validated." },
+  { q: "Are my shares liquid?", a: "Yes, depending on the fund type: listed or quarterly buyback." }
 ];
-
 const container = document.getElementById("faq-container");
 let currentCategory = "";
 faqData.forEach(item => {
@@ -302,6 +245,5 @@ faqData.forEach(item => {
   container.appendChild(faqItem);
 });
 </script>
-
 </body>
 </html>

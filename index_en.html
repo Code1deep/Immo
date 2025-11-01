@@ -4,30 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIH Group – Investing in Sustainable Stability</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f4f9f4, #e8f5e9);
       margin: 0;
-      color: #333;
+      color: #1a1a1a;
+      text-align: left;
     }
 
     header {
-      background: #1a5632;
+      background: linear-gradient(to right, #1a5632, #236b3c);
       color: white;
-      text-align: center;
       padding: 20px 0 10px;
       position: relative;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    /* === Language Switch === */
+    /* Language selector */
     .lang-switch {
       position: absolute;
       top: 10px;
       right: 20px;
       background: rgba(255,255,255,0.15);
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 20px;
       font-size: 0.95em;
     }
@@ -61,38 +66,61 @@
     nav ul li a {
       color: white;
       text-decoration: none;
-      padding: 6px 12px;
+      padding: 8px 16px;
       border-radius: 4px;
-      transition: background 0.3s ease;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     nav ul li a:hover,
-    nav ul li a.active { background: #2e7d4b; }
-
-    section {
-      text-align: center;
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
+    nav ul li a.active {
+      background: #2e7d4b;
     }
 
     .hero {
-      background: url('img/hero.jpg') center/cover no-repeat;
-      color: dark blue;
-      padding: 100px 20px;
+      background: linear-gradient(rgba(26, 86, 50, 0.6), rgba(26, 86, 50, 0.6)), url('img/hero.jpg') center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
       text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
     }
 
     .btn {
       background: #1a5632;
       color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
+      padding: 12px 26px;
+      border-radius: 8px;
       text-decoration: none;
-      transition: background 0.3s ease;
+      font-weight: 600;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
     }
 
-    .btn:hover { background: #2e7d4b; }
+    .btn:hover {
+      background: #2e7d4b;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+      color: #222;
+    }
+
+    section h2 {
+      color: #1a5632;
+      font-size: 1.6em;
+      border-left: 6px solid #2e7d4b;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
 
     .node {
       border: 1px solid #cfe3cf;
@@ -101,17 +129,43 @@
       background: #fff;
       margin: 10px auto;
       max-width: 500px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .structure {
+      background: #f5faf5;
+      border-top: 1px solid #d6e6d8;
+      border-bottom: 1px solid #d6e6d8;
+    }
+
+    .cta {
+      background: linear-gradient(to right, #1a5632, #2e7d4b);
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
     }
 
     footer {
       text-align: center;
       background: #1a5632;
       color: white;
-      padding: 20px 0;
+      padding: 25px 10px;
       margin-top: 40px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
     }
 
-    footer a { color: #cde3d1; text-decoration: none; }
+    footer a {
+      color: #cde3d1;
+      text-decoration: none;
+      margin: 0 6px;
+      font-weight: 500;
+    }
+
     footer a:hover { text-decoration: underline; }
 
     @media (max-width:600px){
@@ -127,6 +181,7 @@
 </head>
 <body>
 
+  <!-- ======= HEADER ======= -->
   <header>
     <div class="lang-switch">
       🌐 
@@ -137,6 +192,7 @@
 
     <h1>🌿 SIH Group</h1>
     <p>Investing in Sustainable Stability</p>
+
     <nav>
       <ul>
         <li><a href="index_en.html" class="active">Home</a></li>
@@ -149,48 +205,53 @@
     </nav>
   </header>
 
+  <!-- ======= HERO ======= -->
   <section class="hero">
     <h2>Invest in Sustainable Stability</h2>
     <p>A hybrid model combining real estate performance, food security, and fair distribution.</p>
-    <a href="investors_en.html" class="btn">Become an Investor</a>
+    <a href="investors_en.html" class="btn">Join as Investor</a>
   </section>
 
+  <!-- ======= FINANCIAL MODEL ======= -->
   <section class="modele">
     <h2>Our Financial Model</h2>
     <p>
-      Our income comes from stable rents from long-term commercial and agricultural leases, 
-      as well as <strong>sales and distribution</strong> of our products 
+      Our revenues come from stable rents for long-term commercial and agricultural leases,
+      as well as <strong>sales and distribution</strong> of our products
       (wheat, barley, corn, flour, milk, eggs, butter, chicken, turkey...).
       <br><br>
-      <strong>90% of net income</strong> is redistributed as dividends to our investors.
+      <strong>90% of net income</strong> is distributed to investors as dividends.
     </p>
-    <p>We favor a positive-impact model: sustainable profitability, green agriculture, and social inclusion.</p>
+    <p>We operate a sustainable and impactful model: continuous profitability, green agriculture, and social inclusion.</p>
   </section>
 
+  <!-- ======= STRUCTURE ======= -->
   <section class="structure">
     <h2>SIH Group Structure</h2>
-    <p>A clear and integrated organization ensuring durable stability.</p>
+    <p>A transparent and balanced organization ensuring lasting stability.</p>
 
     <div class="orgchart">
       <div class="node parent">
         <h3>🌿 SIH Group</h3>
-        <p>Main Holding – Green & Sustainable Investment</p>
+        <p>Main holding company – Green & sustainable investment</p>
 
         <div class="children">
-          <div class="node child"><h4>🏢 SIH Immo</h4><p>Offices, retail, and residences</p></div>
-          <div class="node child"><h4>🌾 SIH Agro</h4><p>Agriculture, livestock, and processing</p></div>
-          <div class="node child"><h4>🚚 SIH Distribution</h4><p>Direct sales and partner network</p></div>
+          <div class="node child"><h4>🏢 SIH Immo</h4><p>Offices, Retail, Housing</p></div>
+          <div class="node child"><h4>🌾 SIH Agro</h4><p>Farming, Livestock, Food Processing</p></div>
+          <div class="node child"><h4>🚚 SIH Distribution</h4><p>Direct sales and distributor network</p></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ======= CALL TO ACTION ======= -->
   <section class="cta">
     <h2>Join the Green Revolution</h2>
     <p>Be part of a responsible, stable, and fair investment model.</p>
     <a href="investors_en.html" class="btn">Invest Now</a>
   </section>
 
+  <!-- ======= FOOTER ======= -->
   <footer>
     <p>© 2025 SIH Group – All Rights Reserved | Green & Sustainable Investment</p>
     <p>

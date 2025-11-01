@@ -17,6 +17,7 @@
       color: white;
       text-align: center;
       padding: 20px 0;
+      position: relative;
     }
     header h1 { margin: 0; font-size: 2em; }
     header p { margin: 5px 0 15px; color: #FF8C00; }
@@ -38,7 +39,7 @@
     }
     nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
 
-    /* ===== LANG SWITCH (TOP RIGHT) ===== */
+    /* Langues */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -48,7 +49,6 @@
       border-radius: 20px;
       font-size: 0.95em;
     }
-
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
@@ -58,41 +58,64 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    .modele {
-      text-align: center;
+    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
+
+    section {
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      max-width: 900px;
+      max-width: 1100px;
       margin: 40px auto;
-      padding: 50px 20px;
+      padding: 40px 25px;
     }
-    .modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; }
-    .orgchart {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
+    h2 {
+      color: #1a5632;
+      border-left: 5px solid #FF8C00;
+      padding-left: 10px;
     }
-    .node {
-      background: #eaf4ec;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    h3 { color: #FF8C00; margin-top: 30px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      font-size: 0.95em;
     }
-    .node h4 { color: #FF8C00; margin-bottom: 10px; }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      vertical-align: top;
+    }
+    th {
+      background-color: #eaf4ec;
+      color: #1a5632;
+    }
+    tr:nth-child(even) { background-color: #f9fdf9; }
+
+    .highlight {
+      background-color: #fffbe6;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
     .cta {
+      text-align: center;
       margin-top: 40px;
     }
     .cta a.btn {
       background: linear-gradient(90deg, #1a5632, #2e7d4b);
       color: #FFC72C;
-      padding: 10px 25px;
+      padding: 12px 30px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
       transition: opacity 0.3s;
     }
     .cta a.btn:hover { opacity: 0.85; }
+
     footer {
       text-align: center;
       background-color: #1a5632;
@@ -129,25 +152,156 @@
     </nav>
   </header>
 
-<section class="modele">
-  <h2>Nos Distributeurs Partenaires</h2>
-  <p>SIH Distribution s’appuie sur un réseau de points de vente régionaux et de partenaires indépendants.  
-     Nos produits (farine, lait, œufs, céréales, volailles) sont vendus à prix justes, garantissant un revenu équitable aux producteurs.</p>
+  <!-- ===== SECTION 1 : Vision ===== -->
+  <section>
+    <h2>🌾 Stratégie de Distribution Locale et Saisonnière (SIH Distribution)</h2>
+    <p>
+      L’intégration d’une stratégie de distribution détaillée renforce l’aspect <strong>solidarité</strong> et <strong>ESG</strong>,
+      en démontrant comment les terres agricoles contribuent non seulement à des loyers fixes, mais aussi à un
+      <strong>écosystème de production, transformation et exportation durable</strong>.  
+      L’investissement dans les terres agricoles finance donc à la fois la production, la logistique,
+      et les infrastructures de distribution locales et régionales.
+    </p>
+  </section>
 
-  <div class="orgchart">
-    <div class="node"><h4>🥖 Points de vente locaux</h4><p>Épiceries vertes et marchés fermiers</p></div>
-    <div class="node"><h4>🏪 Distributeurs régionaux</h4><p>Réseau certifié SIH Durable</p></div>
-    <div class="node"><h4>🌍 Export durable</h4><p>Marchés éthiques à l’international</p></div>
-  </div>
+  <!-- ===== SECTION 2 : Prix ===== -->
+  <section>
+    <h3>I. Niveaux de Prix – Garantie de Prix Juste</h3>
+    <p>
+      Le concept de <strong>prix juste</strong> est central pour le marketing ESG.
+      Les prix reflètent une prime de qualité et d’éthique, tout en restant accessibles pour le consommateur.
+    </p>
 
-  <div class="cta">
-    <h2>Devenir Distributeur Agréé</h2>
-    <a href="contact.html" class="btn">S’inscrire</a>
-  </div>
-</section>
+    <table>
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Description de la Logique de Prix</th>
+          <th>Prix Minimal</th>
+          <th>Prix Maximal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prix Minimal</td>
+          <td>Couvre les coûts de production + marge équitable pour l’exploitant (Garantie).</td>
+          <td>Prix de gros pour les grandes institutions (hôpitaux, écoles).</td>
+          <td>Prix pour les ventes en volume aux marchés de quartier.</td>
+        </tr>
+        <tr>
+          <td>Prix Maximal</td>
+          <td>Reflet de la qualité, du caractère local et des coûts de distribution en zone urbaine.</td>
+          <td>Prix de détail pour le consommateur final (magasins spécialisés, paniers à emporter).</td>
+          <td>Prix pour les produits transformés ou haut de gamme (miel bio, pains artisanaux).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-<footer>
-  <p>© 2025 SIH Group – Tous droits réservés</p>
-</footer>
+  <!-- ===== SECTION 3 : Distribution Rurale ===== -->
+  <section>
+    <h3>II. Distribution en Zone Rurale – Proximité et Service</h3>
+    <p>
+      Dans les zones rurales, la distribution est conçue pour renforcer la <strong>proximité économique</strong>
+      et soutenir les exploitants. Le groupe SIH peut <strong>cofinancer les véhicules, dépôts et infrastructures</strong> de stockage.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fréquence</th>
+          <th>Point de Distribution</th>
+          <th>Produits Distribués</th>
+          <th>Rôle de SIH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Quotidienne</td>
+          <td>Micro-Dépôts Ruraux</td>
+          <td>Œufs, Lait, Produits de boulangerie (livraison quotidienne).</td>
+          <td>Financement de l’aménagement, réfrigération et location à prix réduit pour les exploitants.</td>
+        </tr>
+        <tr>
+          <td>Hebdomadaire</td>
+          <td>Marchés de Producteurs Locaux</td>
+          <td>Volailles, Légumes de saison, Farine et céréales.</td>
+          <td>Soutien logistique (tentes, transport), subvention des frais de marché.</td>
+        </tr>
+        <tr>
+          <td>Saisonnier</td>
+          <td>Points de Collecte de Récolte</td>
+          <td>Miel, Huile, Pommes, Fruits à conservation longue.</td>
+          <td>Investissement dans des unités de transformation légères (moulins, pressoirs partagés).</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== SECTION 4 : Distribution Urbaine ===== -->
+  <section>
+    <h3>III. Distribution en Zone Urbaine – Valeur et Visibilité</h3>
+    <p>
+      En milieu urbain, SIH privilégie les <strong>circuits courts</strong> à haute valeur ajoutée, renforçant la visibilité
+      et l’impact ESG du portefeuille.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fréquence</th>
+          <th>Point de Distribution</th>
+          <th>Produits Distribués</th>
+          <th>Rôle de SIH</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hebdomadaire</td>
+          <td>Paniers à Emporter (AMAP)</td>
+          <td>Mix de légumes, œufs, pain – abonnement prépayé.</td>
+          <td>Utilisation des locaux commerciaux SIH (65 % du portefeuille) comme points de distribution sans frais.</td>
+        </tr>
+        <tr>
+          <td>Hebdomadaire</td>
+          <td>Épiceries Fines / Boulangeries</td>
+          <td>Produits transformés (farine, beurre, confitures, soupes).</td>
+          <td>Contrats d’approvisionnement stables et sélectifs avec partenaires urbains.</td>
+        </tr>
+        <tr>
+          <td>Saisonnier</td>
+          <td>Événements Éphémères (Pop-up Stores)</td>
+          <td>Paniers-cadeaux, volailles de fête, vins ou cidres locaux.</td>
+          <td>Organisation, logistique du froid et financement des installations temporaires.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== SECTION 5 : Avantage ESG ===== -->
+  <section>
+    <h3>Avantage Concurrentiel SIH Distribution</h3>
+    <div class="highlight">
+      <p>
+        La force de SIH réside dans sa double maîtrise : <strong>terres productives + locaux commerciaux urbains</strong>.
+        En éliminant les intermédiaires coûteux, SIH :
+      </p>
+      <ul>
+        <li>Garantit un <strong>loyer agricole stable</strong> et sécurisé aux exploitants partenaires.</li>
+        <li>Offre un <strong>prix juste</strong> et transparent aux consommateurs finaux.</li>
+        <li>Renforce l’image de marque responsable du groupe, soutenant les critères <strong>ESG et d’impact positif</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <h2>🤝 Devenir Distributeur Agréé SIH</h2>
+      <p>Rejoignez un réseau durable et solidaire, au service des producteurs et des consommateurs responsables.</p>
+      <a href="contact.html" class="btn">S’inscrire</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 SIH Group – Performance, Agriculture et Distribution Durable</p>
+  </footer>
 </body>
 </html>

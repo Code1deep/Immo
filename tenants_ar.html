@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المستأجرون – مجموعة SIH</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      direction: rtl;
+      text-align: right;
+    }
+    header {
+      background-color: #1a5632;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    header p { margin: 5px 0 15px; color: #FF8C00; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0 0;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 5px 10px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
+
+    /* LANG SWITCH */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.95em;
+    }
+    .lang-switch a {
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .modele {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 50px 20px;
+    }
+    .modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; text-align: center; }
+    .modele p { text-align: center; }
+    ul { list-style: none; padding: 0; text-align: center; }
+    ul li { margin: 10px 0; font-size: 1.1em; }
+    .cta { text-align: center; margin-top: 40px; }
+    .cta a.btn {
+      background: linear-gradient(90deg, #1a5632, #2e7d4b);
+      color: #FFC72C;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: opacity 0.3s;
+    }
+    .cta a.btn:hover { opacity: 0.85; }
+    footer {
+      text-align: center;
+      background-color: #1a5632;
+      color: white;
+      padding: 15px 0;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="lang-switch">
+      🌐 
+      <a href="locataires.html">🇫🇷 Français</a> |
+      <a href="tenants_en.html">🇬🇧 English</a> |
+      <a href="tenants_ar.html">🇸🇦 العربية</a>
+    </div>
+
+    <h1>🌿 مجموعة SIH</h1>
+    <p>الاستثمار في الاستقرار المستدام</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">الصفحة الرئيسية</a></li>
+        <li><a href="investors_ar.html">المستثمرون</a></li>
+        <li><a href="tenants_ar.html" class="active">المستأجرون</a></li>
+        <li><a href="projects_ar.html">المشاريع</a></li>
+        <li><a href="distributors_ar.html">الموزعون</a></li>
+        <li><a href="contact_ar.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="modele">
+    <h2>مستأجرونا</h2>
+    <p>
+      نتعاون مع مزارعين وحرفيين وتجار على المدى الطويل.  
+      تضمن عقود الإيجار لدينا استقرار الدخل واحترام البيئة.
+    </p>
+
+    <ul>
+      <li>🌾 مزارع زراعية معتمدة بيئيًا</li>
+      <li>🏭 شركات الأغذية المحلية</li>
+      <li>🏠 متاجر محلية مستدامة</li>
+    </ul>
+
+    <div class="cta">
+      <h2>كن مستأجرًا شريكًا</h2>
+      <p>احصل على أراضٍ ومواقع زراعية بإيجارات عادلة.</p>
+      <a href="contact_ar.html" class="btn">قدّم الآن</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>

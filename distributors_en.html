@@ -20,7 +20,7 @@
       position: relative;
     }
     header h1 { margin: 0; font-size: 2em; }
-    header p { margin: 5px 0 15px; color: #FF8C00; }
+    header p { margin: 5px 0 15px; color: #FFC72C; }
     nav ul {
       list-style: none;
       display: flex;
@@ -39,7 +39,7 @@
     }
     nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
 
-    /* ===== LANG SWITCH ===== */
+    /* ===== LANG SWITCH (TOP RIGHT) ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -67,8 +67,11 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 50px 20px;
+      line-height: 1.8;
     }
     .modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; }
+    .modele p { font-size: 1.05em; }
+
     .orgchart {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,7 +85,27 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .node h4 { color: #FF8C00; margin-bottom: 10px; }
-    .cta { margin-top: 40px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fdfdfd;
+      border: 1px solid #ccc;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    table th {
+      background-color: #1a5632;
+      color: white;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
     .cta a.btn {
       background: linear-gradient(90deg, #1a5632, #2e7d4b);
       color: #FFC72C;
@@ -104,6 +127,7 @@
 </head>
 <body>
 
+  <!-- ===== HEADER ===== -->
   <header>
     <div class="lang-switch">
       🌐 
@@ -117,7 +141,7 @@
 
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index_en.html">Home</a></li>
         <li><a href="investors_en.html">Investors</a></li>
         <li><a href="tenants_en.html">Tenants</a></li>
         <li><a href="projects_en.html">Projects</a></li>
@@ -127,27 +151,105 @@
     </nav>
   </header>
 
-  <section class="modele">
-    <h2>Our Partner Distributors</h2>
-    <p>
-      SIH Distribution relies on a network of regional outlets and independent partners.  
-      Our products (flour, milk, eggs, cereals, poultry) are sold at fair prices, ensuring an equitable income for producers.
-    </p>
+<section class="modele">
+  <h2>SIH Distribution – Local & Seasonal Strategy</h2>
+  <p><strong>SIH Group</strong> integrates a comprehensive distribution strategy connecting productive farmlands with urban commercial hubs.  
+  This model ensures fair pricing for farmers, high-quality local food for consumers,  
+  and strengthens rural logistics and sustainable infrastructure.</p>
 
-    <div class="orgchart">
-      <div class="node"><h4>🥖 Local Outlets</h4><p>Eco-friendly shops and farmers’ markets</p></div>
-      <div class="node"><h4>🏪 Regional Distributors</h4><p>Certified SIH Sustainable Network</p></div>
-      <div class="node"><h4>🌍 Sustainable Export</h4><p>Ethical international markets</p></div>
-    </div>
+  <h3>I. Price Levels (Fair Price Guarantee)</h3>
+  <table>
+    <tr>
+      <th>Category</th>
+      <th>Pricing Logic</th>
+      <th>Minimum Price</th>
+      <th>Maximum Price</th>
+    </tr>
+    <tr>
+      <td>Minimum Price</td>
+      <td>Cover production costs + fair margin for the farmer</td>
+      <td>Wholesale pricing for major institutions (hospitals, schools)</td>
+      <td>Volume pricing for neighborhood markets</td>
+    </tr>
+    <tr>
+      <td>Maximum Price</td>
+      <td>Reflects quality, locality, and urban distribution costs</td>
+      <td>Retail price for final urban consumers</td>
+      <td>Premium and processed goods (e.g., organic honey, artisan bread)</td>
+    </tr>
+  </table>
 
-    <div class="cta">
-      <h2>Become an Authorized Distributor</h2>
-      <a href="contact_en.html" class="btn">Register</a>
-    </div>
-  </section>
+  <h3>II. Rural Distribution (Proximity & Service)</h3>
+  <table>
+    <tr>
+      <th>Frequency</th>
+      <th>Distribution Point</th>
+      <th>Example Products</th>
+      <th>Role</th>
+    </tr>
+    <tr>
+      <td>Daily</td>
+      <td>Micro Rural Depots</td>
+      <td>Fresh eggs, milk, bakery items</td>
+      <td>Funding refrigeration, storage, and low-rent premises for local partners</td>
+    </tr>
+    <tr>
+      <td>Weekly</td>
+      <td>Local Farmers’ Markets</td>
+      <td>Poultry, seasonal vegetables, grains and flour</td>
+      <td>Logistical support, covering market stall costs for small producers</td>
+    </tr>
+    <tr>
+      <td>Seasonal</td>
+      <td>Harvest Collection Points</td>
+      <td>Honey, oil, apples and preserved fruits</td>
+      <td>Investment in light processing units shared among tenant farmers</td>
+    </tr>
+  </table>
 
-  <footer>
-    <p>© 2025 SIH Group – All Rights Reserved</p>
-  </footer>
+  <h3>III. Urban Distribution (Value & Visibility)</h3>
+  <table>
+    <tr>
+      <th>Frequency</th>
+      <th>Distribution Point</th>
+      <th>Example Products</th>
+      <th>Role</th>
+    </tr>
+    <tr>
+      <td>Weekly</td>
+      <td>Prepaid Basket System (CSA)</td>
+      <td>SIH Farm Basket (vegetables, eggs, bread)</td>
+      <td>Using owned retail properties as distribution hubs – rent-free</td>
+    </tr>
+    <tr>
+      <td>Weekly</td>
+      <td>Partnerships with Fine Grocers / Bakeries</td>
+      <td>Specialty flour, butter, full-cream milk, jams, soups</td>
+      <td>Stable supply contracts for urban retail partners</td>
+    </tr>
+    <tr>
+      <td>Seasonal</td>
+      <td>Pop-up Events & Direct Sales</td>
+      <td>Festive poultry, holiday baskets, local cider or wine</td>
+      <td>Organizing and financing cold chain logistics for temporary events</td>
+    </tr>
+  </table>
+
+  <div class="node" style="margin-top:40px;">
+    <h4>🏆 Competitive Advantage of SIH Distribution</h4>
+    <p>SIH Group uniquely owns both the productive agricultural lands and the urban retail properties,  
+    removing costly intermediaries and securing stable income for partner farmers.  
+    This model ensures fair prices for consumers and reinforces SIH’s ESG leadership and brand credibility.</p>
+  </div>
+
+  <div class="cta">
+    <h2>Become an Authorized Distributor</h2>
+    <a href="contact_en.html" class="btn">Register Now</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 SIH Group – All rights reserved</p>
+</footer>
 </body>
 </html>

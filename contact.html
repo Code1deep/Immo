@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – SIH Group</title>
-  <link rel="stylesheet" href="css/style.css">
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -13,14 +13,47 @@
       margin: 0;
       padding: 0;
     }
+
+    /* ===== HEADER ===== */
     header {
-      background-color: #1a5632;
+      background: linear-gradient(to right, #1a5632, #2e7d4b);
       color: white;
+      padding: 20px 0 15px;
+      position: relative;
       text-align: center;
-      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
+
     header h1 { margin: 0; font-size: 2em; }
-    header p { margin: 5px 0 15px; color: #cde3d1; }
+    header p { margin: 5px 0 15px; color: #cde3d1; font-weight: 500; }
+
+    /* ===== LANGUAGE SWITCH ===== */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.95em;
+    }
+
+    .lang-switch a {
+      color: #e2f1e8;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    /* ===== NAVIGATION ===== */
     nav ul {
       list-style: none;
       display: flex;
@@ -29,92 +62,144 @@
       margin: 10px 0 0;
       flex-wrap: wrap;
     }
+
     nav ul li { margin: 5px 10px; }
+
     nav ul li a {
       color: white;
       text-decoration: none;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background 0.3s;
+      font-weight: 500;
     }
-    nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
-    .lang-switch {
-      text-align: center;
-      margin: 15px 0;
-      font-size: 1.1em;
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #2e7d4b;
     }
+
+    /* ===== MAIN SECTION ===== */
     .modele {
       text-align: center;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       max-width: 800px;
-      margin: 40px auto;
-      padding: 50px 20px;
+      margin: 60px auto;
+      padding: 60px 30px;
     }
-    .modele h2 { color: #1a5632; font-size: 2em; margin-bottom: 15px; }
+
+    .modele h2 {
+      color: #1a5632;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .modele p {
+      color: #444;
+      font-size: 1.05em;
+    }
+
     .contact-details {
       text-align: left;
       line-height: 1.8;
-      margin-top: 30px;
+      margin-top: 35px;
       font-size: 1.1em;
+      padding: 0 20px;
     }
-    .contact-details a { color: #1a5632; text-decoration: none; }
+
+    .contact-details p { margin: 10px 0; }
+
+    .contact-details a {
+      color: #1a5632;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
     .contact-details a:hover { text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      background-color: #1a5632;
+      background: #1a5632;
       color: white;
-      padding: 15px 0;
+      padding: 18px 0;
       margin-top: 60px;
-      font-size: 0.9em;
+      font-size: 0.95em;
+    }
+
+    footer a {
+      color: #cde3d1;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .lang-switch {
+        position: static;
+        display: block;
+        text-align: center;
+        background: rgba(255,255,255,0.2);
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header>
-  <h1>🌿 SIH Group</h1>
-  <p>Investir dans la Stabilité Durable</p>
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="investisseurs.html">Investisseurs</a></li>
-      <li><a href="locataires.html">Locataires</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="distributeurs.html">Distributeurs</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
-<div class="lang-switch">
-  🌐 <a href="contact.html">🇫🇷 Français</a> |
-  <a href="contact_en.html">🇬🇧 English</a> |
-  <a href="contact_ar.html">🇸🇦 العربية</a>
-</div>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="lang-switch">
+      🌐 
+      <a href="contact.html">🇫🇷 Français</a> |
+      <a href="contact_en.html">🇬🇧 English</a> |
+      <a href="contact_ar.html">🇸🇦 العربية</a>
+    </div>
 
-<section class="modele">
-  <h2>Contactez-nous</h2>
-  <p>Notre équipe est à votre écoute pour toute question sur l’investissement, la location ou la distribution.</p>
+    <h1>🌿 SIH Group</h1>
+    <p>Investir dans la Stabilité Durable</p>
 
-  <div class="contact-details">
-    <p>📞 <strong>Téléphone :</strong> +33 1 23 45 67 89</p>
-    <p>💬 <strong>WhatsApp :</strong> <a href="https://wa.me/33123456789" target="_blank">+33 1 23 45 67 89</a></p>
-    <p>📧 <strong>Email :</strong> <a href="mailto:contact@sihgroup.com">contact@sihgroup.com</a></p>
-    <p>🏢 <strong>Adresse :</strong> 12 Avenue des Investissements, Paris, France</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="investisseurs.html">Investisseurs</a></li>
+        <li><a href="locataires.html">Locataires</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="distributeurs.html">Distributeurs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <p>🌐 <strong>Réseaux sociaux :</strong></p>
-    <p>
-      <a href="https://facebook.com/sihgroup" target="_blank">📘 Facebook</a> |
-      <a href="https://instagram.com/sihgroup" target="_blank">📸 Instagram</a> |
-      <a href="https://linkedin.com/company/sihgroup" target="_blank">💼 LinkedIn</a> |
-      <a href="https://twitter.com/sihgroup" target="_blank">🐦 X (Twitter)</a>
-    </p>
-  </div>
-</section>
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="modele">
+    <h2>Contactez-nous</h2>
+    <p>Notre équipe est à votre écoute pour toute question sur l’investissement, la location ou la distribution.</p>
 
-<footer>
-  <p>© 2025 SIH Group – Tous droits réservés</p>
-</footer>
+    <div class="contact-details">
+      <p>📞 <strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+      <p>💬 <strong>WhatsApp :</strong> <a href="https://wa.me/33123456789" target="_blank">+33 1 23 45 67 89</a></p>
+      <p>📧 <strong>Email :</strong> <a href="mailto:contact@sihgroup.com">contact@sihgroup.com</a></p>
+      <p>🏢 <strong>Adresse :</strong> 12 Avenue des Investissements, Paris, France</p>
+
+      <p>🌐 <strong>Réseaux sociaux :</strong></p>
+      <p>
+        <a href="https://facebook.com/sihgroup" target="_blank">📘 Facebook</a> |
+        <a href="https://instagram.com/sihgroup" target="_blank">📸 Instagram</a> |
+        <a href="https://linkedin.com/company/sihgroup" target="_blank">💼 LinkedIn</a> |
+        <a href="https://twitter.com/sihgroup" target="_blank">🐦 X (Twitter)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 SIH Group – Tous droits réservés</p>
+  </footer>
+
 </body>
 </html>

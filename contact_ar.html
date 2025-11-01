@@ -1,102 +1,181 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا – مجموعة SIH</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Contact – SIH Group</title>
+
   <style>
     body {
-      font-family: 'Cairo', 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
       color: #333;
       margin: 0;
       padding: 0;
-      direction: rtl;
-      text-align: right;
     }
+
+    /* ===== HEADER ===== */
     header {
-      background-color: #1a5632;
+      background: linear-gradient(to right, #1a5632, #2e7d4b);
       color: white;
+      padding: 20px 0 15px;
+      position: relative;
       text-align: center;
-      padding: 20px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
+
     header h1 { margin: 0; font-size: 2em; }
-    header p { margin: 5px 0 15px; color: #cde3d1; }
+    header p { margin: 5px 0 15px; color: #cde3d1; font-weight: 500; }
+
+    /* ===== LANGUAGE SWITCH ===== */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.95em;
+    }
+
+    .lang-switch a {
+      color: #e2f1e8;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    /* ===== NAVIGATION ===== */
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       padding: 0;
       margin: 10px 0 0;
+      flex-wrap: wrap;
     }
+
     nav ul li { margin: 5px 10px; }
+
     nav ul li a {
       color: white;
       text-decoration: none;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background 0.3s;
+      font-weight: 500;
     }
-    nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
 
-    .lang-switch {
-      text-align: left;
-      margin: 15px 0 0 30px;
-      font-size: 1.1em;
-      direction: ltr;
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #2e7d4b;
     }
+
+    /* ===== MAIN SECTION ===== */
     .modele {
-      text-align: right;
+      text-align: center;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       max-width: 800px;
-      margin: 40px auto;
-      padding: 50px 20px;
-      direction: rtl;
+      margin: 60px auto;
+      padding: 60px 30px;
     }
-    .modele h2 { color: #1a5632; font-size: 2em; margin-bottom: 15px; }
+
+    .modele h2 {
+      color: #1a5632;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .modele p {
+      color: #444;
+      font-size: 1.05em;
+    }
+
     .contact-details {
+      text-align: left;
       line-height: 1.8;
-      margin-top: 30px;
+      margin-top: 35px;
       font-size: 1.1em;
+      padding: 0 20px;
     }
-    .contact-details a { color: #1a5632; text-decoration: none; }
+
+    .contact-details p { margin: 10px 0; }
+
+    .contact-details a {
+      color: #1a5632;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
     .contact-details a:hover { text-decoration: underline; }
+
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      background-color: #1a5632;
+      background: #1a5632;
       color: white;
-      padding: 15px 0;
+      padding: 18px 0;
       margin-top: 60px;
-      font-size: 0.9em;
-      direction: ltr;
+      font-size: 0.95em;
+    }
+
+    footer a {
+      color: #cde3d1;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .lang-switch {
+        position: static;
+        display: block;
+        text-align: center;
+        background: rgba(255,255,255,0.2);
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="lang-switch">
+      🌐 
+      <a href="contact.html">🇫🇷 Français</a> |
+      <a href="contact_en.html">🇬🇧 English</a> |
+      <a href="contact_ar.html">🇸🇦 العربية</a>
+    </div>
+
+    <h1>🌿 مجموعة SIH</h1>
+    <p>الاستثمار في الاستقرار المستدام</p>
+
+    <nav>
+      <ul>
+        <li><a href="index_ar.html">الرئيسية</a></li>
+        <li><a href="investors_ar.html">المستثمرون</a></li>
+        <li><a href="tenants_ar.html">المستأجرون</a></li>
+        <li><a href="projects_ar.html">المشاريع</a></li>
+        <li><a href="distributors_ar.html">الموزعون</a></li>
+        <li><a href="contact_ar.html" class="active">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
 <body>
 <header>
-  <h1>🌿 مجموعة SIH</h1>
-  <p>الاستثمار في الاستقرار المستدام</p>
-  <nav>
-    <ul>
-      <li><a href="index_ar.html">الرئيسية</a></li>
-      <li><a href="investors_ar.html">المستثمرون</a></li>
-      <li><a href="tenants_ar.html">المستأجرون</a></li>
-      <li><a href="projects_ar.html">المشاريع</a></li>
-      <li><a href="distributors_ar.html">الموزعون</a></li>
-      <li><a href="contact_ar.html" class="active">اتصل بنا</a></li>
-    </ul>
-  </nav>
-</header>
-
-<div class="lang-switch">
-  🌐 <a href="contact.html">🇫🇷 Français</a> |
-  <a href="contact_en.html">🇬🇧 English</a> |
-  <a href="contact_ar.html">🇸🇦 العربية</a>
-</div>
 
 <section class="modele">
   <h2>اتصل بنا</h2>

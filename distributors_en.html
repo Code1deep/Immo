@@ -21,7 +21,6 @@
     }
     header h1 { margin: 0; font-size: 2em; }
     header p { margin: 5px 0 15px; color: #FF8C00; }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -40,7 +39,7 @@
     }
     nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
 
-    /* Language switch */
+    /* ===== LANG SWITCH ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -59,11 +58,8 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    .lang-switch a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
 
-    section.modele {
+    .modele {
       text-align: center;
       background: #fff;
       border-radius: 10px;
@@ -72,8 +68,7 @@
       margin: 40px auto;
       padding: 50px 20px;
     }
-    section.modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; }
-
+    .modele h2 { color: #FF8C00; font-size: 2em; margin-bottom: 20px; }
     .orgchart {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -87,7 +82,6 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .node h4 { color: #FF8C00; margin-bottom: 10px; }
-
     .cta { margin-top: 40px; }
     .cta a.btn {
       background: linear-gradient(90deg, #1a5632, #2e7d4b);
@@ -98,7 +92,6 @@
       transition: opacity 0.3s;
     }
     .cta a.btn:hover { opacity: 0.85; }
-
     footer {
       text-align: center;
       background-color: #1a5632;
@@ -111,7 +104,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="lang-switch">
       🌐 
@@ -125,7 +117,7 @@
 
     <nav>
       <ul>
-        <li><a href="index_en.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="investors_en.html">Investors</a></li>
         <li><a href="tenants_en.html">Tenants</a></li>
         <li><a href="projects_en.html">Projects</a></li>
@@ -136,24 +128,26 @@
   </header>
 
   <section class="modele">
-    <h2>Our Distribution Partners</h2>
-    <p>SIH Distribution relies on a network of regional outlets and independent partners.  
-       Our products (flour, milk, eggs, grains, poultry) are sold at fair prices, ensuring an equitable income for producers.</p>
+    <h2>Our Partner Distributors</h2>
+    <p>
+      SIH Distribution relies on a network of regional outlets and independent partners.  
+      Our products (flour, milk, eggs, cereals, poultry) are sold at fair prices, ensuring an equitable income for producers.
+    </p>
 
     <div class="orgchart">
-      <div class="node"><h4>🥖 Local Points of Sale</h4><p>Green groceries and farmers' markets</p></div>
+      <div class="node"><h4>🥖 Local Outlets</h4><p>Eco-friendly shops and farmers’ markets</p></div>
       <div class="node"><h4>🏪 Regional Distributors</h4><p>Certified SIH Sustainable Network</p></div>
-      <div class="node"><h4>🌍 Sustainable Export</h4><p>Ethical markets worldwide</p></div>
+      <div class="node"><h4>🌍 Sustainable Export</h4><p>Ethical international markets</p></div>
     </div>
 
     <div class="cta">
       <h2>Become an Authorized Distributor</h2>
-      <a href="contact_en.html" class="btn">Apply Now</a>
+      <a href="contact_en.html" class="btn">Register</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 SIH Group – All rights reserved</p>
+    <p>© 2025 SIH Group – All Rights Reserved</p>
   </footer>
 </body>
 </html>

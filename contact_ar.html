@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – SIH Group</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>اتصل – مجموعة SIH</title>
 
   <style>
     body {
@@ -12,6 +12,8 @@
       color: #333;
       margin: 0;
       padding: 0;
+      direction: rtl;
+      text-align: right;
     }
 
     /* ===== HEADER ===== */
@@ -23,17 +25,17 @@
       position: relative;
     }
 
-        /* ===== LANGUAGE SWITCH ===== */
+    /* ===== LANGUAGE SWITCH (top-right) ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
       right: 25px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.15);
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 0.95em;
+      direction: ltr; /* garder l'ordre visuel des drapeaux LTR */
     }
-
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
@@ -43,18 +45,12 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
-
-    .lang-switch a:hover {
-      background: #cde3d1;
-      color: #1a5632;
-    }
-  
+    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
 
     header h1 { margin: 0; font-size: 2em; }
     header p { margin: 5px 0 15px; color: #FF8C00; font-weight: 500; }
 
-
-    /* ===== NAVIGATION ===== */
+    /* ===== NAV ===== */
     nav ul {
       list-style: none;
       display: flex;
@@ -63,9 +59,7 @@
       margin: 10px 0 0;
       flex-wrap: wrap;
     }
-
     nav ul li { margin: 5px 10px; }
-
     nav ul li a {
       color: white;
       text-decoration: none;
@@ -74,51 +68,55 @@
       transition: background 0.3s;
       font-weight: 500;
     }
-
     nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #2e7d4b;
-    }
+    nav ul li a.active { background-color: #2e7d4b; }
 
-    /* ===== MAIN SECTION ===== */
+    /* ===== MAIN CARD ===== */
     .modele {
-      text-align: center;
+      text-align: right;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      max-width: 800px;
+      max-width: 820px;
       margin: 60px auto;
-      padding: 60px 30px;
+      padding: 48px 30px;
     }
+    .modele h2 { color: #1a5632; font-size: 2em; margin-bottom: 8px; }
+    .modele p { color: #444; font-size: 1.05em; margin: 0 0 12px 0; }
 
-    .modele h2 {
-      color: #1a5632;
-      font-size: 2em;
-      margin-bottom: 10px;
+    /* ===== Contact rows : icon first (début/à droite) ===== */
+    .contact-details { margin-top: 30px; padding: 0 6px; }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.04);
     }
-
-    .modele p {
-      color: #444;
-      font-size: 1.05em;
+    /* icon block */
+    .contact-icon {
+      font-size: 1.35rem;
+      width: 36px;
+      flex: 0 0 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
+    .contact-label { font-weight: 600; color: #1a5632; }
+    .contact-value { color: #222; }
 
-    .contact-details {
-      text-align: right;
-      line-height: 1.8;
-      margin-top: 35px;
-      font-size: 1.1em;
-      padding: 0 20px;
+    /* social links row */
+    .socials { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:6px; }
+    .socials a {
+      display:inline-block;
+      padding:6px 10px;
+      background: #f4faf5;
+      color:#1a5632;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
     }
-
-    .contact-details p { margin: 10px 0; }
-
-    .contact-details a {
-      color: #1a5632;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .contact-details a:hover { text-decoration: underline; }
+    .socials a:hover { background:#e8f5e9; }
 
     /* ===== FOOTER ===== */
     footer {
@@ -126,36 +124,24 @@
       background: #1a5632;
       color: white;
       padding: 18px 0;
-      margin-top: 60px;
+      margin-top: 40px;
       font-size: 0.95em;
     }
-
-    footer a {
-      color: #cde3d1;
-      text-decoration: none;
-      margin: 0 6px;
-    }
-
+    footer a { color: #cde3d1; text-decoration: none; margin: 0 6px; }
     footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 600px) {
-      .lang-switch {
-        position: static;
-        display: block;
-        text-align: center;
-        background: rgba(255,255,255,0.2);
-        margin-bottom: 10px;
-      }
+    @media (max-width:700px){
+      .modele { margin:24px 16px; padding:28px 18px; }
+      .contact-icon { width:30px; font-size:1.1rem }
+      .lang-switch { position: static; display:block; margin-bottom:12px; direction: ltr; text-align:center; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ===== HEADER ===== -->
   <header>
-    <div class="lang-switch">
-      🌐 
+    <div class="lang-switch" aria-label="language switch">
+      🌐
       <a href="contact.html">🇫🇷 Français</a> |
       <a href="contact_en.html">🇬🇧 English</a> |
       <a href="contact_ar.html">🇸🇦 العربية</a>
@@ -176,29 +162,68 @@
     </nav>
   </header>
 
-<section class="modele">
-  <h2>اتصل بنا</h2>
-  <p>فريقنا متاح للإجابة على جميع استفساراتكم حول الاستثمار أو التأجير أو التوزيع.</p>
+  <section class="modele" aria-labelledby="contact-title">
+    <h2 id="contact-title">اتصل بنا</h2>
+    <p>فريقنا متاح للإجابة على جميع استفساراتكم حول الاستثمار أو التأجير أو التوزيع.</p>
 
-  <div class="contact-details">
-    <p> <strong>الهاتف :</strong> 📞  </p> <p> ‎+33 1 23 45 67 89</p>
-    <p> 📞<strong>الهاتف:</strong>  +33 1 23 45 67 89</p>
-    <p>💬 <strong>واتساب:</strong> <a href="https://wa.me/33123456789" target="_blank">‎+33 1 23 45 67 89</a></p>
-    <p>📧 <strong>البريد الإلكتروني:</strong> <a href="mailto:contact@sihgroup.com">contact@sihgroup.com</a></p>
-    <p> <strong>العنوان:</strong>  🏢12 شارع الاستثمارات، باريس، فرنسا</p> 
+    <div class="contact-details" role="contentinfo">
+      <!-- Téléphone -->
+      <div class="contact-row">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">الهاتف</div>
+          <div class="contact-value">+33 1 23 45 67 89</div>
+        </div>
+      </div>
 
-    <p><strong>وسائل التواصل الاجتماعي:</strong></p>🌐 
-    <p>
-      <a href="https://facebook.com/sihgroup" target="_blank">📘 فيسبوك</a> |
-      <a href="https://instagram.com/sihgroup" target="_blank">📸 إنستغرام</a> |
-      <a href="https://linkedin.com/company/sihgroup" target="_blank">💼 لينكدإن</a> |
-      <a href="https://twitter.com/sihgroup" target="_blank">🐦 تويتر (X)</a>
-    </p>
-  </div>
-</section>
+      <!-- WhatsApp -->
+      <div class="contact-row">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="contact-label">واتساب</div>
+          <div class="contact-value">
+            <a href="https://wa.me/33123456789" target="_blank" rel="noopener noreferrer">+33 1 23 45 67 89</a>
+          </div>
+        </div>
+      </div>
 
-<footer>
-  <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة</p>
-</footer>
+      <!-- Email -->
+      <div class="contact-row">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">البريد الإلكتروني</div>
+          <div class="contact-value"><a href="mailto:contact@sihgroup.com">contact@sihgroup.com</a></div>
+        </div>
+      </div>
+
+      <!-- Adresse -->
+      <div class="contact-row">
+        <div class="contact-icon">🏢</div>
+        <div>
+          <div class="contact-label">العنوان</div>
+          <div class="contact-value">12 شارع الاستثمارات، باريس، فرنسا</div>
+        </div>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="contact-row" style="border-bottom: none;">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <div class="contact-label">وسائل التواصل الاجتماعي</div>
+          <div class="contact-value socials">
+            <a href="https://facebook.com/sihgroup" target="_blank" rel="noopener noreferrer">📘 فيسبوك</a>
+            <a href="https://instagram.com/sihgroup" target="_blank" rel="noopener noreferrer">📸 إنستغرام</a>
+            <a href="https://linkedin.com/company/sihgroup" target="_blank" rel="noopener noreferrer">💼 لينكدإن</a>
+            <a href="https://twitter.com/sihgroup" target="_blank" rel="noopener noreferrer">🐦 تويتر (X)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة</p>
+  </footer>
+
 </body>
 </html>

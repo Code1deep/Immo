@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>مجموعة SIH – الاستثمار في الاستقرار المستدام</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
-      font-family: 'Tajawal', sans-serif;
-      background: linear-gradient(to bottom right, #f4f9f4, #e8f5e9);
+      font-family: 'Cairo', sans-serif;
+      background: #f9f9f9;
+      color: #222;
       margin: 0;
-      color: #1a1a1a;
+      line-height: 1.8;
       direction: rtl;
       text-align: right;
     }
 
     header {
-      background: linear-gradient(to right, #1a5632, #236b3c);
+      background: linear-gradient(90deg, #1a5632, #217a45);
       color: white;
-      padding: 20px 0 10px;
-      position: relative;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 25px 0 10px;
+      position: relative;
     }
 
-    /* Sélecteur de langues */
     .lang-switch {
       position: absolute;
       top: 10px;
-      left: 20px;
+      left: 25px;
       background: rgba(255,255,255,0.15);
       padding: 6px 12px;
       border-radius: 20px;
@@ -41,7 +37,7 @@
     .lang-switch a {
       color: #e2f1e8;
       text-decoration: none;
-      margin: 0 4px;
+      margin: 0 5px;
       padding: 3px 8px;
       border-radius: 12px;
       transition: all 0.3s ease;
@@ -62,205 +58,149 @@
       padding: 0;
     }
 
-    nav ul li { margin: 5px 10px; }
+    nav ul li { margin: 5px 12px; }
 
     nav ul li a {
       color: white;
       text-decoration: none;
-      padding: 8px 16px;
+      padding: 6px 12px;
       border-radius: 4px;
-      font-weight: 500;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.3s ease;
     }
 
-    nav ul li a:hover,
-    nav ul li a.active {
-      background: #2e7d4b;
+    nav ul li a:hover, nav ul li a.active {
+      background: rgba(255,255,255,0.2);
     }
 
     .hero {
-      background: linear-gradient(rgba(26, 86, 50, 0.6), rgba(26, 86, 50, 0.6)), url('img/hero.jpg') center/cover no-repeat;
+      background: url('img/hero.jpg') center/cover no-repeat;
       color: white;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
       padding: 120px 20px;
-      text-align: center;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    }
-
-    .hero h2 {
-      font-size: 2em;
-      margin-bottom: 15px;
     }
 
     .btn {
       background: #1a5632;
       color: white;
       padding: 12px 26px;
-      border-radius: 8px;
+      border-radius: 6px;
       text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-      transition: background 0.3s ease, transform 0.2s ease;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
 
-    .btn:hover {
-      background: #2e7d4b;
-      transform: translateY(-2px);
-    }
+    .btn:hover { background: #2e7d4b; }
 
-    section {
+    .modele {
+      background: linear-gradient(180deg, #fdfdfd, #f4faf5);
       padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.8;
-      color: #222;
-    }
-
-    section h2 {
-      color: #1a5632;
-      font-size: 1.6em;
-      border-right: 6px solid #2e7d4b;
-      padding-right: 12px;
-      margin-bottom: 20px;
-    }
-
-    .node {
-      border: 1px solid #cfe3cf;
-      padding: 15px;
-      border-radius: 10px;
-      background: #fff;
-      margin: 10px auto;
-      max-width: 500px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    .structure {
-      background: #f5faf5;
-      border-top: 1px solid #d6e6d8;
-      border-bottom: 1px solid #d6e6d8;
-    }
-
-    .cta {
-      background: linear-gradient(to right, #1a5632, #2e7d4b);
-      color: white;
       text-align: center;
-      padding: 70px 20px;
     }
 
-    .cta h2 {
-      font-size: 1.8em;
-      margin-bottom: 15px;
+    .modele h2 { color: #1a5632; font-size: 1.9em; margin-bottom: 25px; }
+
+    .modele-block {
+      background: white;
+      border-right: 6px solid #1a5632;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 900px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
     }
+
+    .modele-block:hover { transform: scale(1.02); }
+
+    .node h4 { color: #d87b00; }
 
     footer {
       text-align: center;
       background: #1a5632;
       color: white;
-      padding: 25px 10px;
+      padding: 25px 0;
       margin-top: 40px;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
     }
 
     footer a {
       color: #cde3d1;
       text-decoration: none;
-      margin: 0 6px;
-      font-weight: 500;
+      margin: 0 5px;
     }
 
-    footer a:hover { text-decoration: underline; }
-
-    @media (max-width:600px){
-      .lang-switch {
-        position: static;
-        display:block;
-        text-align:center;
-        background: rgba(255,255,255,0.2);
-        margin-bottom:10px;
-      }
-    }
+    footer a:hover { color: #fff; }
   </style>
 </head>
+
 <body>
+<header>
+  <div class="lang-switch">
+    🌐 
+    <a href="index.html">🇫🇷 Français</a> |
+    <a href="index_en.html">🇬🇧 English</a> |
+    <a href="index_ar.html">🇸🇦 العربية</a>
+  </div>
 
-  <!-- ======= HEADER ======= -->
-  <header>
-    <div class="lang-switch">
-      🌐 
-      <a href="index.html">🇫🇷 Français</a> |
-      <a href="index_en.html">🇬🇧 English</a> |
-      <a href="index_ar.html">🇸🇦 العربية</a>
-    </div>
+  <h1>🌿 مجموعة SIH</h1>
+  <p>الاستثمار في الاستقرار المستدام</p>
 
-    <h1>🌿 مجموعة SIH</h1>
-    <p>الاستثمار في الاستقرار المستدام</p>
+  <nav>
+    <ul>
+      <li><a href="index_ar.html" class="active">الرئيسية</a></li>
+      <li><a href="investors_ar.html">المستثمرون</a></li>
+      <li><a href="tenants_ar.html">المستأجرون</a></li>
+      <li><a href="projects_ar.html">المشاريع</a></li>
+      <li><a href="distributors_ar.html">الموزعون</a></li>
+      <li><a href="contact_ar.html">اتصل بنا</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <nav>
-      <ul>
-        <li><a href="index_ar.html" class="active">الرئيسية</a></li>
-        <li><a href="investors_ar.html">المستثمرون</a></li>
-        <li><a href="tenants_ar.html">المستأجرون</a></li>
-        <li><a href="projects_ar.html">المشاريع</a></li>
-        <li><a href="distributors_ar.html">الموزعون</a></li>
-        <li><a href="contact_ar.html">اتصل بنا</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="hero">
+  <h2>استثمر في النمو المستدام</h2>
+  <p>نموذج هجين يجمع بين الأداء العقاري والأمن الغذائي والتوزيع العادل.</p>
+  <a href="investors_ar.html" class="btn">انضم كمستثمر</a>
+</section>
 
-  <!-- ======= HERO ======= -->
-  <section class="hero">
-    <h2>استثمر في الاستقرار المستدام</h2>
-    <p>نموذج هجين يجمع بين الأداء العقاري والأمن الغذائي والتوزيع العادل.</p>
-    <a href="investors_ar.html" class="btn">انضم كمستثمر</a>
-  </section>
+<section class="modele">
+  <h2>نموذجنا المالي: <span class="highlight">FFO آمن ومحرك للنمو</span></h2>
+  <p>استراتيجية استثمار <strong>هجينة ومتكاملة</strong> تضمن المرونة والعائد المستدام.</p>
 
-  <!-- ======= MODELE FINANCIER ======= -->
-  <section class="modele">
-    <h2>نموذجنا المالي</h2>
-    <p>
-      تأتي إيراداتنا من إيجارات مستقرة لعقود تجارية وزراعية طويلة الأجل،
-      بالإضافة إلى <strong>بيع وتوزيع</strong> منتجاتنا
-      (قمح، شعير، ذرة، دقيق، حليب، بيض، زبدة، دجاج، ديك رومي...).
-      <br><br>
-      <strong>يتم توزيع 90٪ من صافي الدخل</strong> كأرباح للمستثمرين.
-    </p>
-    <p>نحن نعتمد نموذجاً مستداماً ذا أثر إيجابي: ربحية مستمرة، زراعة خضراء، وشمول اجتماعي.</p>
-  </section>
+  <div class="modele-block">
+    <h3>١. الركيزتان: الاستقرار والنمو</h3>
+    <p><strong>الاستقرار:</strong> عوائد إيجارية طويلة الأجل من العقارات التجارية والزراعية تشكل قاعدة الأرباح.</p>
+    <p><strong>النمو:</strong> أرباح من الإنتاج الزراعي والتصدير (قمح، دقيق، حليب، دواجن...).</p>
+  </div>
 
-  <!-- ======= STRUCTURE ======= -->
-  <section class="structure">
-    <h2>هيكل مجموعة SIH</h2>
-    <p>تنظيم واضح ومتكامل يضمن الاستقرار الدائم.</p>
+  <div class="modele-block">
+    <h3>٢. التكامل في سلسلة القيمة</h3>
+    <p>نمول <strong>تحديث الإنتاج</strong> ونضمن الجودة والتكلفة في كل مرحلة.</p>
+  </div>
 
-    <div class="orgchart">
-      <div class="node parent">
-        <h3>🌿 مجموعة SIH</h3>
-        <p>الشركة القابضة الرئيسية – الاستثمار الأخضر والمستدام</p>
+  <div class="modele-block">
+    <h3>٣. التوزيع والتصدير</h3>
+    <p>توزيع محلي ذو أثر اجتماعي إيجابي وتصدير عالمي عالي الربح يعزز عوائد المستثمرين.</p>
+  </div>
 
-        <div class="children">
-          <div class="node child"><h4>🏢 SIH Immo</h4><p>مكاتب، متاجر، وسكن</p></div>
-          <div class="node child"><h4>🌾 SIH Agro</h4><p>الزراعة، تربية المواشي، والتصنيع</p></div>
-          <div class="node child"><h4>🚚 SIH Distribution</h4><p>البيع المباشر وشبكة الموزعين</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="modele-block">
+    <h3>٤. الشفافية وإعادة التوزيع</h3>
+    <p>نعيد توزيع <strong>٩٠٪ من FFO</strong> كل ربع سنة لضمان عائد مستقر ومستدام.</p>
+  </div>
+</section>
 
-  <!-- ======= CALL TO ACTION ======= -->
-  <section class="cta">
-    <h2>انضم إلى الثورة الخضراء</h2>
-    <p>كن جزءاً من نموذج استثماري مسؤول ومستقر وعادل.</p>
-    <a href="investors_ar.html" class="btn">استثمر الآن</a>
-  </section>
+<section class="cta" style="text-align:center; background:linear-gradient(90deg,#1a5632,#2a8a4e); color:white; padding:80px 20px;">
+  <h2>انضم إلى الثورة الخضراء</h2>
+  <p>شارك في نموذج استثماري مسؤول ومستقر ومستدام.</p>
+  <a href="investors_ar.html" class="btn">استثمر الآن</a>
+</section>
 
-  <!-- ======= FOOTER ======= -->
-  <footer>
-    <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة | الاستثمار الأخضر والمستدام</p>
-    <p>
-      <a href="contact_ar.html">اتصل بنا</a> |
-      <a href="projects_ar.html">المشاريع</a> |
-      <a href="distributors_ar.html">الموزعون</a>
-    </p>
-  </footer>
-
+<footer>
+  <p>© ٢٠٢٥ مجموعة SIH – جميع الحقوق محفوظة | الاستثمار الأخضر والمستدام</p>
+  <p>
+    <a href="contact_ar.html">اتصل بنا</a> |
+    <a href="projects_ar.html">المشاريع</a> |
+    <a href="distributors_ar.html">الموزعون</a>
+  </p>
+</footer>
 </body>
 </html>

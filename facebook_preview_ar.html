@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مجموعة SIH – وسائل التواصل الاجتماعي</title>
+  <title>مجموعة SIH – شبكات التواصل الاجتماعي</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -14,64 +14,134 @@
       direction: rtl;
       text-align: right;
     }
+
     header {
-      background: linear-gradient(90deg, #1a5632, #217a45);
-      color: white;
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 25px 0 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       text-align: center;
-      padding: 25px 0 10px;
       position: relative;
     }
+
     .lang-switch {
       position: absolute;
       top: 10px;
-      left: 25px;
+      left: 20px;
       background: rgba(255, 255, 255, 0.15);
-      padding: 6px 12px;
+      padding: 6px 10px;
       border-radius: 20px;
       font-size: 0.95em;
     }
+
     .lang-switch a {
-      color: #e2f1e8;
+      color: #FFC72C;
       text-decoration: none;
-      margin: 0 5px;
+      margin: 0 4px;
       padding: 3px 8px;
       border-radius: 12px;
       transition: all 0.3s ease;
+      font-weight: 500;
     }
+
     .lang-switch a:hover {
       background: #cde3d1;
       color: #1a5632;
     }
-    section {
-      text-align: center;
-      padding: 60px 20px;
-    }
-    section h2 {
-      color: #1a5632;
+
+    h1 {
+      margin: 0;
       font-size: 2em;
+      font-weight: bold;
     }
+
+    header p {
+      margin: 8px 0 15px;
+      font-size: 1.05em;
+      color: #fff5b1;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid #f7d16e;
+    }
+
+    nav a:hover {
+      color: #f7d16e;
+    }
+
+    section {
+      padding: 50px 10%;
+      background-color: #fff;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 900px;
+    }
+
+    h2 {
+      color: #8A2BE2;
+      border-right: 5px solid #f7d16e;
+      padding-right: 10px;
+      display: inline-block;
+      text-align: right;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
     .social-links a {
       display: inline-block;
-      margin: 15px;
+      background: #fff5e1;
+      border: 1px solid #ffa500;
+      border-radius: 10px;
+      padding: 10px 20px;
       text-decoration: none;
       font-size: 1.1em;
       color: #1a5632;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
     }
+
     .social-links a:hover {
+      background: #ffb703;
+      color: #fff;
       transform: scale(1.1);
-      color: #d87b00;
     }
+
     footer {
       text-align: center;
       background: #1a5632;
       color: white;
       padding: 25px 0;
-      margin-top: 40px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="lang-switch">
       🌐 
@@ -79,13 +149,26 @@
       <a href="facebook_preview_en.html">🇬🇧 English</a> |
       <a href="facebook_preview_ar.html">🇸🇦 العربية</a>
     </div>
+
     <h1>🌿 مجموعة SIH</h1>
-    <p>تابعنا على وسائل التواصل الاجتماعي</p>
+    <p>تواصل معنا عبر شبكاتنا الاجتماعية</p>
+
+    <nav>
+      <ul>
+        <li><a href="index_ar.html" class="active">الرئيسية</a></li>
+        <li><a href="investors_ar.html">المستثمرون</a></li>
+        <li><a href="tenants_ar.html">المستأجرون</a></li>
+        <li><a href="projects_ar.html">المشاريع</a></li>
+        <li><a href="distributors_ar.html">الموزعون</a></li>
+        <li><a href="contact_ar.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section>
     <h2>انضم إلى مجتمعنا</h2>
-    <p>تابع مجموعة SIH على منصاتنا الرسمية:</p>
+    <p>تابع مجموعة SIH عبر منصاتنا الرسمية:</p>
+
     <div class="social-links">
       <a href="https://www.facebook.com/SIHGroupOfficial" target="_blank">📘 فيسبوك</a>
       <a href="https://www.instagram.com/sihgroup.official" target="_blank">📸 إنستغرام</a>
@@ -97,5 +180,6 @@
   <footer>
     <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة</p>
   </footer>
+
 </body>
 </html>

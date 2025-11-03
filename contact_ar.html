@@ -104,6 +104,17 @@
     }
     .contact-label { font-weight: 600; color: #1a5632; }
     .contact-value { color: #222; }
+    /* Forcing LTR display for numbers and email addresses */
+    .contact-value,
+    .contact-value a[href^="tel"],
+    .contact-value a[href^="mailto"],
+    .contact-value a[href^="https://wa.me"] {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      display: inline-block;
+    }
+
 
     /* social links row */
     .socials { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:6px; }

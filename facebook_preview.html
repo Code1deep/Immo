@@ -12,15 +12,17 @@
       margin: 0;
       line-height: 1.6;
     }
+
     header {
       background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
-      padding: 20px 0;
+      padding: 25px 0 15px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
       position: relative;
     }
 
-    /* ===== LANG SWITCH (TOP RIGHT) ===== */
+    /* ===== Sélecteur de langue ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -40,19 +42,30 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
+
     .lang-switch a:hover {
       background: #cde3d1;
       color: #1a5632;
     }
 
+    h1 {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
 
-    h1 { margin: 0; font-size: 1.8em; }
+    header p {
+      margin: 8px 0 15px;
+      font-size: 1.05em;
+      color: #fff5b1;
+    }
 
     nav ul {
       list-style: none;
       padding: 0;
+      margin: 0;
       display: flex;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
     }
 
@@ -60,78 +73,70 @@
       color: white;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1em;
+      transition: 0.3s;
     }
+
     nav a.active {
       border-bottom: 2px solid #f7d16e;
     }
 
+    nav a:hover {
+      color: #f7d16e;
+    }
+
     section {
-      padding: 40px 10%;
+      padding: 50px 10%;
       background-color: #fff;
-      margin-bottom: 30px;
+      margin: 40px auto;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      max-width: 900px;
     }
 
     h2 {
       color: #8A2BE2;
       border-left: 5px solid #f7d16e;
       padding-left: 10px;
+      display: inline-block;
+      text-align: left;
     }
 
-    h3 { color: #d88b00; }
-
-    .portfolio {
-      background: #f5fff5;
-      border-left: 4px solid #00994c;
-      padding: 15px 20px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
-
-    .cta {
-      background: linear-gradient(90deg, #ffb703, #ffcc33);
-      color: #2b3a2b;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .cta a {
-      background-color: #007a3d;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .cta a:hover { background-color: #005c2b; }
-      text-align: center;
-      padding: 60px 20px;
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
     }
 
     .social-links a {
       display: inline-block;
-      margin: 15px;
+      background: #fff5e1;
+      border: 1px solid #ffa500;
+      border-radius: 10px;
+      padding: 10px 20px;
       text-decoration: none;
       font-size: 1.1em;
       color: #1a5632;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
     }
+
     .social-links a:hover {
+      background: #ffb703;
+      color: #fff;
       transform: scale(1.1);
-      color: #d87b00;
     }
+
     footer {
       text-align: center;
       background: #1a5632;
       color: white;
       padding: 25px 0;
-      margin-top: 40px;
+      margin-top: 60px;
     }
-    
+
     .highlight {
       background-color: #fff5e1;
       border-left: 4px solid #ffa500;
@@ -142,6 +147,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="lang-switch">
       🌐 
@@ -149,6 +155,7 @@
       <a href="facebook_preview_en.html">🇬🇧 English</a> |
       <a href="facebook_preview_ar.html">🇸🇦 العربية</a>
     </div>
+
     <h1>🌿 SIH Group</h1>
     <p>Connectez-vous avec nous sur les réseaux sociaux</p>
 
@@ -167,6 +174,7 @@
   <section>
     <h2>Rejoignez notre communauté</h2>
     <p>Suivez SIH Group sur nos plateformes officielles :</p>
+
     <div class="social-links">
       <a href="https://www.facebook.com/SIHGroupOfficial" target="_blank">📘 Facebook</a>
       <a href="https://www.instagram.com/sihgroup.official" target="_blank">📸 Instagram</a>
@@ -178,5 +186,6 @@
   <footer>
     <p>© 2025 SIH Group – Tous droits réservés</p>
   </footer>
+
 </body>
 </html>

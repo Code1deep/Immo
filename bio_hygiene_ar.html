@@ -7,8 +7,26 @@
   <style>
     body { font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; color: #333; margin: 0; line-height: 1.6; text-align: right; }
     header { background: linear-gradient(90deg, #007a3d, #00994c); color: yellow; padding: 20px 0; position: relative; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    .lang-switch { position: absolute; top: 10px; left: 20px; background: rgba(255,255,255,0.15); padding: 6px 10px; border-radius: 20px; font-size: 0.95em; }
-    .lang-switch a { color: #FFC72C; text-decoration: none; margin: 0 4px; padding: 3px 8px; border-radius: 12px; transition: all 0.3s ease; font-weight: 500; }
+    /* ===== LANGUAGE SWITCH (top-right) ===== */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      direction: ltr; /* garder l'ordre visuel des drapeaux LTR */
+    }
+    .lang-switch a {
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 5px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
     .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
     nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
     nav ul li a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease; }
@@ -38,12 +56,12 @@
   <nav>
     <ul>
       <li><a href="index_ar.html">الرئيسية</a></li>
-      <li><a href="investisseurs_ar.html">المستثمرون</a></li>
+      <li><a href="investors_ar.html">المستثمرون</a></li>
       <li><a href="training_ar.html">التدريبات</a></li>
       <li><a href="bio_patrimoine_ar.html" class="active">التراث البيولوجي</a></li>
-      <li><a href="locataires_ar.html">المستأجرون</a></li>
-      <li><a href="projets_ar.html">المشاريع</a></li>
-      <li><a href="distributeurs_ar.html">الموزعون</a></li>
+      <li><a href="tenants_ar.html">المستأجرون</a></li>
+      <li><a href="projects_ar.html">المشاريع</a></li>
+      <li><a href="distributors_ar.html">الموزعون</a></li>
       <li><a href="contact_ar.html">اتصال</a></li>
     </ul>
   </nav>

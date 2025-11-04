@@ -16,6 +16,30 @@
     nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center;}
     nav a {color: white; text-decoration: none; font-weight: 500;}
     nav a.active {border-bottom: 2px solid #f7d16e;}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 0 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 5px 12px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
     section { padding: 40px 10%; background-color: #fff; margin: 40px auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); max-width: 950px; }
     h1 { font-size: 2.2em; color: #eb7434; text-align: center; }
     h2 { color: #007a3d; border-left: 5px solid #f7d16e; padding-left: 10px; display: inline-block; }

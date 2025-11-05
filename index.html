@@ -167,145 +167,60 @@
     }
 
 /* ===== STYLE : STRUCTURE DU GROUPE SIH ===== */
-.structure {
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-}
 
-.structure h2 {
-  color: #1a5632;
-  font-size: 2em;
-  border-bottom: 4px solid #00994c;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.structure p {
-  color: #333;
-  font-size: 1.1em;
-  margin-bottom: 40px;
-}
-
-/* ===== ORGANIGRAMME ===== */
-.orgchart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.node {
-  background: #fff;
-  border: 2px solid #00994c;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  min-width: 220px;
-  transition: all 0.3s ease;
-}
-
-.node:hover {
-  background: #eaffec;
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-.node h3, .node h4, .node h5 {
-  margin: 5px 0;
-  color: #007a3d;
-}
-
-.node p {
-  font-size: 0.95em;
-  color: #555;
-  margin: 5px 0 0 0;
-}
-
-/* ===== STRUCTURE HIERARCHIQUE ===== */
-.children {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 25px;
-  position: relative;
-}
-
-/* Lignes reliant les éléments */
-.children::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  width: 2px;
-  height: 25px;
-  background: #00994c;
-  transform: translateX(-50%);
-}
-
-.child {
-  position: relative;
-}
-
-.child::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  width: 2px;
-  height: 25px;
-  background: #00994c;
-  transform: translateX(-50%);
-}
-
-.sub-children {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  position: relative;
-}
-
-.sub-children::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  width: 2px;
-  height: 20px;
-  background: #00994c;
-  transform: translateX(-50%);
-}
-
-.sub-child::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  width: 2px;
-  height: 20px;
-  background: #00994c;
-  transform: translateX(-50%);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .children, .sub-children {
-    flex-direction: column;
-  }
-
-  .node {
-    width: 90%;
-    min-width: auto;
-  }
-
-  .children::before,
-  .sub-children::before,
-  .child::before,
-  .sub-child::before {
-    display: none;
-  }
+    .structure {
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .structure h2 {
+      color: #1a5632;
+      font-size: 2em;
+      border-bottom: 4px solid #00994c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .structure p {
+      color: #333;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+    .orgchart { display: flex; flex-direction: column; align-items: center; position: relative; }
+    .node {
+      background: #fff;
+      border: 2px solid #00994c;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      min-width: 220px;
+      transition: all 0.3s ease;
+    }
+    .node:hover {
+      background: #eaffec;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .node h3, .node h4, .node h5 {
+      margin: 5px 0;
+      color: #007a3d;
+      font-weight: bold;
+    }
+    .node p { font-size: 0.95em; color: #555; margin: 5px 0 0 0; }
+    .children {
+      display: flex; flex-wrap: wrap; justify-content: center; margin-top: 25px; position: relative;
+    }
+    .children::before, .child::before, .sub-children::before, .sub-child::before {
+      content: ""; position: absolute; top: -25px; left: 50%; width: 2px; height: 25px; background: #00994c; transform: translateX(-50%);
+    }
+    .sub-children { display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px; position: relative; }
+    @media (max-width: 768px) {
+      .children, .sub-children { flex-direction: column; }
+      .children::before, .sub-children::before, .child::before, .sub-child::before { display: none; }
+      .node { width: 90%; min-width: auto; }
+    }
 
     /* ===== CTA ===== */
     .cta {
@@ -429,53 +344,54 @@
     </div>
   </section>
 
-<!-- ===== STRUCTURE DU GROUPE ===== -->
-<section class="structure">
+<!-- ===== STRUCTURE DU GROUPE SIH ===== -->
+<section class="structure" lang="fr">
   <h2>Structure du Groupe SIH</h2>
-  <p>Une organisation claire et intégrée pour garantir la stabilité durable et la synergie entre les pôles d’excellence.</p>
+  <p>Une organisation claire et intégrée pour garantir la durabilité et la performance collective.</p>
 
   <div class="orgchart">
     <div class="node parent">
-      <h3>🌿 SIH Group</h3>
-      <p>Holding principale — Investissement Vert & Durable</p>
+      <h3>🌿 Groupe SIH</h3>
+      <p>Holding principale — Investissement vert et durable</p>
 
       <div class="children">
 
-        <!-- SIH IMMO -->
+        <!-- Immobilier -->
         <div class="node child">
           <h4>🏢 SIH Immo</h4>
-          <p>Immobilier commercial, industriel et résidentiel</p>
+          <p>Gestion des projets immobiliers commerciaux, résidentiels et industriels</p>
         </div>
 
-        <!-- SIH AGRO -->
+        <!-- Agro -->
         <div class="node child">
           <h4>🌾 SIH Agro</h4>
           <p>Production agricole, élevage et transformation agroalimentaire</p>
 
           <div class="sub-children">
             <div class="node sub-child">
-              <h5>🌱 Semence Bio</h5>
-              <p>Préservation et valorisation du patrimoine génétique agricole</p>
+              <h5>🌱 Département Semences & Agriculture Biologique</h5>
+              <p>Préservation du patrimoine génétique et développement de semences locales adaptées</p>
             </div>
             <div class="node sub-child">
-              <h5>🏠 Stockage & Conservation</h5>
-              <p>Gestion écologique des stocks, conservation et logistique des produits agricoles</p>
+              <h5>🏠 Département Stockage & Conservation</h5>
+              <p>Gestion durable des entrepôts et garantie de la qualité logistique</p>
             </div>
           </div>
         </div>
 
-        <!-- SIH DISTRIBUTION -->
+        <!-- Distribution -->
         <div class="node child">
           <h4>🚚 SIH Distribution</h4>
-          <p>Réseau de distribution, exportation et partenariats commerciaux</p>
+          <p>Réseau de distribution, exportation et commerce durable</p>
         </div>
 
-        <!-- NOUVEAUX DÉPARTEMENTS -->
+        <!-- Formation -->
         <div class="node child">
           <h4>🧑‍🏫 SIH Formation</h4>
-          <p>Programmes de formation technique et managériale pour les acteurs du développement durable</p>
+          <p>Formations techniques et managériales axées sur le développement durable</p>
         </div>
 
+        <!-- Qualification -->
         <div class="node child">
           <h4>🎓 SIH Qualification</h4>
           <p>Certification, normalisation et accompagnement des pratiques responsables</p>

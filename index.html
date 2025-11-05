@@ -166,32 +166,146 @@
       margin: 8px 0;
     }
 
-    /* ===== STRUCTURE ===== */
-    .structure {
-      text-align: center;
-      padding: 60px 20px;
-    }
+/* ===== STYLE : STRUCTURE DU GROUPE SIH ===== */
+.structure {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
 
-    .structure h2 {
-      color: #1a5632;
-    }
+.structure h2 {
+  color: #1a5632;
+  font-size: 2em;
+  border-bottom: 4px solid #00994c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-    .orgchart {
-      margin-top: 40px;
-    }
+.structure p {
+  color: #333;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
 
-    .node {
-      border: 1px solid #cfe3cf;
-      padding: 15px;
-      border-radius: 10px;
-      background: #fff;
-      margin: 10px auto;
-      max-width: 500px;
-    }
+/* ===== ORGANIGRAMME ===== */
+.orgchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-    .node h4 {
-      color: #d87b00;
-    }
+.node {
+  background: #fff;
+  border: 2px solid #00994c;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  min-width: 220px;
+  transition: all 0.3s ease;
+}
+
+.node:hover {
+  background: #eaffec;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.node h3, .node h4, .node h5 {
+  margin: 5px 0;
+  color: #007a3d;
+}
+
+.node p {
+  font-size: 0.95em;
+  color: #555;
+  margin: 5px 0 0 0;
+}
+
+/* ===== STRUCTURE HIERARCHIQUE ===== */
+.children {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+  position: relative;
+}
+
+/* Lignes reliant les éléments */
+.children::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background: #00994c;
+  transform: translateX(-50%);
+}
+
+.child {
+  position: relative;
+}
+
+.child::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background: #00994c;
+  transform: translateX(-50%);
+}
+
+.sub-children {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative;
+}
+
+.sub-children::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #00994c;
+  transform: translateX(-50%);
+}
+
+.sub-child::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #00994c;
+  transform: translateX(-50%);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .children, .sub-children {
+    flex-direction: column;
+  }
+
+  .node {
+    width: 90%;
+    min-width: auto;
+  }
+
+  .children::before,
+  .sub-children::before,
+  .child::before,
+  .sub-child::before {
+    display: none;
+  }
 
     /* ===== CTA ===== */
     .cta {

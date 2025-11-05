@@ -164,33 +164,62 @@
       text-align: left;
       margin: 8px 0;
     }
-
-    /* ===== STRUCTURE ===== */
+    
+<!-- ===== SIH GROUP STRUCTURE ===== -->
     .structure {
       text-align: center;
+      background-color: #f9f9f9;
       padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
     }
-
     .structure h2 {
       color: #1a5632;
+      font-size: 2em;
+      border-bottom: 4px solid #00994c;
+      display: inline-block;
+      padding-bottom: 5px;
     }
-
-    .orgchart {
-      margin-top: 40px;
+    .structure p {
+      color: #333;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      line-height: 1.8;
     }
-
+    .orgchart { display: flex; flex-direction: column; align-items: center; position: relative; }
     .node {
-      border: 1px solid #cfe3cf;
-      padding: 15px;
-      border-radius: 10px;
       background: #fff;
-      margin: 10px auto;
-      max-width: 500px;
+      border: 2px solid #00994c;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      min-width: 220px;
+      transition: all 0.3s ease;
+    }
+    .node:hover {
+      background: #eaffec;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .node h3, .node h4, .node h5 {
+      margin: 5px 0;
+      color: #007a3d;
+      font-weight: bold;
+    }
+    .node p { font-size: 0.95em; color: #555; margin: 5px 0 0 0; }
+    .children {
+      display: flex; flex-wrap: wrap; justify-content: center; margin-top: 25px; position: relative;
+    }
+    .children::before, .child::before, .sub-children::before, .sub-child::before {
+      content: ""; position: absolute; top: -25px; left: 50%; width: 2px; height: 25px; background: #00994c; transform: translateX(-50%);
+    }
+    .sub-children { display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px; position: relative; }
+    @media (max-width: 768px) {
+      .children, .sub-children { flex-direction: column; }
+      .children::before, .sub-children::before, .child::before, .sub-child::before { display: none; }
+      .node { width: 90%; min-width: auto; }
     }
 
-    .node h4 {
-      color: #d87b00;
-    }
 
     /* ===== CTA ===== */
     .cta {
@@ -293,27 +322,59 @@
   </div>
 </section>
 
-<section class="structure">
+<!-- ===== SIH GROUP STRUCTURE ===== -->
+<section class="structure" lang="en">
   <h2>SIH Group Structure</h2>
-  <p>An integrated organization ensuring sustainable stability.</p>
+  <p>A clear and integrated organization ensuring long-term sustainability and synergy between divisions.</p>
 
   <div class="orgchart">
     <div class="node parent">
       <h3>🌿 SIH Group</h3>
-      <p>Parent Holding — Green & Sustainable Investments</p>
+      <p>Main Holding – Green & Sustainable Investment</p>
+
       <div class="children">
+
+        <!-- Real Estate -->
         <div class="node child">
           <h4>🏢 SIH Immo</h4>
-          <p>Commercial and residential real estate</p>
+          <p>Commercial, residential, and industrial real estate management</p>
         </div>
+
+        <!-- Agriculture -->
         <div class="node child">
           <h4>🌾 SIH Agro</h4>
-          <p>Agricultural production, farming, and processing</p>
+          <p>Agricultural production, livestock, and food processing</p>
+
+          <div class="sub-children">
+            <div class="node sub-child">
+              <h5>🌱 Seeds & Organic Farming Department</h5>
+              <p>Preservation of genetic heritage and development of local resilient seeds</p>
+            </div>
+            <div class="node sub-child">
+              <h5>🏠 Storage & Conservation Department</h5>
+              <p>Eco-managed storage systems ensuring product quality and traceability</p>
+            </div>
+          </div>
         </div>
+
+        <!-- Distribution -->
         <div class="node child">
           <h4>🚚 SIH Distribution</h4>
-          <p>Distribution and export network</p>
+          <p>Distribution, export, and sustainable trade network</p>
         </div>
+
+        <!-- Training -->
+        <div class="node child">
+          <h4>🧑‍🏫 SIH Training</h4>
+          <p>Technical and management training for sustainable development professionals</p>
+        </div>
+
+        <!-- Qualification -->
+        <div class="node child">
+          <h4>🎓 SIH Qualification</h4>
+          <p>Certification and environmental standards for responsible practices</p>
+        </div>
+
       </div>
     </div>
   </div>

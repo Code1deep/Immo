@@ -3,49 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vision — Investor Value & Trust – SIH Group</title>
+  <title>Vision — Investor & ESG – SIH Group</title>
   <style>
     :root{--green-dark:#1a5632;--green-mid:#2e7d4b;--accent-orange:#ffa500;--bg:#f9f9f9}
     body{font-family:'Segoe UI',sans-serif;background:var(--bg);margin:0;color:#222}
     header{background:linear-gradient(90deg,var(--green-dark),#217a45);color:#fff5b1;padding:20px 0;position:relative;text-align:center}
-    .lang-switch{position:absolute;top:10px;right:20px;background:rgba(255,255,255,0.12);padding:6px 12px;border-radius:20px}
+    .lang-switch { position: absolute; top: 10px; right: 20px; background: rgba(255,255,255,0.15); padding: 6px 10px; border-radius: 20px; font-size: 0.95em; }
+    .lang-switch a { color: #FFC72C; text-decoration: none; margin: 0 4px; padding: 3px 8px; border-radius: 12px; transition: all 0.3s ease; font-weight: 500; }
+    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
+    nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
+    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
     .container{max-width:1000px;margin:24px auto;padding:0 18px}
-    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px;border-left:6px solid #e6b400}
     h1{margin:6px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    h2 { color: #fa7414; border-left: 5px solid #f7d16e; padding-left: 10px; display: inline-block; font-size: 1.2em; font-weight: bold;}
+    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px;border-left:6px solid var(--green-mid)}
+    .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px}
+    .kpi{background:#fff5e1;padding:14px;border-radius:8px;border:1px solid #ffd79a;text-align:center}
     .btn{background:linear-gradient(90deg,var(--green-dark),var(--green-mid));color:white;padding:10px 18px;border-radius:26px;text-decoration:none;font-weight:700}
   </style>
 </head>
 <body>
   <header>
-    <div class="lang-switch">🌐 <a href="vision_investisseurs.html">🇫🇷 Français</a> | <a href="vision_en.html">🇬🇧 English</a> | <a href="vision_investor_ar.html">🇸🇦 العربية</a></div>
+    <div class="lang-switch">🌐 <a href="vision.html">🇫🇷 Français</a> | <a href="vision_investor_en.html">🇬🇧 English</a> | <a href="vision_investor_ar.html">🇸🇦 العربية</a></div>
+    <h1>🌿 SIH Group</h1>
     <h1>Investor Value & Trust</h1>
-    <p style="color:#eaf6ee">Driving financial attraction and measurable ESG credibility</p>
+    <p style="color:#eaf6ee;margin:6px 0 0;font-weight:600">Stable returns, ESG transparency and solid governance</p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="vision.html">Strategic Vision</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="bio_patrimoine.html">SIH BIO</a></li>
+        <li><a href="locataires.html">Tenants</a></li>
+        <li><a href="projets.html">Projects</a></li>
+        <li><a href="distributeurs.html">Distributors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>SIH Sustainable Yield Fund</h2>
-      <p>Launch a dedicated green fund allowing investors to participate directly in seed heritage, organic farms, training and distribution — targeted to attract impact capital.</p>
+      <h2>1 — SIH Sustainable Yield Fund (Green Fund)</h2>
+      <p><strong>Goal:</strong> Mobilize impact capital to finance seeds, BIO PATRIMOINE, SIH Academy, and distribution infrastructure.</p>
+      <p><strong>Proposed structure:</strong> Dedicated FII/SIF vehicle (depending on jurisdiction) with quarterly FFO reporting + ESG indicators.</p>
     </section>
 
     <section class="card">
-      <h2>Public ESG Dashboard</h2>
-      <p>Live KPIs (biodiversity index, % renewable energy, jobs created) to ensure measurable impact and institutional confidence.</p>
+      <h2>2 — Public ESG Dashboard</h2>
+      <p>Accessible indicators: biodiversity index, % renewable energy, exported organic volumes, rural jobs created, CO₂ emissions per ton.</p>
+      <div class="kpi-grid" aria-hidden="true">
+        <div class="kpi"><strong>Biodiversity Index</strong><div style="font-size:22px;margin-top:6px">72%</div></div>
+        <div class="kpi"><strong>Green Energy</strong><div style="font-size:22px;margin-top:6px">45%</div></div>
+        <div class="kpi"><strong>Rural Jobs</strong><div style="font-size:22px;margin-top:6px">+120</div></div>
+      </div>
     </section>
 
     <section class="card">
-      <h2>SIH Impact Label & Blockchain Traceability</h2>
-      <p>Develop an internally certified label (third-party audited) and integrate blockchain traceability from field to consumer — premium marketing and trust for ESG-only investors.</p>
+      <h2>3 — Label & Traceability</h2>
+      <p><strong>SIH Impact Label:</strong> third-party verified, ensures origin, social conditions, and sustainable compliance.</p>
+      <p><strong>SIH Smart Ecosystem:</strong> blockchain traceability from field to consumer (QR scan on packaging).</p>
     </section>
 
-    <div style="text-align:center;margin-top:14px;">
-      <a class="btn" href="contact_en.html">Request Investor Memorandum</a>
+    <section class="card">
+      <h2>Investor Benefits</h2>
+      <ul>
+        <li>Predictable FFO yield (rental income) + growth leverage (exports & premium products).</li>
+        <li>Risk mitigation via physical assets (land & long-term leases) and certifications.</li>
+        <li>Strong ESG arguments: attractiveness for sovereign and responsible investment funds.</li>
+      </ul>
+    </section>
+
+    <div style="text-align:center;margin:18px 0;">
+      <a class="btn" href="contact.html">Request Memorandum & KPIs</a>
     </div>
   </main>
 
   <footer style="text-align:center;padding:18px;background:var(--green-dark);color:#cde3d1">
-    © 2025 SIH Group — Investor Value & Trust
+    © 2025 SIH Group — Investor Pillar
   </footer>
 </body>
 </html>

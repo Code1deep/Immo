@@ -9,6 +9,26 @@
     :root{--green-dark:#1a5632;--green-mid:#2e7d4b;--accent-orange:#ffa500;--bg:#f9f9f9}
     body{font-family:'Segoe UI',sans-serif;background:var(--bg);margin:0;color:#222}
     header{background:linear-gradient(90deg,var(--green-dark),#217a45);color:#fff5b1;padding:20px 0;position:relative;text-align:center}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0 0;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 5px 10px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
+    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center;}
+    nav a {color: white; text-decoration: none; font-weight: 500;}
+    nav a.active {border-bottom: 2px solid #f7d16e;}
     .lang-switch{position:absolute;top:10px;right:20px;background:rgba(255,255,255,0.12);padding:6px 12px;border-radius:20px}
     .lang-switch a{color:#FFC72C;text-decoration:none;margin:0 6px;font-weight:600}
     .lang-switch {

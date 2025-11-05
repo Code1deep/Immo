@@ -22,43 +22,34 @@
     }
     header h1 { margin: 0; font-size: 2em; }
     header p { margin: 5px 0 15px; color: #FFC72C; }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 10px 0 0;
-      flex-wrap: wrap;
-    }
-    nav ul li { margin: 5px 10px; }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background 0.3s;
-    }
-    nav ul li a:hover, nav ul li a.active { background-color: #2e7d4b; }
-
-    /* ===== LANG SWITCH (TOP LEFT for RTL) ===== */
+    /* ===== LANGUAGE SWITCH (top-right) ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
-      left: 20px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 6px 10px;
+      right: 25px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 12px;
       border-radius: 20px;
       font-size: 0.95em;
+      direction: ltr; /* garder l'ordre visuel des drapeaux LTR */
     }
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
-      margin: 0 4px;
+      margin: 0 5px;
       padding: 3px 8px;
       border-radius: 12px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
+    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
+    
+    nav a{color:white;text-decoration:none;font-weight:500;}
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease; }
+    nav ul li a:hover, nav ul li a.active { background: rgba(255,255,255,0.2); }
+    nav ul{list-style:none;padding:0;display:flex;gap:15px;justify-content:center;}
+    nav a.active{border-bottom:2px solid #f7d16e;}
+    nav a.active{border-bottom:2px solid #f7d16e;}
 
     .modele {
       text-align: center;
@@ -145,13 +136,26 @@
       <ul>
         <li><a href="index_ar.html">الرئيسية</a></li>
         <li><a href="investors_ar.html">المستثمرون</a></li>
+        <li><a href="training_ar.html">التدريب</a></li>
+        <li><a href="bio_patrimoine_ar.html">الزراعة العضوية</a></li>
         <li><a href="tenants_ar.html">المستأجرون</a></li>
         <li><a href="projects_ar.html">المشاريع</a></li>
         <li><a href="distributors_ar.html" class="active">الموزعون</a></li>
         <li><a href="contact_ar.html">اتصل بنا</a></li>
       </ul>
     </nav>
-  </header>
+        <li><a href="index_ar.html">الصفحة الرئيسية</a></li>
+        <li><a href="investors_ar.html">المستثمرون</a></li>
+        <li><a href="training_ar.html" class="active">التدريب</a></li>
+        <li><a href="bio_patrimoine_ar.html">الزراعة العضوية</a></li>
+        <li><a href="tenants_ar.html">المستأجرون</a></li>
+        <li><a href="projects_ar.html">المشاريع</a></li>
+        <li><a href="distributors_ar.html">الموزعون</a></li>
+        <li><a href="contact_ar.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <section class="modele">
   <h2>شبكة التوزيع الزراعية – SIH Distribution</h2>

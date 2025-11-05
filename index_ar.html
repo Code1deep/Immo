@@ -53,31 +53,12 @@
       color: #1a5632;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 10px 0 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 5px 12px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      background: rgba(255, 255, 255, 0.2);
-    }
+    nav a{color:white;text-decoration:none;font-weight:500;}
+    nav ul li a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease; }
+    nav ul li a:hover, nav ul li a.active { background: rgba(255,255,255,0.2); }
+    nav ul{list-style:none;padding:0;display:flex;gap:15px;justify-content:center;}
+    nav a.active{border-bottom:2px solid #f7d16e;}
+    nav a.active{border-bottom:2px solid #f7d16e;}
 
     /* ===== HERO ===== */
     .hero {
@@ -261,13 +242,14 @@
         <li><a href="index_ar.html" class="active">الصفحة الرئيسية</a></li>
         <li><a href="investors_ar.html">المستثمرون</a></li>
         <li><a href="training_ar.html">التدريب</a></li>
+        <li><a href="bio_patrimoine_ar.html">الزراعة العضوية</a></li>
         <li><a href="tenants_ar.html">المستأجرون</a></li>
         <li><a href="projects_ar.html">المشاريع</a></li>
         <li><a href="distributors_ar.html">الموزعون</a></li>
         <li><a href="contact_ar.html">اتصل بنا</a></li>
       </ul>
     </nav>
-  </header>
+</header>
 
   <!-- ===== HERO ===== -->
   <section class="hero">

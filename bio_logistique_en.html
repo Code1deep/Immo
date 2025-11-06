@@ -73,26 +73,26 @@
     nav ul {
       list-style: none;
       padding: 0;
-      margin: 12px 0 0 0;
       display: flex;
-      flex-wrap: wrap;
+      gap: 15px;
       justify-content: center;
-      gap: 10px;
+      flex-wrap: wrap;
+      margin: 15px 0 0;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: 500;
-      padding: 6px 10px;
+      padding: 6px 12px;
       border-radius: 4px;
       transition: background 0.3s ease;
-      display: inline-block;
-      font-size: 0.95em;
     }
-
-    nav ul li a:hover,
     nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
     section {
       padding: 30px 8%;

@@ -1,44 +1,72 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vision — Human Value & SIH Academy – SIH Group</title>
+  <title>Vision — SIH Academy & Human – SIH Group</title>
   <style>
-    :root{--green-dark:#1a5632;--accent-orange:#ffa500;--bg:#f9f9f9}
+    :root{--green-dark:#1a5632;--green-mid:#2e7d4b;--accent-orange:#ffa500;--bg:#f9f9f9}
     body{font-family:'Segoe UI',sans-serif;background:var(--bg);margin:0;color:#222}
-    header{background:linear-gradient(90deg,var(--green-dark),#217a45);color:#fff5b1;padding:20px 0;text-align:center;position:relative}
+    header{background:linear-gradient(90deg,var(--green-dark),#217a45);color:#fff5b1;padding:20px 0;position:relative;text-align:center}
+    .lang-switch { position: absolute; top: 10px; right: 20px; background: rgba(255,255,255,0.15); padding: 6px 10px; border-radius: 20px; font-size: 0.95em; }
+    .lang-switch a { color: #FFC72C; text-decoration: none; margin: 0 4px; padding: 3px 8px; border-radius: 12px; transition: all 0.3s ease; font-weight: 500; }
+    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
+    nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
+    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
     .container{max-width:1000px;margin:24px auto;padding:0 18px}
-    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px;border-left:6px solid #e6b400}
     h1{margin:6px 0}
-    .btn{background:linear-gradient(90deg,var(--green-dark),#2e7d4b);color:white;padding:10px 18px;border-radius:26px;text-decoration:none;font-weight:700}
+    h2 { color: #fa7414; border-left: 5px solid #f7d16e; padding-left: 10px; display: inline-block; font-size: 1.2em; font-weight: bold;}
+    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px;border-left:6px solid var(--green-mid)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .btn{background:linear-gradient(90deg,var(--green-dark),var(--green-mid));color:white;padding:10px 18px;border-radius:26px;text-decoration:none;font-weight:700}
   </style>
 </head>
 <body>
   <header>
-    <div class="lang-switch" style="position:absolute;top:10px;right:20px;background:rgba(255,255,255,0.12);padding:6px 12px;border-radius:20px;">🌐 <a href="vision.html">🇫🇷 Français</a> | <a href="vision_en.html">🇬🇧 English</a> | <a href="vision_ar.html">🇸🇦 العربية</a></div>
-    <h1>Human Value & SIH Academy</h1>
-    <p style="color:#eaf6ee">Training, certification and capacity building for partners and workforce</p>
+    <div class="lang-switch">🌐 <a href="vision.html">🇫🇷 Français</a> | <a href="vision_human_en.html">🇬🇧 English</a> | <a href="vision_human_ar.html">🇸🇦 العربية</a></div>
+    <h1>🌿 SIH Group</h1>
+    <h1>SIH Academy — Training, Certification & Excellence</h1>
+    <p style="color:#eaf6ee">Standardize operational excellence, increase productivity and reduce risks</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="vision.html" class="active">Strategic Vision</a></li>
+        <li><a href="investors.html">Investors</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="bio_patrimoine.html">SIH BIO</a></li>
+        <li><a href="locataires.html">Tenants</a></li>
+        <li><a href="projets.html">Projects</a></li>
+        <li><a href="distributeurs.html">Distributors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">
     <section class="card">
-      <h2>SIH Academy</h2>
-      <p>A multi-modal training platform (video, manuals, practical cases) for farmers, logistics and operations staff with certification pathways.</p>
+      <h2>Platform & Modalities</h2>
+      <p>Blended learning: practical videos, field modules, PDF manuals, case studies and certification quizzes (downloadable SIH Green Expert certificate).</p>
     </section>
 
     <section class="card">
-      <h2>Certified Programs & Partnerships</h2>
-      <p>Create accredited programs with agronomy schools and issue the "Certified SIH Green Expert" diploma to raise field standards.</p>
+      <h2>Key Modules</h2>
+      <ul>
+        <li>Agricultural techniques & sustainable livestock</li>
+        <li>Food Hygiene & Safety (GMP, HACCP)</li>
+        <li>Logistics & Storage (loss reduction)</li>
+        <li>Sustainable innovation & renewable energy</li>
+      </ul>
     </section>
 
     <section class="card">
-      <h2>Public Training & Revenue</h2>
-      <p>Offer premium short courses (organic farming, food safety, green logistics) to external companies as a revenue and reputation channel.</p>
+      <h2>HR & Market Impact</h2>
+      <p>Certification = marketing for distributors and farmers; improves employability and reduces turnover.</p>
     </section>
 
     <div style="text-align:center;margin-top:14px;">
-      <a class="btn" href="contact_en.html">Partner with SIH Academy</a>
+      <a class="btn" href="training.html">View Trainings</a>
     </div>
   </main>
 

@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Logistics – SIH BIO HERITAGE</title>
-<style>
-/* mêmes styles que la version française */
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Logistics – SIH BIO HERITAGE</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 20px 15px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .lang-switch a {
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 2px 4px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    h1 {
+      margin: 8px 0;
+      font-size: 2.1em;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #eb7434;
+      border-right: 5px solid #f7d16e;
+      padding-right: 10px;
+      display: inline-block;
+      font-size: 1.3em;
+    }
+
+    h3, h4 {
+      color: #1a5632;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      display: inline-block;
+      font-size: 0.95em;
+    }
+
+    nav ul li a:hover,
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+
+    section {
+      padding: 30px 8%;
+      background: #fff;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 950px;
+      text-align: center;
+    }
+
+    .highlight {
+      background: #fff5e1;
+      border-right: 4px solid #ffa500;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 6px;
+      text-align: right;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 25px 10px;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    /* ✅ Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 8px 50px 8px;
+      }
+
+      .lang-switch {
+        position: static;
+        display: block;
+        margin: 8px auto 12px;
+        text-align: center;
+      }
+
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.1em; border-right: 3px solid #f7d16e; }
+
+      nav ul { flex-direction: column; gap: 6px; }
+      nav ul li a { display: block; background: rgba(255,255,255,0.1); border-radius: 6px; }
+
+      section { padding: 20px 5%; }
+      .highlight { padding: 10px; font-size: 0.95em; }
+    }
+  </style>
 </head>
 <body>
 <header>

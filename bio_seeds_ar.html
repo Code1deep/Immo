@@ -5,41 +5,168 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🌾 حفظ البذور القديمة – SIH BIO PATRIMOINE</title>
   <style>
-    body {font-family:'Segoe UI',sans-serif;background-color:#f9f9f9;color:#333;margin:0;line-height:1.6;direction:rtl;text-align:right;}
-    header {background:linear-gradient(90deg,#007a3d,#00994c);color:yellow;padding:20px 0;text-align:center;position:relative;box-shadow:0 2px 6px rgba(0,0,0,0.2);}
-    /* ===== LANGUAGE SWITCH (top-right) ===== */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 20px 15px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== LANGUAGE SWITCH ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
-      right: 25px;
+      right: 20px;
       background: rgba(255,255,255,0.15);
-      padding: 6px 12px;
+      padding: 6px 10px;
       border-radius: 20px;
-      font-size: 0.95em;
-      direction: ltr; /* garder l'ordre visuel des drapeaux LTR */
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
     }
+
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
-      margin: 0 5px;
-      padding: 3px 8px;
-      border-radius: 12px;
+      margin: 0 4px;
+      padding: 3px 6px;
+      border-radius: 10px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
 
-    nav a{color:white;text-decoration:none;font-weight:500;}
-    nav ul li a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease; }
-    nav ul li a:hover, nav ul li a.active { background: rgba(255,255,255,0.2); }
-    nav ul{list-style:none;padding:0;display:flex;gap:15px;justify-content:center;}
-    nav a.active{border-bottom:2px solid #f7d16e;}
-    nav a.active{border-bottom:2px solid #f7d16e;}
-    h1 {margin:0;font-size:2.3em;font-weight:bold;}
-    h2 {color:#eb7434;border-right:5px solid #f7d16e;padding-right:10px;display:inline-block;}
-    section {padding:40px 10%;background:#fff;margin:40px auto;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);max-width:950px;text-align:center;}
-    .highlight {background:#fff5e1;border-right:4px solid #ffa500;padding:15px;margin-top:15px;border-radius:6px;text-align:right;}
-    footer {text-align:center;background:#1a5632;color:white;padding:25px 0;margin-top:60px;}
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    h1 {
+      margin: 8px 0;
+      font-size: 2.1em;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #eb7434;
+      border-right: 5px solid #f7d16e;
+      padding-right: 10px;
+      display: inline-block;
+      font-size: 1.3em;
+    }
+
+    h3 {
+      color: #1a5632;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+      display: inline-block;
+      font-size: 0.95em;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255,255,255,0.2);
+    }
+
+    section {
+      padding: 30px 8%;
+      background: #fff;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 950px;
+      text-align: center;
+    }
+
+    .highlight {
+      background: #fff5e1;
+      border-right: 4px solid #ffa500;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 6px;
+      text-align: right;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 25px 10px;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    /* ===== RESPONSIVE DESIGN ===== */
+    @media (max-width: 768px) {
+      header {
+        padding: 25px 10px 50px 10px;
+      }
+
+      .lang-switch {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.1em;
+        border-right: 3px solid #f7d16e;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      nav ul li a {
+        display: block;
+        text-align: center;
+        background: rgba(255,255,255,0.1);
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      section {
+        padding: 20px 5%;
+      }
+
+      .highlight {
+        padding: 10px;
+        font-size: 0.95em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -51,9 +178,11 @@
     <a href="bio_seeds_en.html">🇬🇧 English</a> |
     <a href="bio_seeds_ar.html">🇸🇦 العربية</a>
   </div>
+
   <h3>🌿 مجموعة SIH</h3>
   <h1>🌾 حفظ البذور القديمة</h1>
   <h2>قسم التراث البذري والزراعة العضوية – SIH BIO PATRIMOINE</h2>
+
   <nav>
     <ul>
       <li><a href="index_ar.html">الرئيسية</a></li>

@@ -49,31 +49,10 @@
       color: #1a5632;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 10px 0 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 5px 12px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      background: rgba(255, 255, 255, 0.2);
-    }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
+    nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
+    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
 
     /* ===== HERO ===== */
     .hero {

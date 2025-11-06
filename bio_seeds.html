@@ -5,22 +5,186 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sauvegarde des Semences Anciennes – SIH BIO PATRIMOINE</title>
   <style>
-    body { font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; color: #333; margin: 0; line-height: 1.6; }
-    header { background: linear-gradient(90deg, #007a3d, #00994c); color: yellow; padding: 20px 0; position: relative; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    .lang-switch { position: absolute; top: 10px; right: 20px; background: rgba(255,255,255,0.15); padding: 6px 10px; border-radius: 20px; font-size: 0.95em; }
-    .lang-switch a { color: #FFC72C; text-decoration: none; margin: 0 4px; padding: 3px 8px; border-radius: 12px; transition: all 0.3s ease; font-weight: 500; }
-    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
-    nav a.active { border-bottom: 2px solid #f7d16e; }
-    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
-    nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
-    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
-    section { padding: 40px 10%; background-color: #fff; margin: 40px auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); max-width: 950px; }
-    h1 { font-size: 2.2em; color: #eb7434; text-align: center; }
-    h2 { color: #2217e8; border-left: 5px solid #f7d16e; padding-left: 10px; display: inline-block; font-size: 2.2em; font-weight: bold;}
-    h3 { color: #f5f262; font-size: 2.2em; font-weight: bold;}
-    h4 { color: #99069c; font-size: 2.2em; font-weight: bold;}
-    .highlight { background-color: #fff5e1; border-left: 4px solid #ffa500; padding: 15px; margin-top: 15px; border-radius: 6px; }
-    footer { text-align: center; background: #1a5632; color: white; padding: 25px 0; margin-top: 60px; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 20px 15px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* --- Language Switch --- */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
+    }
+
+    .lang-switch a {
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 15px 0 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #eb7434;
+      margin: 10px 0;
+    }
+
+    h2 {
+      color: #2217e8;
+      border-left: 5px solid #f7d16e;
+      padding-left: 10px;
+      display: inline-block;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #f5f262;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    h4 {
+      color: #99069c;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 10%;
+      background-color: #fff;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 950px;
+    }
+
+    .highlight {
+      background-color: #fff5e1;
+      border-left: 4px solid #ffa500;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 25px 10px;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      header {
+        padding: 25px 10px 50px 10px;
+      }
+
+      .lang-switch {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.3em;
+        border-left: 3px solid #f7d16e;
+      }
+
+      h3 {
+        font-size: 1.4em;
+      }
+
+      h4 {
+        font-size: 1.2em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      nav ul li a {
+        display: block;
+        text-align: center;
+        background: rgba(255,255,255,0.1);
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      section {
+        padding: 25px 5%;
+        margin: 25px auto;
+      }
+
+      .highlight {
+        padding: 12px;
+        font-size: 0.95em;
+      }
+
+      footer {
+        font-size: 0.85em;
+        padding: 20px 5px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -31,9 +195,11 @@
     <a href="bio_seeds_en.html">🇬🇧 English</a> |
     <a href="bio_seeds_ar.html">🇸🇦 العربية</a>
   </div>
+
   <h3>🌿 SIH Group</h3>
   <h1>🌾 Sauvegarde des Semences Anciennes</h1>
   <p>Préserver la biodiversité et garantir la résilience climatique</p>
+
   <nav>
     <ul>
       <li><a href="index.html">Accueil</a></li>

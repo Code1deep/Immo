@@ -137,6 +137,43 @@
       font-size: 1.05em;
       display: block;
     }
+    .cards-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    .card {
+      background: #e9f8ed;
+      border-left: 6px solid #2e8b57;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background-color: #d7f0df;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .click-icon {
+      float: right;
+      color: #1a5632;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .click-icon {
+     transform: translateX(5px);
+    }
 
     .highlight {
       background-color: #fff5e1;
@@ -254,13 +291,25 @@
     <h2>Structure du Département</h2>
     <p>Un pilier stratégique de la transition durable de SIH Group</p>
 
-    <div class="modules">
-      <div class="card"><a href="bio_seeds.html">🌾 Sauvegarde des Semences Anciennes</a></div>
-      <div class="card"><a href="bio_hygiene.html">🌱 Hygiène Agricole Durable</a></div>
-      <div class="card"><a href="bio_innov.html">🧪 Recherche & Développement Bio-Intrants</a></div>
-      <div class="card"><a href="bio_certif.html">🌍 Certification & Valorisation BIO</a></div>
-      <div class="card"><a href="bio_distribution.html">🍎 Production & Distribution Biologique</a></div>
-      <div class="card"><a href="bio_logistique.html">🚚 Logistique Verte</a></div>
+    <div class="cards-section">
+      <div class="card" onclick="location.href='bio_seeds.html'">
+        🌾 <b>1. Sauvegarde des Semences Anciennes</b> <span class="click-icon">➜</span>
+      </div>
+      <div class="card" onclick="location.href='bio_hygiene.html'">
+        🌿 <b>2. Hygiène Agricole Durable</b> <span class="click-icon">➜</span>
+      </div>
+      <div class="card" onclick="location.href='bio_recherche.html'">
+        🔬 <b>3. Recherche & Développement Bio-Intrants</b> <span class="click-icon">➜</span>
+      </div>
+      <div class="card" onclick="location.href='bio_certification.html'">
+        🧾 <b>4. Certification & Valorisation BIO</b> <span class="click-icon">➜</span>
+      </div>
+      <div class="card" onclick="location.href='bio_production.html'">
+        🍎 <b>5. Production & Distribution Biologique</b> <span class="click-icon">➜</span>
+      </div>
+      <div class="card" onclick="location.href='bio_logistique.html'">
+        🚛 <b>6. Logistique Verte</b> <span class="click-icon">➜</span>
+      </div>
     </div>
 
     <div class="highlight">

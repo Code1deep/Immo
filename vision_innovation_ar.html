@@ -6,40 +6,62 @@
   <title>الرؤية — الابتكار والبحث والتطوير – مجموعة SIH</title>
   <style>
     :root{--green-dark:#1a5632;--green-mid:#2e7d4b;--accent-orange:#ffa500;--bg:#f9f9f9}
-    body{font-family:'Segoe UI',sans-serif;background:var(--bg);margin:0;color:#222;direction:rtl;text-align:right;}
+    body{font-family:'Segoe UI',sans-serif;background:var(--bg);margin:0;color:#222;direction:rtl;text-align:right}
     header{background:linear-gradient(90deg,var(--green-dark),#217a45);color:#fff5b1;padding:20px 0;position:relative;text-align:center}
-    .lang-switch{position:absolute;top:10px;left:20px;background:rgba(255,255,255,0.12);padding:6px 12px;border-radius:20px;direction:ltr}
+    .lang-switch { position: absolute; top: 10px; left: 20px; background: rgba(255,255,255,0.15); padding: 6px 10px; border-radius: 20px; font-size: 0.95em; }
+    .lang-switch a { color: #FFC72C; text-decoration: none; margin: 0 4px; padding: 3px 8px; border-radius: 12px; transition: all 0.3s ease; font-weight: 500; }
+    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
+    nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
+    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
     .container{max-width:1000px;margin:24px auto;padding:0 18px}
-    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px;border-right:6px solid #e6b400}
     h1{margin:6px 0}
-    .btn{background:linear-gradient(90deg,var(--green-dark),var(--green-mid));color:white;padding:10px 18px;border-radius:26px;text-decoration:none;font-weight:700;display:inline-block}
+    h2 { color: #fa7414; border-right: 5px solid #f7d16e; padding-right: 10px; display: inline-block; font-size: 1.2em; font-weight: bold;}
+    .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04);margin-bottom:16px;border-right:6px solid #e6b400}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .btn{background:linear-gradient(90deg,var(--green-dark),var(--green-mid));color:white;padding:10px 18px;border-radius:26px;text-decoration:none;font-weight:700}
   </style>
 </head>
 <body>
   <header>
-    <div class="lang-switch">🌐 <a href="vision.html">🇫🇷 Français</a> | <a href="vision_en.html">🇬🇧 English</a> | <a href="vision_ar.html">🇸🇦 العربية</a></div>
+    <div class="lang-switch">🌐 <a href="vision.html">🇫🇷 Français</a> | <a href="vision_innovation_en.html">🇬🇧 English</a> | <a href="vision_innovation_ar.html">🇸🇦 العربية</a></div>
+    <h1>🌿 مجموعة SIH</h1>
     <h1>الابتكار والبحث والتطوير — نظام SIH الذكي</h1>
-    <p style="color:#eaf6ee">خلق القيمة غير المادية وضمان التتبع والأداء</p>
+    <p style="color:#eaf6ee">خلق القيمة غير الملموسة وضمان التتبع والأداء</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">الصفحة الرئيسية</a></li>
+        <li><a href="vision.html" class="active">الرؤية الاستراتيجية</a></li>
+        <li><a href="investors.html">المستثمرون</a></li>
+        <li><a href="training.html">التدريب</a></li>
+        <li><a href="bio_patrimoine.html">SIH BIO</a></li>
+        <li><a href="locataires.html">المستأجرون</a></li>
+        <li><a href="projets.html">المشاريع</a></li>
+        <li><a href="distributeurs.html">الموزعون</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="container">
     <section class="card">
       <h2>مركز SIH BIO Tech</h2>
-      <p>البحث والتطوير في الأسمدة الحيوية، المكافحة الحيوية والبذور المتكيفة مع المناخ — هدف: براءات وحلول قابلة للتسويق.</p>
+      <p>البحث والتطوير في الأسمدة الحيوية، المكافحة البيولوجية، البذور المتوافقة مع المناخ — الهدف: براءات اختراع وحلول قابلة للتسويق.</p>
     </section>
 
     <section class="card">
       <h2>نظام SIH الذكي (رقمي)</h2>
-      <p>منصة رقمية: تخطيط المحاصيل، حساسات إنترنت الأشياء، تقارير ESG آلية وتتبع بلوكتشين لأصل المنتج والتغليف.</p>
+      <p>منصة رقمية: تخطيط المحاصيل، أجهزة استشعار IoT، تقارير ESG تلقائية، وتتبع عبر البلوك تشين للتغليف.</p>
     </section>
 
     <section class="card">
-      <h2>التمويل والشراكات الجامعية</h2>
-      <p>استهداف منح دولية (الفاو، البنك الدولي، الاتحاد الأوروبي) والتعاون مع مؤسسات الزراعة لتسريع الابتكار واعتماده.</p>
+      <h2>التمويل والشراكات</h2>
+      <p>استهداف المنح (FAO، الاتحاد الأوروبي، البنك الدولي) والشراكات الجامعية لتسريع الابتكار واعتماده.</p>
     </section>
 
     <div style="text-align:center;margin-top:14px;">
-      <a class="btn" href="contact_ar.html">اقترح شراكة بحثية</a>
+      <a class="btn" href="contact.html">اقتراح شراكة بحث وتطوير</a>
     </div>
   </main>
 

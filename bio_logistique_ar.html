@@ -24,11 +24,10 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    /* ===== LANGUAGE SWITCH ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
-      right: 20px;
+      left: 20px;
       background: rgba(255,255,255,0.15);
       padding: 4px 8px;
       border-radius: 20px;
@@ -66,7 +65,7 @@
       font-size: 1.3em;
     }
 
-    h3 {
+    h3, h4 {
       color: #1a5632;
     }
 
@@ -122,48 +121,27 @@
       font-size: 0.9em;
     }
 
-    /* ===== RESPONSIVE DESIGN ===== */
+    /* ✅ Responsive */
     @media (max-width: 768px) {
       header {
-        padding: 25px 10px 50px 10px;
+        padding: 20px 8px 50px 8px;
       }
 
       .lang-switch {
         position: static;
-        display: inline-block;
-        margin-bottom: 10px;
-      }
-
-      h1 {
-        font-size: 1.6em;
-      }
-
-      h2 {
-        font-size: 1.1em;
-        border-right: 3px solid #f7d16e;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 6px;
-      }
-
-      nav ul li a {
         display: block;
+        margin: 8px auto 12px;
         text-align: center;
-        background: rgba(255,255,255,0.1);
-        border-radius: 6px;
-        padding: 8px;
       }
 
-      section {
-        padding: 20px 5%;
-      }
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.1em; border-right: 3px solid #f7d16e; }
 
-      .highlight {
-        padding: 10px;
-        font-size: 0.95em;
-      }
+      nav ul { flex-direction: column; gap: 6px; }
+      nav ul li a { display: block; background: rgba(255,255,255,0.1); border-radius: 6px; }
+
+      section { padding: 20px 5%; }
+      .highlight { padding: 10px; font-size: 0.95em; }
     }
   </style>
 </head>
@@ -183,7 +161,7 @@
       <li><a href="index_ar.html">الرئيسية</a></li>
       <li><a href="vision_ar.html">الرؤية الاستراتيجية</a></li>
       <li><a href="investors_ar.html">المستثمرون</a></li>
-      <li><a href="training_ar.html">التدريبات</a></li>
+      <li><a href="training_ar.html">التدريب</a></li>
       <li><a href="bio_patrimoine_ar.html" class="active">التراث البيولوجي</a></li>
       <li><a href="tenants_ar.html">المستأجرون</a></li>
       <li><a href="projects_ar.html">المشاريع</a></li>
@@ -198,7 +176,7 @@
   <p>ضمان نقل وتخزين آمن وفعال للمنتجات العضوية بما يتماشى مع معايير البيئة والاستدامة.</p>
 
   <div class="highlight">
-    <h4>الأهداف الإستراتيجية</h4>
+    <h4>🎯 الأهداف الإستراتيجية</h4>
     <ul>
       <li>تقليل البصمة الكربونية في سلاسل التوريد.</li>
       <li>اعتماد طاقة متجددة في النقل والتخزين.</li>
@@ -207,7 +185,7 @@
   </div>
 
   <div class="highlight">
-    <h4>الشراكات</h4>
+    <h4>🤝 الشراكات</h4>
     <p>التعاون مع شركات النقل الصديقة للبيئة والمراكز اللوجستية الخضراء.</p>
   </div>
 </section>

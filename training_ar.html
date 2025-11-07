@@ -21,31 +21,47 @@
       position: relative;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
+    .lang-switch a:hover {background: #cde3d1; color: #1a5632;}
+
     .lang-switch {
       position: absolute;
       top: 10px;
       left: 20px;
       background: rgba(255,255,255,0.15);
-      padding: 6px 10px;
+      padding: 4px 8px;
       border-radius: 20px;
-      font-size: 0.95em;
+      font-size: 0.9em;
       direction: ltr;
+      white-space: nowrap;
     }
+
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
       margin: 0 4px;
-      padding: 3px 8px;
-      border-radius: 12px;
+      padding: 2px 4px;
+      border-radius: 10px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    .lang-switch a:hover {background: #cde3d1; color: #1a5632;}
+
+    .lang-switch {
+      position: static;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
     h1 {margin: 0; font-size: 2.2em; font-weight: bold;}
     header p {margin: 8px 0 15px; font-size: 1.1em; color: #fff5b1;}
     nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
     nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
     nav ul li a:hover, nav ul li a.active {background: rgba(255,255,255,0.2);}
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+      border-bottom: 2px solid #f7d16e;
+    }
+
     section {
       padding: 40px 10%;
       background-color: #fff;

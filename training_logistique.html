@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logistique & Conservation - SIH Group</title>
   <style>
-    body{font-family:'Segoe UI',sans-serif;background:#f9f9f9;color:#333;margin:0;line-height:1.6;}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
 
     header {
       background: linear-gradient(90deg, #007a3d, #00994c);
@@ -16,9 +22,29 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    .lang-switch{position:absolute;top:10px;right:20px;background:rgba(255,255,255,0.15);padding:6px 10px;border-radius:20px;}
-    .lang-switch a{color:#FFC72C;text-decoration:none;margin:0 4px;padding:3px 8px;border-radius:12px;transition:0.3s;}
-    .lang-switch a:hover{background:#cde3d1;color:#1a5632;}
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 10px;
+      border-radius: 20px;
+    }
+
+    .lang-switch a {
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 3px 8px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
     nav ul {
       list-style: none;
       padding: 0;
@@ -37,32 +63,68 @@
       border-radius: 4px;
       transition: background 0.3s ease;
     }
-    nav a.active { border-bottom: 2px solid #f7d16e; }
+
+    nav a.active {
+      border-bottom: 2px solid #f7d16e;
+    }
+
     nav ul li a:hover,
     nav ul li a.active {
       background: rgba(255, 255, 255, 0.2);
     }
-    nav ul {
-      flex-direction: column;
-      gap: 6px;
+
+    section {
+      padding: 40px 10%;
+      background: #fff;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 950px;
     }
 
-    nav ul li a {
-      display: block;
+    h1, h2 {
       text-align: center;
-      background: rgba(255,255,255,0.1);
-      border-radius: 6px;
-      padding: 8px;
     }
 
-    section{padding:40px 10%;background:#fff;margin:40px auto;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);max-width:950px;}
-    h1,h2{text-align:center;}
-    h2{color:#eb7434;border-left:5px solid #f7d16e;padding-left:10px;display:inline-block;}
-    ul{text-align:left;max-width:700px;margin:20px auto;}
-    .cta{text-align:center;margin-top:30px;}
-    .cta a{background:#007a3d;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:600;transition:0.3s;}
-    .cta a:hover{background:#ffa500;}
-    footer{text-align:center;background:#1a5632;color:white;padding:25px 0;margin-top:60px;}
+    h2 {
+      color: #eb7434;
+      border-left: 5px solid #f7d16e;
+      padding-left: 10px;
+      display: inline-block;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 700px;
+      margin: 20px auto;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta a {
+      background: #007a3d;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background: #ffa500;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 25px 0;
+      margin-top: 60px;
+    }
 
     /* ✅ Ajustement MOBILE — sans modifier le design Desktop */
     @media (max-width: 768px) {
@@ -72,17 +134,35 @@
         margin-bottom: 10px;
       }
 
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+
+      nav ul li a {
+        display: block;
+        text-align: center;
+        background: rgba(255,255,255,0.1);
+        border-radius: 6px;
+        padding: 8px;
+        width: 80%;
+      }
+
       section {
         padding: 25px 6%;
         margin: 25px auto;
       }
+
       h2 {
         font-size: 1.3em;
         border-left: 3px solid #f7d16e;
       }
+
       ul {
         font-size: 0.95em;
       }
+
       .cta a {
         display: block;
         width: 80%;

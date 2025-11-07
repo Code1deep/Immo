@@ -64,6 +64,23 @@
       transition: background 0.3s ease;
     }
 
+    /* ⚡ Ajustements MOBILE */
+    @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column; /* vertical sur mobile */
+      align-items: center;    /* centrer verticalement */
+      gap: 6px;
+    }
+
+    nav ul li a {
+      display: block;
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 8px;
+      width: 80%;
+    }
+
     nav a.active {
       border-bottom: 2px solid #f7d16e;
     }

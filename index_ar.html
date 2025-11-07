@@ -6,7 +6,7 @@
   <title>مجموعة SIH – الاستثمار في الاستقرار المستدام</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* --- Base / Palette identique --- */
+    /* ===== BASE ===== */
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f9f9f9;
@@ -16,6 +16,9 @@
       direction: rtl;
       text-align: right;
     }
+
+    a { text-decoration: none; }
+    h2, h3, h4, h5 { margin: 0.5em 0; }
 
     /* ===== HEADER ===== */
     header {
@@ -27,110 +30,30 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-/* ===== LANGUAGE SWITCH  ===== */
-.lang-switch {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  background: rgba(255,255,255,0.15);
-  padding: 4px 8px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  direction: rtl;
-  white-space: nowrap;
-}
-@media (max-width: 768px) {
-  header {
-    padding: 20px 10px 40px 10px;
-  }
+    /* ===== LANGUAGE SWITCH ===== */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      white-space: nowrap;
+    }
 
-  .lang-switch {
-    position: relative;
-    display: block;
-    text-align: center;
-    margin: 10px auto;
-    background: rgba(255,255,255,0.15);
-    padding: 6px 10px;
-    border-radius: 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding: 0;
-    margin: 15px 0;
-  }
-
-  nav ul li a {
-    display: block;
-    background: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 10px 15px;
-    width: 90%;
-    text-align: center;
-  }
-
-  section {
-    padding: 25px 6%;
-    width: 95%;
-    margin: 25px auto;
-    text-align: center;
-  }
-
-  h2 {
-    text-align: center;
-    border: none;
-    border-bottom: 4px solid #f7d16e;
-    padding-bottom: 8px;
-  }
-
-  .highlight {
-    padding: 14px;
-    font-size: 0.95em;
-    text-align: left;
-  }
-
-  .cta a {
-    display: block;
-    width: 90%;
-    margin: 15px auto;
-    text-align: center;
-    padding: 12px 18px;
-    font-size: 1em;
-  }
-
-  footer {
-    font-size: 0.9em;
-    padding: 20px 10px;
-  }
-
-.lang-switch a {
-  color: #FFC72C;
-  text-decoration: none;
-  margin: 0 4px;
-  padding: 2px 4px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.lang-switch a:hover {
-  background: #cde3d1;
-  color: #1a5632;
-}
-
-/* ===== MOBILE VERSION ===== */
-@media (max-width: 768px) {
-  .lang-switch {
-    position: static;
-    display: inline-block;
-    margin-bottom: 12px;
-  }
-}
-
-
-    nav a{color:white;text-decoration:none;font-weight:500;}
+    .lang-switch a {
+      color: #FFC72C;
+      margin: 0 4px;
+      padding: 2px 4px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
 
     nav ul {
       list-style: none;
@@ -144,7 +67,6 @@
 
     nav ul li a {
       color: white;
-      text-decoration: none;
       font-weight: 500;
       padding: 8px 14px;
       border-radius: 6px;
@@ -156,242 +78,117 @@
       background: rgba(255, 255, 255, 0.2);
       border-bottom: 2px solid #f7d16e;
     }
+
     /* ===== HERO ===== */
     .hero {
       background: url('img/hero.jpg') center/cover no-repeat;
       color: white;
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
       padding: 20px 1px;
-    }
-    .hero p {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      color: white;
+      text-align: center;
     }
 
-    .hero h2 {
-      font-size: 2.2em;
-      margin-bottom: 15px;
-    }
-    h4 {
-      font-size: 2.2em;
-      margin-bottom: 15px;
-    }
+    .hero h2 { font-size: 2.2em; margin-bottom: 15px; }
+    .hero p { font-size: 1.5em; margin-bottom: 15px; }
 
     .btn {
       background: #1a5632;
       color: white;
       padding: 12px 26px;
       border-radius: 6px;
-      text-decoration: none;
-      transition: all 0.3s ease;
       font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
+    .btn:hover { background: #2e7d4b; }
 
-    .btn:hover {
-      background: #2e7d4b;
-    }
-
-    /* ===== SECTION MODELE ===== */
+    /* ===== MODELE FINANCIER ===== */
     .modele {
       background: linear-gradient(180deg, #fdfdfd, #f4faf5);
       padding: 60px 20px;
       text-align: center;
     }
 
-    .modele h2 {
-      color: #1a5632;
-      font-size: 1.9em;
-      margin-bottom: 25px;
-    }
-
-    .modele .highlight {
-      color: #d87b00;
-      font-weight: 600;
-    }
-
-    .modele-block p {
-      color: #0f95f5;
-      font-size: 1.9em;
-      margin-bottom: 15px;
-    }
+    .modele h2 { color: #1a5632; font-size: 1.9em; margin-bottom: 25px; }
+    .modele .highlight { color: #d87b00; font-weight: 600; }
 
     .modele-block {
       background: white;
-      border-right: 6px solid #1a5632; /* pour RTL on met la bordure à droite */
+      border-right: 6px solid #1a5632;
       border-radius: 10px;
       padding: 25px 25px 15px;
       margin: 20px auto;
       max-width: 900px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       transition: transform 0.2s ease;
-    }
-
-    .modele-block:hover {
-      transform: scale(1.02);
-    }
-
-    .modele-block h3 {
-      color: #d20ff5;
-      margin-bottom: 10px;
-    }
-
-    .modele-block h4 {
-      color: #e6b400;
-      margin-top: 15px;
-    }
-
-    .modele-block p {
       text-align: right;
-      margin: 8px 0;
+    }
+    .modele-block:hover { transform: scale(1.02); }
+    .modele-block h3 { color: #d20ff5; margin-bottom: 10px; }
+    .modele-block h4 { color: #e6b400; margin-top: 15px; }
+    .modele-block p { font-size: 1em; margin: 8px 0; color: #0f95f5; }
+
+    /* ===== STRUCTURE DU GROUPE ===== */
+    .structure {
+      text-align: center;
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      direction: rtl;
     }
 
-    /* ===== STRUCTURE ===== */
+    .structure h2 {
+      color: #1a5632;
+      font-size: 2em;
+      border-bottom: 4px solid #00994c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-.structure {
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  direction: rtl;
-  font-family: 'Segoe UI', sans-serif;
-}
+    .structure p {
+      color: #f2c249;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      line-height: 1.8;
+      font-weight: bold;
+    }
 
-.structure h2 {
-  color: #1a5632;
-  font-size: 2em;
-  border-bottom: 4px solid #00994c;
-  display: inline-block;
-  padding-bottom: 5px;
-}
+    .orgchart { display: flex; flex-direction: column; align-items: center; position: relative; }
+    .node {
+      background: #fff;
+      border: 2px solid #00994c;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      min-width: 220px;
+      transition: all 0.3s ease;
+    }
+    .node:hover { background: #eaffec; transform: translateY(-5px); }
+    .node h3, .node h4, .node h5 { color: #007a3d; font-weight: bold; margin: 5px 0; }
+    .node p { font-size: 0.95em; color: #555; margin: 5px 0 0 0; }
 
-.structure p {
-  color: #f2c249;
-  font-size: 1.1em;
-  margin-bottom: 40px;
-  line-height: 1.8;
-  font-weight: bold;
-}
+    .children, .sub-children {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 25px;
+      position: relative;
+    }
 
-/* ===== الهيكل ===== */
-.orgchart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
+    .children::before, .sub-children::before,
+    .child::before, .sub-child::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: 50%;
+      width: 2px;
+      height: 25px;
+      background: #00994c;
+      transform: translateX(50%);
+    }
 
-.node {
-  background: #fff;
-  border: 2px solid #00994c;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  min-width: 220px;
-  transition: all 0.3s ease;
-}
+    .child, .sub-child { position: relative; }
 
-.node:hover {
-  background: #eaffec;
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-.node h3, .node h4, .node h5 {
-  margin: 5px 0;
-  color: #007a3d;
-  font-weight: bold;
-}
-
-.node p {
-  font-size: 0.95em;
-  color: #555;
-  margin: 5px 0 0 0;
-}
-
-/* ===== العلاقات بين الأقسام ===== */
-.children {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 25px;
-  position: relative;
-}
-
-.children::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  right: 50%;
-  width: 2px;
-  height: 25px;
-  background: #00994c;
-  transform: translateX(50%);
-}
-
-.child {
-  position: relative;
-}
-
-.child::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  right: 50%;
-  width: 2px;
-  height: 25px;
-  background: #00994c;
-  transform: translateX(50%);
-}
-
-.sub-children {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  position: relative;
-}
-
-.sub-children::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 50%;
-  width: 2px;
-  height: 20px;
-  background: #00994c;
-  transform: translateX(50%);
-}
-
-.sub-child::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  right: 50%;
-  width: 2px;
-  height: 20px;
-  background: #00994c;
-  transform: translateX(50%);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .children, .sub-children {
-    flex-direction: column;
-  }
-
-  .node {
-    width: 90%;
-    min-width: auto;
-  }
-
-  .children::before,
-  .sub-children::before,
-  .child::before,
-  .sub-child::before {
-    display: none;
-  }
-  
     /* ===== CTA ===== */
     .cta {
       text-align: center;
@@ -399,14 +196,8 @@
       background: linear-gradient(90deg, #1a5632, #2a8a4e);
       color: white;
     }
-
-    .cta h2 {
-      font-size: 1.8em;
-    }
-
-    .cta p {
-      margin-bottom: 20px;
-    }
+    .cta h2 { font-size: 1.8em; margin-bottom: 15px; }
+    .cta p { margin-bottom: 20px; }
 
     /* ===== FOOTER ===== */
     footer {
@@ -414,44 +205,40 @@
       background: #1a5632;
       color: white;
       padding: 25px 0;
-      margin-top: 40px;
     }
+    footer a { color: #cde3d1; margin: 0 5px; }
+    footer a:hover { color: #fff; }
 
-    footer a {
-      color: #cde3d1;
-      text-decoration: none;
-      margin: 0 5px;
-    }
+    /* ===== RESPONSIVE MOBILE ===== */
+    @media (max-width: 768px) {
+      header { padding: 20px 10px 40px 10px; }
 
-    footer a:hover {
-      color: #fff;
-    }
+      .lang-switch { position: relative; display: block; text-align: center; margin: 10px auto; }
 
-    @media (max-width: 700px) {
-      .modele-block p {
-        text-align: justify;
-      }
-      .lang-switch {
-        position: static;
-        margin-bottom: 10px;
-        direction: ltr;
-      }
+      nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 15px 0; }
+      nav ul li a { display: block; width: 90%; text-align: center; padding: 10px 15px; }
+
+      section, .modele-block, .cta { width: 95%; margin: 20px auto; padding: 20px 5%; text-align: center; }
+
+      .children, .sub-children { flex-direction: column; }
+      .node { width: 90%; min-width: auto; }
+      .children::before, .sub-children::before, .child::before, .sub-child::before { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER -->
   <header>
-    <div class="lang-switch" aria-label="language switch">
+    <div class="lang-switch">
       🌐
       <a href="index.html">🇫🇷 Français</a> |
       <a href="index_en.html">🇬🇧 English</a> |
       <a href="index_ar.html">🇸🇦 العربية</a>
     </div>
-
     <h1>🌿 مجموعة SIH</h1>
     <p>الاستثمار في الاستقرار المستدام</p>
+
     <nav>
       <ul>
         <li><a href="index_ar.html" class="active">الصفحة الرئيسية</a></li>
@@ -465,50 +252,46 @@
         <li><a href="contact_ar.html">اتصل بنا</a></li>
       </ul>
     </nav>
-</header>
+  </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h2>الاستثمار في الاستقرار المستدام</h2>
-      <p>نموذج هجين يجمع بين الأداء العقاري والأمن الغذائي والتوزيع العادل.</p>
-      <a href="investors_ar.html" class="btn">انضم كمستثمر</a>
-    </div>
+    <h2>الاستثمار في الاستقرار المستدام</h2>
+    <p>نموذج هجين يجمع بين الأداء العقاري والأمن الغذائي والتوزيع العادل.</p>
+    <a href="investors_ar.html" class="btn">انضم كمستثمر</a>
   </section>
 
-  <!-- ===== MODELE FINANCIER ===== -->
+  <!-- MODELE FINANCIER -->
   <section class="modele">
     <h2>نموذجنا المالي: <span class="highlight">FFO آمن ومحرك للنمو</span></h2>
-    <p>
-      استراتيجية استثمار <strong>هجينة ومتكاملة</strong> تضمن أقصى درجات المرونة والأداء المستدام.
-    </p>
+    <p>استراتيجية استثمار <strong>هجينة ومتكاملة</strong> تضمن أقصى درجات المرونة والأداء المستدام.</p>
 
-    <div class="modele-block" aria-labelledby="block1">
-      <h3 id="block1">I. الركيزتان: الاستقرار والنمو</h3>
+    <div class="modele-block">
+      <h3>I. الركيزتان: الاستقرار والنمو</h3>
       <h4>1. الاستقرار :</h4>
       <p>عوائد إيجارية طويلة الأجل (عقارات تجارية وزراعية) تشكل قاعدة العائد وتضمن استقرار التوزيع.</p>
       <h4>2. النمو :</h4>
       <p>هوامش الربح الناتجة عن بيع وتصدير المنتجات الزراعية (القمح، الدقيق، الحليب، البيض، الدواجن...)</p>
     </div>
 
-    <div class="modele-block" aria-labelledby="block2">
-      <h3 id="block2">II. التكامل في سلسلة القيمة</h3>
+    <div class="modele-block">
+      <h3>II. التكامل في سلسلة القيمة</h3>
       <h4>1. تحديث الإنتاج :</h4>
       <p>نمول <strong>تحديث البنية الإنتاجية</strong> ونضمن مراقبة الجودة وتحكم التكاليف في كل مرحلة.</p>
       <h4>2. تتبُّع كامل :</h4>
       <p>هذا التكامل العمودي يضمن <strong>تتبعاً كاملاً</strong> ويزيد من الربحية مقارنة بالاكتفاء بالإيجار فقط.</p>
     </div>
 
-    <div class="modele-block" aria-labelledby="block3">
-      <h3 id="block3">III. التوزيع والتصدير</h3>
+    <div class="modele-block">
+      <h3>III. التوزيع والتصدير</h3>
       <h4>1. التوزيع المحلي :</h4>
       <p>توزيع محلي ذو أثر اجتماعي (مخازن صغيرة محلية، سلاسل قصيرة) يدعم الأمن الغذائي ويعزز الصورة.</p>
       <h4>2. التصدير :</h4>
       <p>تصدير منتجات مُحسّنة ومُعتمدة يحقق هوامش أعلى تُعاد إلى FFO وتغذي نمو توزيع الأرباح.</p>
     </div>
 
-    <div class="modele-block" aria-labelledby="block4">
-      <h3 id="block4">IV. الشفافية وإعادة التوزيع</h3>
+    <div class="modele-block">
+      <h3>IV. الشفافية وإعادة التوزيع</h3>
       <h4>1. الشفافية :</h4>
       <p>كل أصل مدعوم <strong>بصك ملكية معتمد</strong> ويتم تدقيقه من قِبَل مكتب تدقيق مستقل.</p>
       <h4>2. إعادة التوزيع :</h4>
@@ -516,73 +299,61 @@
     </div>
   </section>
 
-  <!-- ===== STRUCTURE DU GROUPE ===== -->
-<!-- ===== الهيكل التنظيمي لمجموعة SIH ===== -->
-<section class="structure" dir="rtl" lang="ar">
-  <h2>الهيكل التنظيمي لمجموعة SIH</h2>
-  <p>تنظيم متكامل وواضح يضمن الاستدامة والتكامل بين مختلف الأقسام المتخصصة.</p>
+  <!-- STRUCTURE DU GROUPE -->
+  <section class="structure">
+    <h2>الهيكل التنظيمي لمجموعة SIH</h2>
+    <p>تنظيم متكامل وواضح يضمن الاستدامة والتكامل بين مختلف الأقسام المتخصصة.</p>
 
-  <div class="orgchart">
-    <div class="node parent">
-      <h3>🌿 مجموعة SIH</h3>
-      <p>الشركة القابضة الرئيسية – للاستثمار الأخضر والمستدام</p>
+    <div class="orgchart">
+      <div class="node parent">
+        <h3>🌿 مجموعة SIH</h3>
+        <p>الشركة القابضة الرئيسية – للاستثمار الأخضر والمستدام</p>
 
-      <div class="children">
+        <div class="children">
+          <div class="node child">
+            <h4>🏢 قسم العقارات (SIH Immo)</h4>
+            <p>إدارة المشاريع العقارية التجارية والسكنية والصناعية</p>
+          </div>
+          <div class="node child">
+            <h4>🌾 قسم الزراعة (SIH Agro)</h4>
+            <p>الإنتاج الزراعي وتربية المواشي والتحويل الزراعي الغذائي</p>
 
-        <!-- قسم العقارات -->
-        <div class="node child">
-          <h4>🏢 قسم العقارات (SIH Immo)</h4>
-          <p>إدارة المشاريع العقارية التجارية والسكنية والصناعية</p>
-        </div>
-
-        <!-- قسم الزراعة -->
-        <div class="node child">
-          <h4>🌾 قسم الزراعة (SIH Agro)</h4>
-          <p>الإنتاج الزراعي وتربية المواشي والتحويل الزراعي الغذائي</p>
-
-          <div class="sub-children">
-            <div class="node sub-child">
-              <h5>🌱 قسم البذور العضوية</h5>
-              <p>الحفاظ على التراث الوراثي الزراعي وتطوير البذور المحلية</p>
-            </div>
-            <div class="node sub-child">
-              <h5>🏠 قسم التخزين والحفظ</h5>
-              <p>إدارة بيئية لمخازن المنتجات الزراعية وضمان الجودة اللوجستية</p>
+            <div class="sub-children">
+              <div class="node sub-child">
+                <h5>🌱 قسم البذور العضوية</h5>
+                <p>الحفاظ على التراث الوراثي الزراعي وتطوير البذور المحلية</p>
+              </div>
+              <div class="node sub-child">
+                <h5>🏠 قسم التخزين والحفظ</h5>
+                <p>إدارة بيئية لمخازن المنتجات الزراعية وضمان الجودة اللوجستية</p>
+              </div>
             </div>
           </div>
+          <div class="node child">
+            <h4>🚚 قسم التوزيع (SIH Distribution)</h4>
+            <p>شبكة التوزيع والتصدير والتعاون التجاري المستدام</p>
+          </div>
+          <div class="node child">
+            <h4>🧑‍🏫 قسم التدريب (SIH Formation)</h4>
+            <p>برامج تدريبية تقنية وإدارية للفاعلين في التنمية المستدامة</p>
+          </div>
+          <div class="node child">
+            <h4>🎓 قسم التأهيل والاعتماد (SIH Qualification)</h4>
+            <p>إصدار الشهادات والمعايير البيئية ومرافقة الممارسات المسؤولة</p>
+          </div>
         </div>
-
-        <!-- قسم التوزيع -->
-        <div class="node child">
-          <h4>🚚 قسم التوزيع (SIH Distribution)</h4>
-          <p>شبكة التوزيع والتصدير والتعاون التجاري المستدام</p>
-        </div>
-
-        <!-- قسم التكوين -->
-        <div class="node child">
-          <h4>🧑‍🏫 قسم التدريب (SIH Formation)</h4>
-          <p>برامج تدريبية تقنية وإدارية للفاعلين في التنمية المستدامة</p>
-        </div>
-
-        <!-- قسم التأهيل -->
-        <div class="node child">
-          <h4>🎓 قسم التأهيل والاعتماد (SIH Qualification)</h4>
-          <p>إصدار الشهادات والمعايير البيئية ومرافقة الممارسات المسؤولة</p>
-        </div>
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- CTA -->
   <section class="cta">
     <h2>انضم إلى الثورة الخضراء</h2>
     <p>شارك في نموذج استثماري مسؤول، مستقر ومستدام.</p>
     <a href="investors_ar.html" class="btn">استثمر الآن</a>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة | الاستثمار الأخضر والمستدام</p>
     <p>

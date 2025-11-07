@@ -157,7 +157,16 @@
       position: relative;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
+    .card::after {
+      content: "👉";
+      position: absolute;
+      right: 15px;
+      bottom: 12px;
+      font-size: 1.4em;
+      opacity: 0.6;
+      transition: transform 0.3s ease;
+    }
+    
     .card:hover {
       transform: translateY(-4px);
       background-color: #d7f0df;

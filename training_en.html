@@ -23,7 +23,7 @@
       position: absolute;
       top: 10px;
       right: 20px;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255,255,255,0.15);
       padding: 6px 10px;
       border-radius: 20px;
       font-size: 0.95em;
@@ -43,10 +43,9 @@
     }
     h1 {margin: 0; font-size: 2.2em; font-weight: bold;}
     header p {margin: 8px 0 15px; font-size: 1.1em; color: #fff5b1;}
-    nav a.active { border-bottom: 2px solid #f7d16e; }
     nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
     nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
-    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
+    nav ul li a:hover, nav ul li a.active {background: rgba(255,255,255,0.2);}
     section {
       padding: 40px 10%;
       background-color: #fff;
@@ -67,18 +66,39 @@
       background: #fff5e1;
       border: 1px solid #ffa500;
       border-radius: 12px;
-      padding: 20px;
+      padding: 25px 20px;
       transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    .card:hover {background: #ffb703; color: #fff; transform: translateY(-5px);}
-    .card a {text-decoration: none; color: #1a5632; font-weight: 600; font-size: 1.05em;}
-    footer {text-align: center; background: #1a5632; color: white; padding: 25px 0; margin-top: 60px;}
+    .card::after {
+      content: "👉";
+      position: absolute;
+      right: 15px;
+      bottom: 12px;
+      font-size: 1.4em;
+      opacity: 0.6;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {background: #ffb703; color: #fff; transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.15);}
+    .card:hover::after {transform: translateX(5px); opacity: 1;}
+    .card a {text-decoration: none; color: #1a5632; font-weight: 600; font-size: 1.05em; display: block;}
+    .card:hover a {color: white;}
     .cta {margin-top: 40px; text-align: center;}
-    .cta a {
-      background: #007a3d; color: #fff; padding: 12px 25px; border-radius: 25px;
-      text-decoration: none; font-weight: 600; transition: 0.3s;
-    }
+    .cta a {background: #007a3d; color: #fff; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: 0.3s;}
     .cta a:hover {background: #ffa500;}
+    footer {text-align: center; background: #1a5632; color: white; padding: 25px 0; margin-top: 60px;}
+    @media (max-width: 768px) {
+      header {text-align: center; padding: 25px 0 60px;}
+      h1 {font-size: 1.8em;}
+      .lang-switch {position: static; display: inline-block; margin-bottom: 10px;}
+      nav ul {flex-direction: column; gap: 6px;}
+      nav ul li a {display: block; background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px;}
+      section {padding: 25px 5%;}
+      .card {padding: 18px; font-size: 1em;}
+      .card::after {right: 10px; bottom: 8px; font-size: 1.2em;}
+    }
   </style>
 </head>
 <body>
@@ -86,40 +106,33 @@
   <div class="lang-switch">
     🌐 <a href="training.html">🇫🇷 Français</a> | <a href="training_en.html">🇬🇧 English</a> | <a href="training_ar.html">🇸🇦 العربية</a>
   </div>
-  
-  <div style="text-align:center; direction:ltr;">
+  <div style="text-align:center;">
     <h1>🌿 SIH Group</h1>
-    <p style="font-size:1.3em; color:#fff5b1; margin:10px 0;">
-      <span style="font-weight:bold; font-size:1.3em; color:yellow;">🎓 Training & Qualification</span> :
-      Commitment to technical excellence and ESG.
-    </p>
+    <p><span style="color:yellow; font-weight:bold;">🎓 Training & Qualification</span>: A commitment to technical excellence and ESG values.</p>
   </div>
-
-
-    <nav>
-      <ul>
-        <li><a href="index_en.html">Home</a></li>
-        <li><a href="vision_en.html">Strategic Vision</a></li>
-        <li><a href="investors_en.html">Investors</a></li>
-        <li><a href="training_en.html" class="active">Training</a></li>
-        <li><a href="bio_patrimoine_en.html">SIH BIO</a></li>
-        <li><a href="tenants_en.html">Tenants</a></li>
-        <li><a href="projects_en.html">Projects</a></li>
-        <li><a href="distributors_en.html">Distributors</a></li>
-        <li><a href="contact_en.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="vision_en.html">Strategic Vision</a></li>
+      <li><a href="investors_en.html">Investors</a></li>
+      <li><a href="training_en.html" class="active">Training</a></li>
+      <li><a href="bio_patrimoine_en.html">SIH BIO</a></li>
+      <li><a href="tenants_en.html">Tenants</a></li>
+      <li><a href="projects_en.html">Projects</a></li>
+      <li><a href="distributors_en.html">Distributors</a></li>
+      <li><a href="contact_en.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section>
   <h2>Our Training Programs</h2>
-  <p>Each module is a thematic path leading to a certification recognized by SIH Group.</p>
+  <p>Each module is an interactive card leading to a certification recognized by SIH Group.</p>
   <div class="modules">
-    <div class="card"><a href="training_agriculture.html">🌾 Agricultural & Livestock Techniques</a></div>
-    <div class="card"><a href="training_hygiene.html">🧼 Food Hygiene & Safety</a></div>
-    <div class="card"><a href="training_logistics.html">🏭 Logistics, Storage & Preservation</a></div>
-    <div class="card"><a href="training_innovation.html">🌍 Innovation & Sustainability</a></div>
+    <div class="card"><a href="training_agriculture_en.html">🌾 Agricultural & Livestock Techniques</a></div>
+    <div class="card"><a href="training_hygiene_en.html">🧼 Hygiene & Food Safety</a></div>
+    <div class="card"><a href="training_logistics_en.html">🏭 Logistics, Storage & Preservation</a></div>
+    <div class="card"><a href="training_innovation_en.html">🌍 Innovation & Sustainability</a></div>
   </div>
   <div class="cta">
     <a href="contact_en.html">📩 Contact us to join a training program</a>

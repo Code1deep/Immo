@@ -1,95 +1,209 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>اللوجستيات والتخزين والحفظ – مجموعة SIH</title>
-<style>
-body{font-family:'Segoe UI',sans-serif;background:#f9f9f9;color:#333;margin:0;line-height:1.6;direction:rtl;text-align:right;}
-header{background:linear-gradient(90deg,#007a3d,#00994c);color:yellow;padding:20px 0;box-shadow:0 2px 6px rgba(0,0,0,0.2);position:relative;}
-    /* ===== LANGUAGE SWITCH (top-right) ===== */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اللوجستية والتخزين - مجموعة SIH</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 20px 15px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* --- Language Switch --- */
     .lang-switch {
       position: absolute;
       top: 10px;
-      right: 25px;
+      right: 20px;
       background: rgba(255,255,255,0.15);
-      padding: 6px 12px;
+      padding: 4px 8px;
       border-radius: 20px;
-      font-size: 0.95em;
-      direction: ltr; /* garder l'ordre visuel des drapeaux LTR */
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
     }
+
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
-      margin: 0 5px;
-      padding: 3px 8px;
-      border-radius: 12px;
+      margin: 0 4px;
+      padding: 2px 4px;
+      border-radius: 10px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
-    .lang-switch a:hover { background: #cde3d1; color: #1a5632; }
 
-    nav a{color:white;text-decoration:none;font-weight:500;}
-    nav ul li a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease; }
-    nav ul li a:hover, nav ul li a.active { background: rgba(255,255,255,0.2); }
-    nav ul{list-style:none;padding:0;display:flex;gap:15px;justify-content:center;}
-    nav a.active{border-bottom:2px solid #f7d16e;}
-    nav a.active{border-bottom:2px solid #f7d16e;}
-section{padding:40px 10%;background:#fff;margin:40px auto;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);max-width:950px;text-align:right;}
-h2{color:#eb7434;font-size:1.7em;font-weight:bold;border-right:5px solid #f7d16e;padding-right:10px;margin-bottom:20px;}
-.highlight{background-color:#fff5e1;border-right:4px solid #ffa500;padding:15px;margin-top:15px;border-radius:6px;}
-footer{text-align:center;background:#1a5632;color:white;padding:25px 0;margin-top:60px;}
-.cta{text-align:center;margin-top:40px;}
-.cta a{background:#007a3d;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:600;transition:0.3s;}
-.cta a:hover{background:#ffa500;}
-</style>
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 15px 0 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #eb7434;
+      margin: 10px 0;
+    }
+
+    h2 {
+      color: #2217e8;
+      border-left: 5px solid #f7d16e;
+      padding-left: 10px;
+      display: inline-block;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: #f5f262;
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    h4 {
+      color: #99069c;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 10%;
+      background-color: #fff;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      max-width: 950px;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .highlight {
+      background-color: #fff5e1;
+      border-left: 4px solid #ffa500;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 25px 10px;
+      margin-top: 60px;
+      font-size: 0.9em;
+      direction: rtl;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      header { padding: 25px 10px 50px 10px; }
+
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.3em; border-left: 3px solid #f7d16e; }
+      h3 { font-size: 1.4em; }
+      h4 { font-size: 1.2em; }
+      nav ul { flex-direction: column; gap: 6px; }
+      nav ul li a { display: block; text-align: center; background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px; }
+      section { padding: 25px 5%; margin: 25px auto; }
+      .highlight { padding: 12px; font-size: 0.95em; }
+      footer { font-size: 0.85em; padding: 20px 5px; }
+      .cta a { width: 80%; display: block; margin: 10px auto; } /* adaptation mobile */
+    }
+
+    .cta{text-align:center;margin-top:30px;}
+    .cta a{background:#007a3d;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:600;transition:0.3s;}
+    .cta a:hover{background:#ffa500;}
+  </style>
 </head>
 <body>
-
 <header>
   <div class="lang-switch">
-    🌐 
-    <a href="training_logistique.html">🇫🇷 Français</a> |
-    <a href="training_logistique_en.html">🇬🇧 English</a> |
-    <a href="training_logistique_ar.html">🇸🇦 العربية</a>
+    🌐 <a href="training.html">🇫🇷 Français</a> | <a href="training_logistique_en.html">🇬🇧 English</a> | <a href="training_logistique_ar.html">🇸🇦 العربية</a>
   </div>
 
-<div style="text-align:center;">
-<h1>🌿 مجموعة SIH</h1>
-<h2>🏭 اللوجستيات والتخزين والحفظ</h2>
-<p>ضمان جودة المنتجات واستقرارها من المزرعة إلى السوق</p>
+  <div style="text-align:center; direction:rtl;">
+    <p style="font-size:1.3em; color:yellow; margin:10px 0;">
+      <span style="font-weight:bold; font-size:1.3em; color:yellow;">🌿 مجموعة SIH</span> :
+      🌾 اللوجستية والتخزين.
+    </p>
+  </div>
+
+  <div style="text-align:center;">
+    <p style="color:#fff5b1;">كفاءة وأمان سلسلة الإمداد</p>
     <nav>
       <ul>
-        <li><a href="index_ar.html">الصفحة الرئيسية</a></li>
-        <li><a href="vision_ar.html">الرؤية الاستراتيجية</a></li>
-        <li><a href="investors_ar.html">المستثمرون</a></li>
-        <li><a href="training_ar.html" class="active">التدريب</a></li>
-        <li><a href="bio_patrimoine_ar.html">الزراعة العضوية</a></li>
-        <li><a href="tenants_ar.html">المستأجرون</a></li>
-        <li><a href="projects_ar.html">المشاريع</a></li>
-        <li><a href="distributors_ar.html">الموزعون</a></li>
-        <li><a href="contact_ar.html">اتصل بنا</a></li>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="vision.html">الرؤية الإستراتيجية</a></li>
+        <li><a href="investisseurs.html">المستثمرون</a></li>
+        <li><a href="training.html" class="active">الدورات التدريبية</a></li>
+        <li><a href="bio_patrimoine.html">SIH BIO</a></li>
+        <li><a href="locataires.html">المستأجرون</a></li>
+        <li><a href="projets.html">المشاريع</a></li>
+        <li><a href="distributeurs.html">الموزعون</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <section>
-<h2>نظرة عامة على البرنامج</h2>
-<p>يركز هذا البرنامج على تطوير الكفاءات في إدارة سلاسل التبريد، والتخزين الفعال، وضمان سلامة الأغذية أثناء النقل والتوزيع.</p>
+  <h2>الهدف</h2>
+  <p>تدريب المهنيين القادرين على إدارة تدفقات اللوجستية والمستودعات وطرق حفظ الغذاء.</p>
 
-<div class="highlight">
-<ul>
-<li>🚛 إدارة سلسلة التبريد ومراقبة درجات الحرارة</li>
-<li>🏗️ تنظيم المستودعات ومعايير السلامة الغذائية</li>
-<li>📦 تقنيات التعبئة والتغليف المستدامة</li>
-<li>🧯 تدريب السلامة المهنية في بيئات العمل</li>
-</ul>
-</div>
+  <h2>البرنامج</h2>
+  <ul>
+    <li>🏭 تنظيم وتحسين المستودعات</li>
+    <li>🚚 إدارة سلسلة الإمداد وتتبع المنتجات</li>
+    <li>❄️ تقنيات الحفظ بالتبريد والتخزين في جو متحكم به</li>
+    <li>📦 السلامة والنظافة والراحة في مناطق التخزين</li>
+    <li>💡 الأنظمة الرقمية للوجستية المستدامة (IoT, RFID)</li>
+  </ul>
 
-<div class="cta"><a href="contact_ar.html">📩 انضم إلى هذا البرنامج</a></div>
+  <div class="cta">
+    <a href="training.html">⬅️ العودة إلى الدورات التدريبية</a>
+    <a href="contact.html">📩 اتصل بنا</a>
+  </div>
 </section>
 
-<footer><p>© 2025 مجموعة SIH – جميع الحقوق محفوظة</p></footer>
+<footer>
+  <p>© 2025 مجموعة SIH – جميع الحقوق محفوظة</p>
+</footer>
 </body>
 </html>

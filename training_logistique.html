@@ -1,179 +1,62 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logistique & Conservation - SIH Group</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      margin: 0;
-      line-height: 1.6;
-    }
+    body{font-family:'Segoe UI',sans-serif;background:#f9f9f9;color:#333;margin:0;line-height:1.6;}
+    header{background:linear-gradient(90deg,#007a3d,#00994c);color:yellow;padding:20px 0;box-shadow:0 2px 6px rgba(0,0,0,0.2);position:relative;}
+    .lang-switch{position:absolute;top:10px;right:20px;background:rgba(255,255,255,0.15);padding:6px 10px;border-radius:20px;}
+    .lang-switch a{color:#FFC72C;text-decoration:none;margin:0 4px;padding:3px 8px;border-radius:12px;transition:0.3s;}
+    .lang-switch a:hover{background:#cde3d1;color:#1a5632;}
+    nav ul{list-style:none;display:flex;gap:15px;justify-content:center;padding:0;margin:10px 0 0;}
+    nav a{color:white;text-decoration:none;font-weight:500;}
+    nav a.active{border-bottom:2px solid #f7d16e;}
+    section{padding:40px 10%;background:#fff;margin:40px auto;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.05);max-width:950px;}
+    h1,h2{text-align:center;}
+    h2{color:#eb7434;border-left:5px solid #f7d16e;padding-left:10px;display:inline-block;}
+    ul{text-align:left;max-width:700px;margin:20px auto;}
+    .cta{text-align:center;margin-top:30px;}
+    .cta a{background:#007a3d;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:600;transition:0.3s;}
+    .cta a:hover{background:#ffa500;}
+    footer{text-align:center;background:#1a5632;color:white;padding:25px 0;margin-top:60px;}
 
-    header {
-      background: linear-gradient(90deg, #007a3d, #00994c);
-      color: yellow;
-      padding: 20px 0 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      position: relative;
-      text-align: center;
-    }
-
-    .lang-switch {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      background: rgba(255,255,255,0.15);
-      padding: 6px 10px;
-      border-radius: 20px;
-      font-size: 0.95em;
-      z-index: 10;
-    }
-
-    .lang-switch a {
-      color: #FFC72C;
-      text-decoration: none;
-      margin: 0 4px;
-      padding: 3px 8px;
-      border-radius: 12px;
-      transition: 0.3s;
-      font-weight: 500;
-    }
-
-    .lang-switch a:hover {
-      background: #cde3d1;
-      color: #1a5632;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      padding: 0;
-      margin: 10px 0 0;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: rgba(255,255,255,0.2);
-    }
-
-    section {
-      padding: 40px 10%;
-      background: #fff;
-      margin: 40px auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      max-width: 950px;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    h2 {
-      color: #eb7434;
-      border-left: 5px solid #f7d16e;
-      padding-left: 10px;
-      display: inline-block;
-      font-size: 1.5em;
-    }
-
-    ul {
-      text-align: left;
-      max-width: 700px;
-      margin: 20px auto;
-      padding-left: 20px;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .cta a {
-      background: #007a3d;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 8px;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .cta a:hover {
-      background: #ffa500;
-    }
-
-    footer {
-      text-align: center;
-      background: #1a5632;
-      color: white;
-      padding: 25px 0;
-      margin-top: 60px;
-    }
-
-    /* ===== MOBILE OPTIMISATION ===== */
+    /* ✅ Ajustement MOBILE — sans modifier le design Desktop */
     @media (max-width: 768px) {
-      header {
-        padding: 25px 10px 50px;
-      }
-
       .lang-switch {
         position: static;
         display: inline-block;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
       }
-
       nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
       }
-
       nav a {
         display: block;
         width: 80%;
         text-align: center;
         background: rgba(255,255,255,0.1);
         border-radius: 8px;
-        padding: 10px;
+        padding: 8px;
       }
-
       section {
         padding: 25px 6%;
         margin: 25px auto;
       }
-
       h2 {
         font-size: 1.3em;
         border-left: 3px solid #f7d16e;
       }
-
       ul {
-        padding-left: 10px;
         font-size: 0.95em;
       }
-
       .cta a {
+        display: block;
         width: 80%;
-        font-size: 1em;
+        margin: 10px auto;
       }
     }
   </style>
@@ -181,31 +64,32 @@
 <body>
 <header>
   <div class="lang-switch">
-    🌐 <a href="training.html">🇫🇷</a> | <a href="training_en.html">🇬🇧</a> | <a href="training_ar.html">🇸🇦</a>
+    🌐 <a href="training.html">🇫🇷 Français</a> | <a href="training_en.html">🇬🇧 English</a> | <a href="training_ar.html">🇸🇦 العربية</a>
   </div>
-  
+
   <div style="text-align:center; direction:ltr;">
     <p style="font-size:1.3em; color:yellow; margin:10px 0;">
-      <span style="font-weight:bold; font-size:1.3em;">🌿 SIH Group</span> :
-      🏭 Logistique & Conservation
+      <span style="font-weight:bold; font-size:1.3em; color:yellow;">🌿 SIH Group</span> :
+      🌾 Logistique & Conservation.
     </p>
   </div>
 
-  <p style="color:#fff5b1;">Efficacité et sécurité de la chaîne d’approvisionnement</p>
-  
-  <nav>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="vision.html">Vision Stratégique</a></li>
-      <li><a href="investisseurs.html">Investisseurs</a></li>
-      <li><a href="training.html" class="active">Formations</a></li>
-      <li><a href="bio_patrimoine.html">SIH BIO</a></li>
-      <li><a href="locataires.html">Locataires</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="distributeurs.html">Distributeurs</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div style="text-align:center;">
+    <p style="color:#fff5b1;">Efficacité et sécurité de la chaîne d’approvisionnement</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="vision.html">Vision Stratégique</a></li>
+        <li><a href="investisseurs.html">Investisseurs</a></li>
+        <li><a href="training.html" class="active">Formations</a></li>
+        <li><a href="bio_patrimoine.html">SIH BIO</a></li>
+        <li><a href="locataires.html">Locataires</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="distributeurs.html">Distributeurs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <section>
@@ -222,8 +106,8 @@
   </ul>
 
   <div class="cta">
-    <a href="training.html">⬅️ Retour</a>
-    <a href="contact.html">📩 Contact</a>
+    <a href="training.html">⬅️ Retour aux formations</a>
+    <a href="contact.html">📩 Nous contacter</a>
   </div>
 </section>
 

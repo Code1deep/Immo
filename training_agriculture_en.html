@@ -119,6 +119,27 @@
       border-radius: 6px;
     }
 
+    /* ✅ CTA visible sur desktop ET mobile */
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .cta a {
+      background: #007a3d;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .cta a:hover {
+      background: #ffa500;
+    }
+
     footer {
       text-align: center;
       background: #1a5632;
@@ -133,46 +154,17 @@
       header {
         padding: 25px 10px 50px 10px;
       }
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
 
-    .cta a {
-      background: #007a3d;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .cta a:hover {
-      background: #ffa500;
-    }
       .lang-switch {
         position: static;
         display: inline-block;
         margin-bottom: 10px;
       }
 
-      h1 {
-        font-size: 1.6em;
-      }
-
-      h2 {
-        font-size: 1.3em;
-        border-left: 3px solid #f7d16e;
-      }
-
-      h3 {
-        font-size: 1.4em;
-      }
-
-      h4 {
-        font-size: 1.2em;
-      }
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.3em; border-left: 3px solid #f7d16e; }
+      h3 { font-size: 1.4em; }
+      h4 { font-size: 1.2em; }
 
       nav ul {
         flex-direction: column;
@@ -201,7 +193,9 @@
         font-size: 0.85em;
         padding: 20px 5px;
       }
-      .cta a { width: 80%; display: block; margin: 10px auto; } /* adaptation mobile */
+
+      /* adaptation mobile du bouton */
+      .cta a { width: 80%; display: block; margin: 10px auto; text-align: center; }
     }
   </style>
 </head>
@@ -222,20 +216,19 @@
   </div>
   <p>Master the foundations of sustainable agriculture and modern breeding.</p>
 
-    <nav>
-      <ul>
-        <li><a href="index_en.html">Home</a></li>
-        <li><a href="vision_en.html">Strategic Vision</a></li>
-        <li><a href="investors_en.html">Investors</a></li>
-        <li><a href="training_en.html" class="active">Training</a></li>
-        <li><a href="bio_patrimoine_en.html">SIH BIO</a></li>
-        <li><a href="tenants_en.html">Tenants</a></li>
-        <li><a href="projects_en.html">Projects</a></li>
-        <li><a href="distributors_en.html">Distributors</a></li>
-        <li><a href="contact_en.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="vision_en.html">Strategic Vision</a></li>
+      <li><a href="investors_en.html">Investors</a></li>
+      <li><a href="training_en.html" class="active">Training</a></li>
+      <li><a href="bio_patrimoine_en.html">SIH BIO</a></li>
+      <li><a href="tenants_en.html">Tenants</a></li>
+      <li><a href="projects_en.html">Projects</a></li>
+      <li><a href="distributors_en.html">Distributors</a></li>
+      <li><a href="contact_en.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section>

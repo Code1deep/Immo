@@ -19,39 +19,51 @@
 
     /* ===== HEADER ===== */
     header {
-      background: linear-gradient(90deg, #1a5632, #217a45);
+      background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
+      padding: 20px 15px 30px 15px;
       text-align: center;
-      padding: 25px 0 10px;
       position: relative;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    /* Sélecteur de langue (extrême haut à droite) */
-    .lang-switch {
-      position: absolute;
-      top: 10px;
-      right: 25px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.95em;
-      direction: ltr; /* garder drapeaux dans l'ordre LTR */
-    }
+/* ===== LANGUAGE SWITCH  ===== */
+.lang-switch {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background: rgba(255,255,255,0.15);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  direction: rtl;
+  white-space: nowrap;
+}
 
-    .lang-switch a {
-      color: #FFC72C;
-      text-decoration: none;
-      margin: 0 5px;
-      padding: 3px 8px;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
+.lang-switch a {
+  color: #FFC72C;
+  text-decoration: none;
+  margin: 0 4px;
+  padding: 2px 4px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
 
-    .lang-switch a:hover {
-      background: #cde3d1;
-      color: #1a5632;
-    }
+.lang-switch a:hover {
+  background: #cde3d1;
+  color: #1a5632;
+}
+
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+  .lang-switch {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+}
+
 
     nav a{color:white;text-decoration:none;font-weight:500;}
     nav ul li a { color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease; }

@@ -24,6 +24,7 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
+
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -32,17 +33,28 @@
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 0.95em;
+      display: inline-block;
+      text-align: right;
     }
 
-    .lang-switch a {
-      color: #FFC72C;
-      text-decoration: none;
-      margin: 0 5px;
-      padding: 3px 8px;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
+    /* Mobile version */
+    @media (max-width: 700px) {
+      .lang-switch {
+        position: relative; /* au lieu de static */
+        top: 0;
+        right: 0;
+        margin: 0 auto 10px auto; /* centrage horizontal */
+        display: inline-block;
+      }    
+      .lang-switch a {
+        color: #FFC72C;
+        text-decoration: none;
+        margin: 0 5px;
+        padding: 3px 8px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
 
     .lang-switch a:hover {
       background: #cde3d1;

@@ -24,35 +24,43 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .lang-switch a:hover {background: #cde3d1; color: #1a5632;}
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background: rgba(255,255,255,0.15);
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  direction: ltr;
+  white-space: nowrap;
+}
 
-    .lang-switch {
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      background: rgba(255,255,255,0.15);
-      padding: 4px 8px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      direction: ltr;
-      white-space: nowrap;
-    }
+.lang-switch a {
+  color: #FFC72C;
+  text-decoration: none;
+  margin: 0 4px;
+  padding: 2px 4px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
 
-    .lang-switch a {
-      color: #FFC72C;
-      text-decoration: none;
-      margin: 0 4px;
-      padding: 2px 4px;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
+.lang-switch a:hover {
+  background: #cde3d1;
+  color: #1a5632;
+}
 
-    .lang-switch {
-      position: static;
-      display: inline-block;
-      margin-bottom: 12px;
-    }
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+  .lang-switch {
+    position: static;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+}
+
 
     h1 {
       margin: 8px 0;

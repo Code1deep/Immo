@@ -12,6 +12,7 @@
       margin: 0;
       line-height: 1.6;
     }
+
     header {
       background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
@@ -19,6 +20,8 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       position: relative;
     }
+
+    /* ===== LANG SWITCH ===== */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -28,6 +31,7 @@
       border-radius: 20px;
       font-size: 0.95em;
     }
+
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
@@ -37,16 +41,49 @@
       transition: all 0.3s ease;
       font-weight: 500;
     }
+
     .lang-switch a:hover {
       background: #cde3d1;
       color: #1a5632;
     }
-    h1 {margin: 0; font-size: 2.2em; font-weight: bold;}
-    header p {margin: 8px 0 15px; font-size: 1.1em; color: #fff5b1;}
-    nav a.active { border-bottom: 2px solid #f7d16e; }
-    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin: 10px 0 0;}
-    nav ul li a {color: white; text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 4px; transition: background 0.3s ease;}
-    nav ul li a:hover, nav ul li a.active {background: rgba(255, 255, 255, 0.2);}
+
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+      font-weight: bold;
+    }
+
+    header p {
+      margin: 8px 0 15px;
+      font-size: 1.1em;
+      color: #fff5b1;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 0 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ===== SECTION ===== */
     section {
       padding: 40px 10%;
       background-color: #fff;
@@ -56,31 +93,145 @@
       max-width: 950px;
       text-align: center;
     }
-    h2 {color: #eb7434; font-size: 1.7em; font-weight: bold; border-left: 5px solid #f7d16e; padding-left: 10px; display: inline-block; margin-bottom: 10px;}
+
+    h2 {
+      color: #eb7434;
+      font-size: 1.7em;
+      font-weight: bold;
+      border-left: 5px solid #f7d16e;
+      padding-left: 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
     .modules {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
       margin-top: 35px;
     }
+
+    /* ===== CARDS ===== */
     .card {
       background: #fff5e1;
       border: 1px solid #ffa500;
       border-radius: 12px;
-      padding: 20px;
+      padding: 25px 20px;
       transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-    .card:hover {background: #ffb703; color: #fff; transform: translateY(-5px);}
-    .card a {text-decoration: none; color: #1a5632; font-weight: 600; font-size: 1.05em;}
-    footer {text-align: center; background: #1a5632; color: white; padding: 25px 0; margin-top: 60px;}
-    .cta {margin-top: 40px; text-align: center;}
+
+    .card::after {
+      content: "👉";
+      position: absolute;
+      right: 15px;
+      bottom: 12px;
+      font-size: 1.4em;
+      opacity: 0.6;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      background: #ffb703;
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card:hover::after {
+      transform: translateX(5px);
+      opacity: 1;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #1a5632;
+      font-weight: 600;
+      font-size: 1.05em;
+      display: block;
+    }
+
+    .card:hover a {
+      color: white;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
     .cta a {
-      background: #007a3d; color: #fff; padding: 12px 25px; border-radius: 25px;
-      text-decoration: none; font-weight: 600; transition: 0.3s;
+      background: #007a3d;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
     }
-    .cta a:hover {background: #ffa500;}
+
+    .cta a:hover {
+      background: #ffa500;
+    }
+
+    footer {
+      text-align: center;
+      background: #1a5632;
+      color: white;
+      padding: 25px 0;
+      margin-top: 60px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        text-align: center;
+        padding: 25px 0 60px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .lang-switch {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      nav ul li a {
+        display: block;
+        background: rgba(255,255,255,0.1);
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      section {
+        padding: 25px 5%;
+      }
+
+      .card {
+        padding: 18px;
+        font-size: 1em;
+      }
+
+      .card::after {
+        right: 10px;
+        bottom: 8px;
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
+
 <body>
 <header>
   <div class="lang-switch">
@@ -95,31 +246,32 @@
     </p>
   </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="vision.html">Vision Stratégique</a></li>
-        <li><a href="investisseurs.html">Investisseurs</a></li>
-        <li><a href="training.html" class="active">Formations</a></li>
-        <li><a href="bio_patrimoine.html">SIH BIO</a></li>
-        <li><a href="locataires.html">Locataires</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="distributeurs.html">Distributeurs</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="vision.html">Vision Stratégique</a></li>
+      <li><a href="investisseurs.html">Investisseurs</a></li>
+      <li><a href="training.html" class="active">Formations</a></li>
+      <li><a href="bio_patrimoine.html">SIH BIO</a></li>
+      <li><a href="locataires.html">Locataires</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="distributeurs.html">Distributeurs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section>
   <h2>Nos Programmes de Formation</h2>
-  <p>Chaque module est une carte thématique menant à une certification reconnue par SIH Group.</p>
+  <p>Chaque module est une carte thématique interactive menant à une certification reconnue par SIH Group.</p>
+
   <div class="modules">
     <div class="card"><a href="training_agriculture.html">🌾 Techniques Agricoles & Élevage</a></div>
     <div class="card"><a href="training_hygiene.html">🧼 Hygiène & Sécurité Alimentaire</a></div>
     <div class="card"><a href="training_logistique.html">🏭 Logistique, Stockage & Conservation</a></div>
     <div class="card"><a href="training_innovation.html">🌍 Innovation & Durabilité</a></div>
   </div>
+
   <div class="cta">
     <a href="contact.html">📩 Contactez-nous pour rejoindre une formation</a>
   </div>

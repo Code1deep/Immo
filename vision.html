@@ -117,7 +117,51 @@
 
     footer{ text-align:center; background:var(--green-dark); color:#cde3d1; padding:20px 0; margin-top:30px; }
     /* responsive */
-    @media(max-width:700px){ .hero{ padding:18px } .container{ padding:0 14px } }
+    @media(max-width:700px){ .hero{ padding:18px } .container{ padding:0 14px } 
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        text-align: center;
+        padding: 25px 0 60px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .lang-switch {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      nav ul li a {
+        display: block;
+        background: rgba(255,255,255,0.1);
+        border-radius: 6px;
+        padding: 8px;
+      }
+
+      section {
+        padding: 25px 5%;
+      }
+
+      .card {
+        padding: 18px;
+        font-size: 1em;
+      }
+
+      .card::after {
+        right: 10px;
+        bottom: 8px;
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>

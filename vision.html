@@ -68,6 +68,15 @@
       box-shadow:0 4px 12px rgba(0,0,0,0.04);
       border-left:6px solid var(--green-mid);
     }
+    .card::after {
+      content: "👉";
+      position: absolute;
+      right: 15px;
+      bottom: 12px;
+      font-size: 1.4em;
+      opacity: 0.6;
+      transition: transform 0.3s ease;
+    }
     .card h3{ margin:0 0 8px; color:var(--green-dark); }
     .card p{ margin:0; color:#354b3d; }
 
@@ -114,12 +123,12 @@
       <h2 id="vision-title">Notre ambition : un écosystème de référence en bioéconomie et formation verte</h2>
       <p>SIH crée une plateforme intégrée où l'investisseur, l'agriculteur et le consommateur tirent un bénéfice concret : rendement mesurable, qualité produit, et impact social/environnemental positif.</p>
 
-      <div class="cta-row">
-        <a class="btn" href="vision_investisseurs.html">Pilier Investisseur & ESG</a>
-        <a class="btn" href="vision_commercial.html">Valeur Produit & Commercial</a>
-        <a class="btn" href="vision_humain.html">SIH Academy & RH</a>
-        <a class="btn secondary" href="vision_innovation.html">Innovation & SIH Smart Ecosystem</a>
-      </div>
+  <div class="cta-row">
+    <div class="card"><a href="vision_investisseurs.html">🌾 Pilier Investisseur & ESG</a></div>
+    <div class="card"><a href="vision_commercial.html">🧼 Valeur Produit & Commercial</a></div>
+    <div class="card"><a href="vision_humain.html">🏭 SIH Academy & RH</a></div>
+    <div class="card"><a href="vision_innovation.html">🌍 Innovation & SIH Smart Ecosystem</a></div>
+  </div>
     </section>
 
     <section style="margin-top:22px;">

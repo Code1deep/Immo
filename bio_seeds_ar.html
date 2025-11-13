@@ -5,26 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🌾 حفظ البذور القديمة – SIH BIO PATRIMOINE</title>
   <style>
+    :root{--green-dark:#1a5632;--green-mid:#2e7d4b;--accent-orange:#ffa500;--bg:#f9f9f9}
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Tahoma', 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
       color: #333;
       margin: 0;
-      line-height: 1.6;
       direction: rtl;
-      text-align: right;
     }
-
+    /* ===== LANGUAGE SWITCH (top-right) ===== */
     header {
       background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
       padding: 20px 15px;
-      text-align: center;
       position: relative;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    /* ===== LANGUAGE SWITCH ===== */
+    /* --- Language Switch --- */
     .lang-switch {
       position: absolute;
       top: 10px;
@@ -52,6 +51,29 @@
       color: #1a5632;
     }
 
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 15px 0 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
     h1 {
       margin: 8px 0;
       font-size: 2.1em;
@@ -69,30 +91,6 @@
     h3 {
       color: #1a5632;
     }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 6px 10px;
-      border-radius: 4px;
-      transition: background 0.3s ease;
-      display: inline-block;
-      font-size: 0.95em;
-    }
-
-    nav ul li a:hover,
-    nav a.active { border-bottom: 2px solid #f7d16e; }
 
     section {
       padding: 30px 8%;

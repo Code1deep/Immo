@@ -5,62 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hygiène et Sécurité Alimentaire – Groupe SIH</title>
 <style>
-body {
-    font-family:'Segoe UI',sans-serif;
-    background:#f9f9f9;
-    color:#333;
-    margin:0;
-    line-height:1.6;
-    text-align:left;
-}
+    :root {
+      --green-dark: #1a5632;
+      --green-mid: #2e7d4b;
+      --accent-orange: #ffa500;
+      --accent-yellow: #ffcc33;
+      --bg: #f9f9f9;
+    }
 
-header {
-    background: linear-gradient(90deg, #007a3d, #00994c);
-    color: yellow;
-    padding: 20px 15px;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #222;
+      margin: 0;
+      line-height: 1.6;
+    }
 
-/* ===== LANGUAGE SWITCH ===== */
-.lang-switch {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background: rgba(255,255,255,0.15);
-    padding: 5px 8px;
-    border-radius: 20px;
-    font-size: 0.95em;
-    direction: ltr;
-    white-space: nowrap;
-}
+    header {
+      background: linear-gradient(90deg, #007a3d, #00994c);
+      color: yellow;
+      padding: 20px 15px;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-.lang-switch a {
-    color: #FFC72C;
-    text-decoration: none;
-    margin: 0 5px;
-    padding: 3px 8px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
+    /* --- Language Switch --- */
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
+    }
 
-.lang-switch a:hover {
-    background: #cde3d1;
-    color: #1a5632;
-}
+    .lang-switch a {
+      color: #FFC72C;
+      text-decoration: none;
+      margin: 0 4px;
+      padding: 2px 4px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
 
-/* ===== NAVIGATION ===== */
-nav a {
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-}
+    .lang-switch a:hover {
+      background: #cde3d1;
+      color: #1a5632;
+    }
 
-nav a.active {
-    border-bottom:2px solid #f7d16e;
-}
     nav ul {
       list-style: none;
       padding: 0;
@@ -84,6 +81,7 @@ nav a.active {
     nav ul li a.active {
       background: rgba(255, 255, 255, 0.2);
     }
+
 /* ===== SECTION ===== */
 section {
     padding:40px 10%;

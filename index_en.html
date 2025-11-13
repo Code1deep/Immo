@@ -6,40 +6,50 @@
   <title>SIH Group – Investing in Sustainable Stability</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    :root {
+      --green-dark: #1a5632;
+      --green-mid: #2e7d4b;
+      --accent-orange: #ffa500;
+      --accent-yellow: #ffcc33;
+      --bg: #f9f9f9;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: #222;
       margin: 0;
       line-height: 1.6;
     }
 
-    /* ===== HEADER ===== */
     header {
-      background: linear-gradient(90deg, #1a5632, #217a45);
+      background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
-      text-align: center;
-      padding: 25px 0 10px;
+      padding: 20px 15px;
       position: relative;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
+    /* --- Language Switch --- */
     .lang-switch {
       position: absolute;
       top: 10px;
-      right: 12px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 4px 9px;
+      right: 20px;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 8px;
       border-radius: 20px;
-      font-size: 0.95em;
-      z-index: 10;
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
     }
 
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
-      margin: 0 5px;
-      padding: 3px 8px;
-      border-radius: 12px;
+      margin: 0 4px;
+      padding: 2px 4px;
+      border-radius: 10px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
@@ -51,32 +61,26 @@
 
     nav ul {
       list-style: none;
+      padding: 0;
       display: flex;
+      gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 10px 0 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 5px 12px;
+      margin: 15px 0 0;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
+      font-weight: 500;
       padding: 6px 12px;
       border-radius: 4px;
       transition: background 0.3s ease;
     }
-
+    nav a.active { border-bottom: 2px solid #f7d16e; }
     nav ul li a:hover,
     nav ul li a.active {
       background: rgba(255, 255, 255, 0.2);
-    }
-
-    nav a.active {
-      border-bottom: 2px solid #f7d16e;
     }
 
     /* ===== HERO ===== */

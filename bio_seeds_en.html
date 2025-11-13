@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conservation of Ancient Seeds – SIH BIO PATRIMOINE</title>
   <style>
+    :root {
+      --green-dark: #1a5632;
+      --green-mid: #2e7d4b;
+      --accent-orange: #ffa500;
+      --accent-yellow: #ffcc33;
+      --bg: #f9f9f9;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: #222;
       margin: 0;
       line-height: 1.6;
     }
@@ -16,7 +24,7 @@
     header {
       background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
-      padding: 20px 10px;
+      padding: 20px 15px;
       position: relative;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -50,7 +58,6 @@
       color: #1a5632;
     }
 
-    nav a.active { border-bottom: 2px solid #f7d16e; }
     nav ul {
       list-style: none;
       padding: 0;
@@ -58,7 +65,7 @@
       gap: 15px;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 10px 0 0;
+      margin: 15px 0 0;
     }
 
     nav ul li a {
@@ -69,7 +76,7 @@
       border-radius: 4px;
       transition: background 0.3s ease;
     }
-
+    nav a.active { border-bottom: 2px solid #f7d16e; }
     nav ul li a:hover,
     nav ul li a.active {
       background: rgba(255, 255, 255, 0.2);

@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SIH Group – Réseaux Sociaux</title>
   <style>
+    :root {
+      --green-dark: #1a5632;
+      --green-mid: #2e7d4b;
+      --accent-orange: #ffa500;
+      --accent-yellow: #ffcc33;
+      --bg: #f9f9f9;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: var(--bg);
+      color: #222;
       margin: 0;
       line-height: 1.6;
     }
@@ -16,29 +24,31 @@
     header {
       background: linear-gradient(90deg, #007a3d, #00994c);
       color: yellow;
-      padding: 25px 0 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      text-align: center;
+      padding: 20px 15px;
       position: relative;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    /* ===== Sélecteur de langue ===== */
+    /* --- Language Switch --- */
     .lang-switch {
       position: absolute;
       top: 10px;
       right: 20px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 6px 10px;
+      background: rgba(255,255,255,0.15);
+      padding: 4px 8px;
       border-radius: 20px;
-      font-size: 0.95em;
+      font-size: 0.9em;
+      direction: ltr;
+      white-space: nowrap;
     }
 
     .lang-switch a {
       color: #FFC72C;
       text-decoration: none;
       margin: 0 4px;
-      padding: 3px 8px;
-      border-radius: 12px;
+      padding: 2px 4px;
+      border-radius: 10px;
       transition: all 0.3s ease;
       font-weight: 500;
     }
@@ -46,6 +56,30 @@
     .lang-switch a:hover {
       background: #cde3d1;
       color: #1a5632;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 15px 0 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    nav a.active { border-bottom: 2px solid #f7d16e; }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     h1 {
@@ -59,34 +93,6 @@
       font-size: 1.05em;
       color: #fff5b1;
     }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1em;
-      transition: 0.3s;
-    }
-
-    nav a.active {
-      border-bottom: 2px solid #f7d16e;
-    }
-
-    nav a:hover {
-      color: #f7d16e;
-    }
-    nav ul {list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center;}
-    nav a {color: white; text-decoration: none; font-weight: 500;}
-    nav a.active {border-bottom: 2px solid #f7d16e;}
 
     section {
       padding: 50px 10%;

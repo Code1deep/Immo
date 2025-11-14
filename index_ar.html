@@ -211,14 +211,15 @@
 
     /* ===== RESPONSIVE MOBILE ===== */
     @media (max-width: 768px) {
-      header { padding: 20px 10px 40px 10px; }
-
-      .lang-switch { position: relative; display: block; text-align: center; margin: 10px auto; }
-
-      nav ul { flex-direction: column; align-items: center; gap: 8px; margin: 15px 0; }
-      nav ul li a { display: block; width: 100%; text-align: center; padding: 0px 115px; white-space: nowrap; }
-
-      section, .modele-block, .cta { width: 95%; margin: 20px auto; padding: 20px 5%; text-align: center; }
+      header {text-align: center; padding: 25px 0 60px;}
+      h1 { font-size: 1.2em; }
+      .lang-switch {position: static; display: inline-block; margin-bottom: 10px;}
+      nav ul {flex-direction: column; gap: 6px;}
+      nav ul li a {display: block; background: rgba(255,255,255,0.1); border-radius: 6px; padding: 8px;}
+      section {padding: 25px 5%;}
+      .highlight { padding: 12px; font-size: 0.95em; }
+      footer { font-size: 0.85em; padding: 20px 5px; }
+      .cta a { width: 80%; display: block; margin: 10px auto; } /* adaptation mobile */
 
       .children, .sub-children { flex-direction: column; }
       .node { width: 90%; min-width: auto; }
